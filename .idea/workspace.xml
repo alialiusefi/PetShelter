@@ -7,12 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aaaf2f76-4e53-48ef-addd-78db3cc4e10b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/servletconfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/servletconfig.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/sql/2_create_tables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/sql/2_create_tables.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/Action.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/DeleteAdoptionAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/DeleteAdoptionAction.class" afterDir="false" />
@@ -30,8 +25,6 @@
       <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/parser/PetFormParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/parser/PetFormParser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/service/PetServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/service/PetServiceImpl.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/servletconfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/servletconfig.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/servletconfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servletconfig.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -239,7 +232,7 @@
       <updated>1564655624444</updated>
       <workItem from="1564655628268" duration="897000" />
       <workItem from="1564656824113" duration="5227000" />
-      <workItem from="1564664874618" duration="12696000" />
+      <workItem from="1564664874618" duration="13318000" />
     </task>
     <task id="LOCAL-00001" summary="Optimized Imports">
       <created>1564665014093</created>
@@ -360,7 +353,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564674967174</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Updated web.xml">
+      <created>1564682164136</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1564682164136</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
