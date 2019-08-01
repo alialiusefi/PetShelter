@@ -1,5 +1,4 @@
 
-use petshelter;
 create table if not exists users
 (
   id       integer    not null auto_increment unique,
@@ -9,7 +8,6 @@ create table if not exists users
   primary key (id)
 ) default charset utf8;
 
-use petshelter;
 create table if not exists breeds
 (
   id          integer      not null unique auto_increment,
@@ -19,7 +17,6 @@ create table if not exists breeds
   PRIMARY KEY (id)
 ) default charset utf8;
 
-use petshelter;
 create table if not exists shelters
 (
   id       integer      not null unique auto_increment,
@@ -28,7 +25,6 @@ create table if not exists shelters
   PRIMARY KEY (id)
 ) default charset utf8;
 
-use petshelter;
 create table if not exists pets
 (
   id             integer                             not null auto_increment,
@@ -45,7 +41,6 @@ create table if not exists pets
   constraint fk_breedid foreign key (breed_id) references breeds (id)
 ) default charset utf8;
 
-use petshelter;
 create table if not exists adoptions_made
 (
   id              integer not null primary key auto_increment,
@@ -60,7 +55,6 @@ create table if not exists adoptions_made
 ) default charset utf8;
 
 
-use petshelter;
 create table if not exists userinfo
 (
   user_id     integer       not null unique,

@@ -6,7 +6,7 @@
 
     <description>Pet Shelter - Adopt Your Pet!</description>
     <display-name>Pet Shelter</display-name>
-
+    <absolute-ordering/>
     <request-character-encoding>utf-8</request-character-encoding>
 
     <servlet>
