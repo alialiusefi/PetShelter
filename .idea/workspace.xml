@@ -7,8 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aaaf2f76-4e53-48ef-addd-78db3cc4e10b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Procfile" beforeDir="false" afterPath="$PROJECT_DIR$/Procfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp.war" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -180,7 +179,7 @@
       <updated>1564655624444</updated>
       <workItem from="1564655628268" duration="897000" />
       <workItem from="1564656824113" duration="5227000" />
-      <workItem from="1564664874618" duration="8945000" />
+      <workItem from="1564664874618" duration="9442000" />
     </task>
     <task id="LOCAL-00001" summary="Optimized Imports">
       <created>1564665014093</created>
@@ -287,7 +286,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564673963319</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Updated Procfile">
+      <created>1564674463060</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1564674463060</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
