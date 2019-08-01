@@ -9,22 +9,6 @@
     <list default="true" id="aaaf2f76-4e53-48ef-addd-78db3cc4e10b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp.war" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/Action.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/DeleteAdoptionAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/DeleteAdoptionAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/MoreInfoPetAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/MoreInfoPetAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/UserDeleteAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/UserDeleteAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/admin/FindStaffAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/admin/FindStaffAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/admin/FindStaffByFirstNameAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/admin/FindStaffByFirstNameAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/admin/FindStaffByPhoneAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/admin/FindStaffByPhoneAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/guest/AdoptPetAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/guest/AdoptPetAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/staff/DeletePetAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/staff/DeletePetAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/dao/pool/ConnectionPool.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/dao/pool/ConnectionPool.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/dao/pool/PetPooledConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/dao/pool/PetPooledConnection.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/filter/ActionURIFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/filter/ActionURIFilter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/parser/FormParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/parser/FormParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/parser/PetFormParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/parser/PetFormParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/service/PetServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/service/PetServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/servletconfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/servletconfig.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -232,7 +216,7 @@
       <updated>1564655624444</updated>
       <workItem from="1564655628268" duration="897000" />
       <workItem from="1564656824113" duration="5227000" />
-      <workItem from="1564664874618" duration="13318000" />
+      <workItem from="1564664874618" duration="13619000" />
     </task>
     <task id="LOCAL-00001" summary="Optimized Imports">
       <created>1564665014093</created>
@@ -360,11 +344,28 @@
       <option name="project" value="LOCAL" />
       <updated>1564682164136</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Updated ServletConfig">
+      <created>1564682677001</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1564682677001</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -381,6 +382,7 @@
     <MESSAGE value="Optimized Imports" />
     <MESSAGE value="Updated Procfile" />
     <MESSAGE value="Updated web.xml" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated web.xml" />
+    <MESSAGE value="Updated ServletConfig" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated ServletConfig" />
   </component>
 </project>
