@@ -1,7 +1,6 @@
 package by.training.finaltask.parser;
 
 import by.training.finaltask.action.Action;
-import by.training.finaltask.entity.Entity;
 import by.training.finaltask.exception.InvalidFormDataException;
 import by.training.finaltask.exception.PersistentException;
 

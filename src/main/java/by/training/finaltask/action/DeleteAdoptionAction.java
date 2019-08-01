@@ -1,13 +1,11 @@
 package by.training.finaltask.action;
 
-import by.training.finaltask.action.staff.DeletePetAction;
 import by.training.finaltask.dao.mysql.DAOEnum;
 import by.training.finaltask.entity.Role;
 import by.training.finaltask.entity.User;
 import by.training.finaltask.exception.InvalidFormDataException;
 import by.training.finaltask.exception.PersistentException;
 import by.training.finaltask.service.serviceinterface.AdoptionService;
-import com.sun.scenario.effect.impl.state.PerspectiveTransformState;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 

@@ -9,7 +9,6 @@ import by.training.finaltask.entity.User;
 import by.training.finaltask.exception.InvalidFormDataException;
 import by.training.finaltask.exception.PersistentException;
 import by.training.finaltask.parser.AdoptionFormParser;
-import by.training.finaltask.parser.FormParser;
 import by.training.finaltask.service.ServiceFactoryImpl;
 import by.training.finaltask.service.serviceinterface.AdoptionService;
 import by.training.finaltask.service.serviceinterface.PetService;

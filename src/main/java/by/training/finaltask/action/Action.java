@@ -1,9 +1,7 @@
 package by.training.finaltask.action;
 
-import by.training.finaltask.entity.Entity;
 import by.training.finaltask.entity.User;
 import by.training.finaltask.exception.PersistentException;
-import by.training.finaltask.parser.FormParser;
 import by.training.finaltask.service.serviceinterface.ServiceFactory;
 
 import javax.servlet.http.HttpServletRequest;

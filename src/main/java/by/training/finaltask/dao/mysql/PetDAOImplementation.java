@@ -7,8 +7,8 @@ import by.training.finaltask.exception.PersistentException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.sql.*;
 import java.sql.Date;
+import java.sql.*;
 import java.util.*;
 
 public final class PetDAOImplementation extends BaseDAO implements PetDAO {

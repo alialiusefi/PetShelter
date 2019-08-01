@@ -2,7 +2,6 @@ package by.training.finaltask.dao.pool;
 
 import java.sql.*;
 import java.util.Map;
-import java.util.Objects;
 import java.util.Properties;
 import java.util.concurrent.Executor;
 

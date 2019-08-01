@@ -7,7 +7,6 @@ import by.training.finaltask.entity.User;
 import by.training.finaltask.entity.UserInfo;
 import by.training.finaltask.exception.InvalidFormDataException;
 import by.training.finaltask.exception.PersistentException;
-import by.training.finaltask.service.ServiceFactoryImpl;
 import by.training.finaltask.service.serviceinterface.UserInfoService;
 import by.training.finaltask.service.serviceinterface.UserService;
 import org.apache.logging.log4j.LogManager;

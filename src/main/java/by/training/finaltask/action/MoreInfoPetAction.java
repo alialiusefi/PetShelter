@@ -3,7 +3,6 @@ package by.training.finaltask.action;
 import by.training.finaltask.dao.mysql.DAOEnum;
 import by.training.finaltask.entity.*;
 import by.training.finaltask.exception.PersistentException;
-import by.training.finaltask.service.ServiceFactoryImpl;
 import by.training.finaltask.service.serviceinterface.BreedService;
 import by.training.finaltask.service.serviceinterface.PetService;
 import by.training.finaltask.service.serviceinterface.ShelterService;

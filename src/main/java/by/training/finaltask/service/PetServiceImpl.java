@@ -4,7 +4,6 @@ import by.training.finaltask.dao.daointerface.PetDAO;
 import by.training.finaltask.dao.mysql.DAOEnum;
 import by.training.finaltask.entity.Pet;
 import by.training.finaltask.entity.PetStatus;
-import by.training.finaltask.entity.Shelter;
 import by.training.finaltask.exception.PersistentException;
 import by.training.finaltask.service.serviceinterface.PetService;
 

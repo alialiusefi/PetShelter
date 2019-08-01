@@ -1,0 +1,14 @@
+add README in final project
+add index in sql
+add custom tag
+code convention
+service test
+fix logger
+====================
+
+fix updatePet function
+fix pagination with searchParameters using session
+
+====
+
+

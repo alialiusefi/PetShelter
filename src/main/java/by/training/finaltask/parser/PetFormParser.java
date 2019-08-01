@@ -2,7 +2,10 @@ package by.training.finaltask.parser;
 
 import by.training.finaltask.action.Action;
 import by.training.finaltask.dao.mysql.DAOEnum;
-import by.training.finaltask.entity.*;
+import by.training.finaltask.entity.Breed;
+import by.training.finaltask.entity.Pet;
+import by.training.finaltask.entity.PetStatus;
+import by.training.finaltask.entity.Shelter;
 import by.training.finaltask.exception.InvalidFormDataException;
 import by.training.finaltask.exception.PersistentException;
 import by.training.finaltask.service.serviceinterface.BreedService;

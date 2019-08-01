@@ -7,7 +7,10 @@ import by.training.finaltask.action.admin.FindStaffByFirstNameAction;
 import by.training.finaltask.action.admin.FindStaffByPhoneAction;
 import by.training.finaltask.action.guest.AdoptPetAction;
 import by.training.finaltask.action.guest.MyAdoptionsAction;
-import by.training.finaltask.action.staff.*;
+import by.training.finaltask.action.staff.AddPetAction;
+import by.training.finaltask.action.staff.DeletePetAction;
+import by.training.finaltask.action.staff.EditPetAction;
+import by.training.finaltask.action.staff.FindAdoptionAction;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
