@@ -1,1 +1,1 @@
-web:    java $JAVA_OPTS -jar target/dependency/webapp-runner.jar --port $PORT --expand-war target/*.war
+web:    java $JAVA_OPTS -jar target/dependency/webapp-runner-9.0.20.0.jar --port $PORT --expand-war target/*.war
