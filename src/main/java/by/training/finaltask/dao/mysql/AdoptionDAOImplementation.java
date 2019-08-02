@@ -444,7 +444,6 @@ public final class AdoptionDAOImplementation extends BaseDAO implements Adoption
             preparedStatement.setInt(1, element.getPetID());
             Date sqlDateAdoptionStart = new Date(
                     element.getAdoptionStart().getTimeInMillis());
-            System.out.println(sqlDateAdoptionStart);
             preparedStatement.setDate(2, sqlDateAdoptionStart);
             Date sqlDateAdoptionend = null;
             if (element.getAdoptionEnd() != null) {

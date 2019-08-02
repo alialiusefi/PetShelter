@@ -1,3 +1,4 @@
+use petshelter;
 INSERT INTO shelters (name, location)
 VALUES ('Manhattan Shelter', 'New York'),
         ('Carbon County', 'New Jersey'),
@@ -9,7 +10,6 @@ VALUES ('Alaskan husky','Big Ears and Strong','Germany'),
 ('Bearded Collie','Big Ears and Strong','USA'),
 ('German Shepherd','Big Ears and Strong','Germany'),
 ('Beauceron','Big Ears and Strong','Russia'),
-       ('Alaskan husky','Big Ears and Strong','Germany'),
        ('Himalayan Sheepdog','Big Ears and Strong','Germany'),
        ('Chihuahua', 'Small, Weak and Nimble', 'Mexico');
 

@@ -11,7 +11,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <c:url value="/index.html" var="indexActionURL"/>
+    <c:url value="/" var="indexActionURL"/>
     <c:url value="/login.html" var="loginActionURL"/>
     <c:url value="/register.html" var="registerActionURL"/>
     <c:url value="/logout.html" var="logoutActionURL"/>

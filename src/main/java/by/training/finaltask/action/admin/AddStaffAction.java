@@ -64,7 +64,7 @@ public class AddStaffAction extends AuthorizedUserAction {
             return new Forward("/login.html", true);
         }
         LOGGER.info(String.format("%s - attempted to access %s and failed",
-                request.getRemoteAddr(),request.getContextPath()));
+                request.getRemoteAddr(),request.getRequestURI()));
         return new Forward("/login.html", true);
     }
 

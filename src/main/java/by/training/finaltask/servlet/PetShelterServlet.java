@@ -82,7 +82,7 @@ final public class PetShelterServlet extends HttpServlet {
             }
             String requestedUri = request.getRequestURI();
             if (forward != null && forward.isRedirect()) {
-                String redirectedUri = request.getContextPath() + forward.getForward();
+                String redirectedUri = request.getRequestURI() + forward.getForward();
                 LOGGER.debug(String.format(
                         "Request for URI \"%s\" id redirected to URI \"%s\"", requestedUri,
                         redirectedUri));

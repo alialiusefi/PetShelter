@@ -80,11 +80,11 @@ public class EditPetAction extends AuthorizedUserAction {
                 }
             }
             LOGGER.info(String.format("%s - attempted to access %s and stopped due to not enough" +
-                    "privileges", request.getRemoteAddr(),request.getContextPath()));
+                    "privileges", request.getRemoteAddr(),request.getRequestURI()));
             throw new PersistentException("forbiddenAccess");
         }
         LOGGER.info(String.format("%s - attempted to access %s and failed",
-                request.getRemoteAddr(),request.getContextPath()));
+                request.getRemoteAddr(),request.getRequestURI()));
         throw new PersistentException("forbiddenAccess");
     }
     private void updateSelectionList(HttpServletRequest request)

@@ -1,4 +1,4 @@
-
+use petshelter;
 create table if not exists users
 (
   id       integer    not null auto_increment unique,

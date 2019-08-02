@@ -5,9 +5,6 @@ import java.util.logging.Level;
 
 public final class PetShelterServletConfig {
 
-    private String logFilename;
-    private Level logLevel;
-    private String logFormat;
     private String dbDriverClass;
     private String dbURL;
     private String dbUser;
@@ -19,9 +16,6 @@ public final class PetShelterServletConfig {
     {
         ResourceBundle resourceBundle = ResourceBundle.getBundle(
                 "servletconfig");
-        logFilename = resourceBundle.getString("logFilename");
-        logLevel = Level.parse(resourceBundle.getString("logLevel"));
-        logFormat = resourceBundle.getString("logFormat");
         dbDriverClass = resourceBundle.getString("dbDriverClass");
         dbURL = resourceBundle.getString("dbURL");
         dbPoolStartSize = Integer.parseInt(
@@ -32,18 +26,6 @@ public final class PetShelterServletConfig {
                 resourceBundle.getString("dbPoolCheckTimeOut"));
         dbUser = resourceBundle.getString("dbUser");
         dbPassword = resourceBundle.getString("dbPassword");
-    }
-
-    public String getLogFilename() {
-        return logFilename;
-    }
-
-    public Level getLogLevel() {
-        return logLevel;
-    }
-
-    public String getLogFormat() {
-        return logFormat;
     }
 
     public String getDbDriverClass() {

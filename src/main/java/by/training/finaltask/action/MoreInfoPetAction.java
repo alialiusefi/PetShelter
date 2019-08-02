@@ -59,7 +59,7 @@ public class MoreInfoPetAction extends AuthorizedUserAction {
             return forward;
         }
         LOGGER.info(String.format("%s - attempted to access %s and failed",
-                request.getRemoteAddr(),request.getContextPath()));
+                request.getRemoteAddr(),request.getRequestURI()));
         throw new PersistentException("forbiddenAccess");
     }
     private String getImage(HttpServletRequest request, Pet pet)

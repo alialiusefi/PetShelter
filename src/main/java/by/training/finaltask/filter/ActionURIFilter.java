@@ -11,6 +11,8 @@ import by.training.finaltask.action.staff.AddPetAction;
 import by.training.finaltask.action.staff.DeletePetAction;
 import by.training.finaltask.action.staff.EditPetAction;
 import by.training.finaltask.action.staff.FindAdoptionAction;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
@@ -21,11 +23,13 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public class ActionURIFilter implements Filter {
 
+    private static final Logger LOGGER = LogManager.getLogger(ActionURIFilter.class);
+
     private static Map<String, Class<? extends Action>> actions = new ConcurrentHashMap<>();
 
     static {
         actions.put("/", MainAction.class);
-        actions.put("/index", MainAction.class);
+        //actions.put("/index", MainAction.class);
         actions.put("/login", LoginAction.class);
         actions.put("/logout", LogoutAction.class);
         actions.put("/register", RegisterAction.class);
@@ -63,7 +67,7 @@ public class ActionURIFilter implements Filter {
             HttpServletRequest httpRequest = (HttpServletRequest) request;
             String contextPath = httpRequest.getContextPath();
             String uri = httpRequest.getRequestURI();
-            System.out.println(String.format("Starting of processing of request for URI \"%s\"", uri));
+            LOGGER.info(String.format("Starting of processing of request for URI \"%s\"", uri));
             int beginAction = contextPath.length();
             int endAction = uri.lastIndexOf('.');
             String actionName;
@@ -80,12 +84,12 @@ public class ActionURIFilter implements Filter {
                 clearSessionMessage(httpRequest);
                 chain.doFilter(request, response);
             } catch (InstantiationException | IllegalAccessException | NullPointerException e) {
-                System.out.println("It is impossible to create action handler object " + e);
+                LOGGER.info("It is impossible to create action handler object " + e.getMessage());
                 httpRequest.setAttribute("error", String.format("Запрошенный адрес %s не может быть обработан сервером", uri));
                 httpRequest.getServletContext().getRequestDispatcher("/jsp/error.jsp").forward(request, response);
             }
         } else {
-            System.out.println("It is impossible to use HTTP filter");
+            LOGGER.info("It is impossible to use HTTP filter");
         }
     }
 

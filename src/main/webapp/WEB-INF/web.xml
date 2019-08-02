@@ -19,11 +19,6 @@
         <url-pattern>*.html</url-pattern>
     </servlet-mapping>
 
-    <!--<context-param>
-        <param-name>log4jConfiguration</param-name>
-        <param-value>/WEB-INF/classes/log4j2.xml</param-value>
-    </context-param>-->
-
     <context-param>
         <description>Location to store uploaded file</description>
         <param-name>file-upload</param-name>

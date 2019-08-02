@@ -2,30 +2,123 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="Task_FinalProject_WebApp:war" />
       <artifact name="Task_FinalProject_WebApp:war exploded" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aaaf2f76-4e53-48ef-addd-78db3cc4e10b" name="Default Changelist" comment="">
+    <list default="true" id="aaaf2f76-4e53-48ef-addd-78db3cc4e10b" name="Default Changelist" comment="Removed index.html url mapping&#10;Replaced all System.out.println with Logger.info&#10;Removed Unused log4j2 config file&#10;Remove unused resource bundle fields">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/DeleteAdoptionAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/DeleteAdoptionAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/EditAdoptionAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/EditAdoptionAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindAdoptionBetweenDatesAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindAdoptionBetweenDatesAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindAdoptionByPetName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindAdoptionByPetName.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindPetAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindPetAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindPetByBirthDateAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindPetByBirthDateAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindPetByBreedAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindPetByBreedAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindPetByPetNameAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindPetByPetNameAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindPetByShelterAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindPetByShelterAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/LoginAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/LoginAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/MainAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/MainAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/MoreInfoPetAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/MoreInfoPetAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/ProfileAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/ProfileAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/UserDeleteAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/UserDeleteAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/UserEditAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/UserEditAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/admin/AddStaffAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/admin/AddStaffAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/admin/FindStaffByFirstNameAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/admin/FindStaffByFirstNameAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/admin/FindStaffByPhoneAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/admin/FindStaffByPhoneAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/guest/AdoptPetAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/guest/AdoptPetAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/guest/MyAdoptionsAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/guest/MyAdoptionsAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/staff/AddPetAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/staff/AddPetAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/staff/DeletePetAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/staff/DeletePetAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/staff/EditPetAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/staff/EditPetAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/staff/FindAdoptionAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/staff/FindAdoptionAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/AdoptionDAOImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/AdoptionDAOImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/filter/ActionURIFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/filter/ActionURIFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/servlet/PetShelterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/servlet/PetShelterServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/servlet/PetShelterServletConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/servlet/PetShelterServletConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/servletconfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/servletconfig.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/sql/#_test.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/sql/#_test.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/sql/2_create_tables.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/sql/2_create_tables.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/sql/4_fill_db.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/sql/4_fill_db.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tld/livedate.tld" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/tld/livedate.tld" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/adoptions/editadoption.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/adoptions/editadoption.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/error.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/error.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/pets/staff/addpet.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/pets/staff/addpet.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/pets/staff/editpet.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/pets/staff/editpet.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/register.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/tags/menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/tags/menu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/user/admin/addstaff.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/user/admin/addstaff.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/user/useredit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/user/useredit.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp.war" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp.war" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/Action.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/Action.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/DeleteAdoptionAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/DeleteAdoptionAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/EditAdoptionAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/EditAdoptionAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/FindAdoptionBetweenDatesAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/FindAdoptionBetweenDatesAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/FindAdoptionByPetName.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/FindAdoptionByPetName.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/FindPetAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/FindPetAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/FindPetByBirthDateAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/FindPetByBirthDateAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/FindPetByBreedAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/FindPetByBreedAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/FindPetByPetNameAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/FindPetByPetNameAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/FindPetByShelterAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/FindPetByShelterAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/MainAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/MainAction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/MoreInfoPetAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/MoreInfoPetAction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/UserDeleteAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/UserDeleteAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/admin/FindStaffAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/admin/FindStaffAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/UserEditAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/UserEditAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/admin/AddStaffAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/admin/AddStaffAction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/admin/FindStaffByFirstNameAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/admin/FindStaffByFirstNameAction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/admin/FindStaffByPhoneAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/admin/FindStaffByPhoneAction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/guest/AdoptPetAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/guest/AdoptPetAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/guest/MyAdoptionsAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/guest/MyAdoptionsAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/staff/AddPetAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/staff/AddPetAction.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/staff/DeletePetAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/staff/DeletePetAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/staff/EditPetAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/staff/EditPetAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/staff/FindAdoptionAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/staff/FindAdoptionAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/dao/mysql/AdoptionDAOImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/dao/mysql/AdoptionDAOImplementation.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/dao/pool/ConnectionPool.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/dao/pool/ConnectionPool.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/dao/pool/PetPooledConnection.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/dao/pool/PetPooledConnection.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/filter/ActionURIFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/filter/ActionURIFilter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/parser/FormParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/parser/FormParser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/parser/PetFormParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/parser/PetFormParser.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/service/PetServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/service/PetServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/servlet/PetShelterServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/servlet/PetShelterServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/servlet/PetShelterServletConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/servlet/PetShelterServletConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/servletconfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/servletconfig.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/tld/livedate.tld" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/tld/livedate.tld" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/jsp/tags/menu.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/jsp/tags/menu.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/jsp/user/useredit.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/jsp/user/useredit.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/DeleteAdoptionAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/DeleteAdoptionAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/EditAdoptionAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/EditAdoptionAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/FindAdoptionBetweenDatesAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/FindAdoptionBetweenDatesAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/FindAdoptionByPetName.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/FindAdoptionByPetName.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/FindPetAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/FindPetAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/FindPetByBirthDateAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/FindPetByBirthDateAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/FindPetByBreedAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/FindPetByBreedAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/FindPetByPetNameAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/FindPetByPetNameAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/FindPetByShelterAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/FindPetByShelterAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/MainAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/MainAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/MoreInfoPetAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/MoreInfoPetAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/UserDeleteAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/UserDeleteAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/UserEditAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/UserEditAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/admin/AddStaffAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/admin/AddStaffAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/admin/FindStaffByFirstNameAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/admin/FindStaffByFirstNameAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/admin/FindStaffByPhoneAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/admin/FindStaffByPhoneAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/guest/AdoptPetAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/guest/AdoptPetAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/guest/MyAdoptionsAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/guest/MyAdoptionsAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/staff/AddPetAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/staff/AddPetAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/staff/DeletePetAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/staff/DeletePetAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/staff/EditPetAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/staff/EditPetAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/staff/FindAdoptionAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/staff/FindAdoptionAction.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/dao/mysql/AdoptionDAOImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/dao/mysql/AdoptionDAOImplementation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/filter/ActionURIFilter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/filter/ActionURIFilter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/servlet/PetShelterServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/servlet/PetShelterServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/servlet/PetShelterServletConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/servlet/PetShelterServletConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/servletconfig.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/servletconfig.properties" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -47,18 +140,12 @@
     <expand>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="MYSQL" type="feb32156:DbDataSourceImpl" />
+        <item name="petshelter@localhost" type="feb32156:DbDataSourceImpl" />
       </path>
       <path>
         <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="MYSQL" type="feb32156:DbDataSourceImpl" />
+        <item name="petshelter@localhost" type="feb32156:DbDataSourceImpl" />
         <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="MYSQL" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="pbh2a9nwa7up8f7g: schema" type="76f4a085:MysqlImplModel$Schema" />
       </path>
     </expand>
     <select />
@@ -86,7 +173,7 @@
   <component name="ProjectId" id="1Oot9P58gnBvj0mHuMGkZhEVKqo" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="DatabaseDriversLRU" value="mysql" />
+    <property name="DatabaseDriversLRU" value="mysql&#10;mysql.8&#10;mariadb" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.Annotations" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
@@ -101,17 +188,19 @@
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Ali\Desktop\Maven\Task_FinalProject_WebApp\src\main" />
-      <recent name="C:\Users\Ali\Desktop\Maven\Task_FinalProject_WebApp\src\main\resources" />
-      <recent name="C:\Users\Ali\Desktop\Maven\Task_FinalProject_WebApp" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Ali\Desktop\Maven\Task_FinalProject_WebApp" />
       <recent name="C:\Users\Ali\Desktop\Maven\Task_FinalProject_WebApp\src\main" />
       <recent name="C:\Users\Ali\Desktop\Maven\Task_FinalProject_WebApp\src\main\java\by\training\finaltask" />
       <recent name="C:\Users\Ali\Desktop\Maven\Task_FinalProject_WebApp\src\main\java" />
       <recent name="C:\Users\Ali\Desktop\Maven\Task_FinalProject_WebApp\src\main\webapp" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ali\Desktop\Github\PetShelter\src\main\webapp" />
+      <recent name="C:\Users\Ali\Desktop\Github\PetShelter\src\main\webapp\jsp" />
+      <recent name="C:\Users\Ali\Desktop\Maven\Task_FinalProject_WebApp\src\main" />
+      <recent name="C:\Users\Ali\Desktop\Maven\Task_FinalProject_WebApp\src\main\resources" />
+      <recent name="C:\Users\Ali\Desktop\Maven\Task_FinalProject_WebApp" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -128,7 +217,6 @@
   </component>
   <component name="RunManager">
     <configuration name="Tomcat 8.5.43" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" APPLICATION_SERVER_NAME="Tomcat 8.5.43" ALTERNATIVE_JRE_ENABLED="false" nameIsGenerated="true">
-      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/index.html" />
       <option name="UPDATING_POLICY" value="restart-server" />
       <deployment>
         <artifact name="Task_FinalProject_WebApp:war exploded">
@@ -208,17 +296,12 @@
           <expand>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@15dfa485" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@277e6ef9" type="7427dc5b:ServiceModel$ServiceGroupNode" />
             </path>
             <path>
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@15dfa485" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@59b81e1c" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@15dfa485" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@5447df11" type="9fbbdea:ServiceModel$ServiceNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@277e6ef9" type="7427dc5b:ServiceModel$ServiceGroupNode" />
+              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@4c2e6fdc" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -238,7 +321,9 @@
       <updated>1564655624444</updated>
       <workItem from="1564655628268" duration="897000" />
       <workItem from="1564656824113" duration="5227000" />
-      <workItem from="1564664874618" duration="14221000" />
+      <workItem from="1564664874618" duration="14783000" />
+      <workItem from="1564744255548" duration="1954000" />
+      <workItem from="1564749722296" duration="4000000" />
     </task>
     <task id="LOCAL-00001" summary="Optimized Imports">
       <created>1564665014093</created>
@@ -380,7 +465,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564683183991</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Updated ServletConfig">
+      <created>1564683588591</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1564683588591</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -401,7 +493,9 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
           </value>
         </entry>
       </map>
@@ -412,6 +506,18 @@
     <MESSAGE value="Updated Procfile" />
     <MESSAGE value="Updated web.xml" />
     <MESSAGE value="Updated ServletConfig" />
-    <option name="LAST_COMMIT_MESSAGE" value="Updated ServletConfig" />
+    <MESSAGE value="Removed index.html url mapping&#10;Replaced all System.out.println with Logger.info&#10;Removed Unused log4j2 config file&#10;Remove unused resource bundle fields" />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed index.html url mapping&#10;Replaced all System.out.println with Logger.info&#10;Removed Unused log4j2 config file&#10;Remove unused resource bundle fields" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/training/finaltask/servlet/PetShelterServlet.java</url>
+          <line>96</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

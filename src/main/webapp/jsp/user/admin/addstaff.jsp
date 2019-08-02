@@ -10,7 +10,7 @@
     <c:url value="/js/bootstrap.bundle.min.js" var="jsURL"/>
     <c:url value="/login.html" var="loginActionURL"/>
     <c:url value="/logout.html" var="logoutActionURL"/>
-    <c:url value="/index.html" var="titleActionURL"/>
+    <c:url value="/" var="titleActionURL"/>
     <c:url value="/register.html" var="registerActionURL"/>
     <c:url value="/user/profile.html" var="profileActionURL"/>
     <fmt:setLocale value="${sessionLang}"/>

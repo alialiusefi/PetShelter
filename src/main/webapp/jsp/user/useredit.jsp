@@ -15,25 +15,22 @@
 <body>
 <!-- MenuItem -->
 <jsp:include page="/jsp/tags/menu.jsp" flush="true"/>
-
-
 <div class="container">
-    <form class="form" action=" " method="post" id="contact_form">
-        <fieldset>
+    <form method="post" id="contact_form">
             <!-- Form Name -->
             <legend>
                 <center><h2><b><fmt:message key="editProfile"/> </b></h2></center>
             </legend>
             <br>
             <c:if test="${not empty successMessage}">
-            <div class="text-center text-info">
-                <p>Attention: <fmt:message key="${successMessage}"/></p>
-            </div>
+                <div class="text-center text-info">
+                    <p>Attention: <fmt:message key="${successMessage}"/></p>
+                </div>
             </c:if>
             <c:if test="${not empty message}">
-            <div class="text-center text-warning">
-                <p>Attention: <fmt:message key="${message}"/></p>
-            </div>
+                <div class="text-center text-warning">
+                    <p>Attention: <fmt:message key="${message}"/></p>
+                </div>
             </c:if>
             <!-- Text input-->
             <div class="form-row">
@@ -85,7 +82,7 @@
                     <label class="col-md-6 control-label"><fmt:message key="password"/></label>
                     <div class="col-md-6 inputGroupContainer">
                         <div class="input-group">
-                            <input name="password"  class="form-control"
+                            <input name="password" class="form-control"
                                    type="password">
                         </div>
                     </div>
@@ -133,12 +130,9 @@
                         <fmt:message key="reset"/></button>
                 </div>
             </div>
-</div>
 
-</fieldset>
-</form>
+    </form>
 </div>
-
 <jsp:include page="/jsp/tags/footer.jsp" flush="true"/>
 
 </body>

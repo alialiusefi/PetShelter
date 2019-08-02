@@ -29,6 +29,6 @@ public class ProfileAction extends AuthorizedUserAction {
             }
             return new Forward("/login.html", true);
         }
-        return new Forward("/index.html", true);
+        return new Forward("/", true);
     }
 }
