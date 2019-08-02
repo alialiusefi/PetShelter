@@ -1,4 +1,4 @@
-package by.training.finaltask.dao.daointerface;
+package by.training.finaltask.dao;
 
 import by.training.finaltask.entity.UserInfo;
 import by.training.finaltask.exception.PersistentException;
@@ -18,12 +18,5 @@ public interface UserInfoDAO extends DAO<UserInfo> {
     List<UserInfo> getAllStaff(int offset, int rowcount) throws PersistentException;
 
     List<UserInfo> getAllStaffByPhone(long phone, int offset, int rowcount) throws PersistentException;
-
-/*
-    List<UserInfo> getAllByAdoptionUserID(int userID, int offset, int rowcount) throws PersistentException;
-
-    int getCountByAdoptionUserID(int userID) throws PersistentException;
-*/
-
 
 }

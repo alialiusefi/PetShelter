@@ -1,6 +1,6 @@
 package by.training.finaltask.service;
 
-import by.training.finaltask.dao.daointerface.PetDAO;
+import by.training.finaltask.dao.PetDAO;
 import by.training.finaltask.dao.mysql.DAOEnum;
 import by.training.finaltask.entity.Pet;
 import by.training.finaltask.entity.PetStatus;

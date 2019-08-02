@@ -1,4 +1,4 @@
-package by.training.finaltask.dao.daointerface;
+package by.training.finaltask.dao;
 
 import by.training.finaltask.entity.Breed;
 import by.training.finaltask.exception.PersistentException;

@@ -1,6 +1,6 @@
 package by.training.finaltask.service;
 
-import by.training.finaltask.dao.daointerface.ShelterDAO;
+import by.training.finaltask.dao.ShelterDAO;
 import by.training.finaltask.dao.mysql.DAOEnum;
 import by.training.finaltask.entity.Shelter;
 import by.training.finaltask.exception.PersistentException;

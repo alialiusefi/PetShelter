@@ -1,6 +1,6 @@
 package by.training.finaltask.dao.mysql;
 
-import by.training.finaltask.dao.daointerface.UserDAO;
+import by.training.finaltask.dao.UserDAO;
 import by.training.finaltask.entity.Role;
 import by.training.finaltask.entity.User;
 import by.training.finaltask.exception.PersistentException;

@@ -1,6 +1,6 @@
 package by.training.finaltask.service;
 
-import by.training.finaltask.dao.daointerface.BreedDAO;
+import by.training.finaltask.dao.BreedDAO;
 import by.training.finaltask.dao.mysql.DAOEnum;
 import by.training.finaltask.entity.Breed;
 import by.training.finaltask.exception.PersistentException;

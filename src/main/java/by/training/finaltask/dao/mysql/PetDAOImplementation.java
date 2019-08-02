@@ -1,6 +1,6 @@
 package by.training.finaltask.dao.mysql;
 
-import by.training.finaltask.dao.daointerface.PetDAO;
+import by.training.finaltask.dao.PetDAO;
 import by.training.finaltask.entity.Pet;
 import by.training.finaltask.entity.PetStatus;
 import by.training.finaltask.exception.PersistentException;

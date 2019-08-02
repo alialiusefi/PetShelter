@@ -1,7 +1,7 @@
 package by.training.finaltask.service;
 
-import by.training.finaltask.dao.daointerface.AdoptionDAO;
-import by.training.finaltask.dao.daointerface.PetDAO;
+import by.training.finaltask.dao.AdoptionDAO;
+import by.training.finaltask.dao.PetDAO;
 import by.training.finaltask.dao.mysql.DAOEnum;
 import by.training.finaltask.entity.Adoption;
 import by.training.finaltask.entity.Pet;

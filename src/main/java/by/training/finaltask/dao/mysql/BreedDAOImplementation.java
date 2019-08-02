@@ -1,6 +1,6 @@
 package by.training.finaltask.dao.mysql;
 
-import by.training.finaltask.dao.daointerface.BreedDAO;
+import by.training.finaltask.dao.BreedDAO;
 import by.training.finaltask.entity.Breed;
 import by.training.finaltask.exception.PersistentException;
 import org.apache.logging.log4j.LogManager;

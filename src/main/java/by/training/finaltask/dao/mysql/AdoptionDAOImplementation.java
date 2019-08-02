@@ -1,7 +1,7 @@
 package by.training.finaltask.dao.mysql;
 
 
-import by.training.finaltask.dao.daointerface.AdoptionDAO;
+import by.training.finaltask.dao.AdoptionDAO;
 import by.training.finaltask.entity.Adoption;
 import by.training.finaltask.exception.PersistentException;
 import org.apache.logging.log4j.LogManager;
@@ -13,23 +13,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.ResourceBundle;
 
-/*
-
-    TODO: Correctly use try with resources
-public List<User> getUser(int userId) {
-    try (Connection con = DriverManager.getConnection(myConnectionURL);
-         PreparedStatement ps = createPreparedStatement(con, userId);
-         ResultSet rs = ps.executeQuery()) {
-
-         // process the resultset here, all resources will be cleaned up
-
-    } catch (SQLException e) {
-        e.printStackTrace();
-    }
-}
-
-
- */
 public final class AdoptionDAOImplementation extends BaseDAO implements AdoptionDAO {
 
     private Logger LOGGER = LogManager.getLogger(AdoptionDAOImplementation.class);
@@ -366,21 +349,6 @@ public final class AdoptionDAOImplementation extends BaseDAO implements Adoption
     }
 
     @Override
-    public boolean delete(Integer petID) throws PersistentException {
-        try (PreparedStatement preparedStatement = connection.prepareStatement(
-                resourceBundle.getString("deleteAdoptionDAO"))) {
-            preparedStatement.setInt(1, petID);
-            preparedStatement.executeUpdate();
-            return true;
-        } catch (SQLException e) {
-            LOGGER.warn(e.getMessage(), e);
-            throw new PersistentException(e.getMessage(), e);
-        } finally {
-            LOGGER.debug("AdoptionDAO Record Deleted!");
-        }
-    }
-
-    @Override
     public int add(Adoption element) throws PersistentException {
         try (PreparedStatement preparedStatement = connection.prepareStatement(
                 resourceBundle.getString("addAdoptionDAO"), PreparedStatement.RETURN_GENERATED_KEYS)) {
@@ -436,31 +404,21 @@ public final class AdoptionDAOImplementation extends BaseDAO implements Adoption
         }
     }
 
-    //todo: ask how to delete adoptions records using an adoption!
-    // delete IS STILL NOT DONE
+
     @Override
-    public boolean delete(Adoption element) throws PersistentException {
-        try (PreparedStatement preparedStatement = connection.prepareStatement(resourceBundle.getString("deleteByElementAdoptionDAO"))) {
-            preparedStatement.setInt(1, element.getPetID());
-            Date sqlDateAdoptionStart = new Date(
-                    element.getAdoptionStart().getTimeInMillis());
-            preparedStatement.setDate(2, sqlDateAdoptionStart);
-            Date sqlDateAdoptionend = null;
-            if (element.getAdoptionEnd() != null) {
-                sqlDateAdoptionend = new Date(
-                        element.getAdoptionEnd().getTimeInMillis());
-                preparedStatement.setDate(3, sqlDateAdoptionend);
-            } else {
-                preparedStatement.setNull(3, Types.DATE);
-            }
-            preparedStatement.setInt(4, element.getUserID());
+    public boolean delete(Adoption adoption) throws PersistentException {
+        return delete(adoption.getPetID());
+    }
+
+    public boolean delete(int adoptionID) throws PersistentException {
+        try (PreparedStatement preparedStatement = connection.prepareStatement(
+                resourceBundle.getString("deleteAdoptionDAO"))) {
+            preparedStatement.setInt(1, adoptionID);
             preparedStatement.executeUpdate();
             return true;
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
             throw new PersistentException(e.getMessage(), e);
-        } finally {
-            LOGGER.debug("User Deleted!");
         }
     }
 

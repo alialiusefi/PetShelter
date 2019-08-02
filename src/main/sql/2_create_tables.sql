@@ -14,7 +14,8 @@ create table if not exists breeds
   name        nvarchar(32) not null,
   description nvarchar(255),
   origin      nvarchar(48) not null,
-  PRIMARY KEY (id)
+  PRIMARY KEY (id),
+  index(id,name)
 ) default charset utf8;
 
 create table if not exists shelters
@@ -22,7 +23,8 @@ create table if not exists shelters
   id       integer      not null unique auto_increment,
   name     nvarchar(32) not null unique,
   location nvarchar(32) not null,
-  PRIMARY KEY (id)
+  PRIMARY KEY (id),
+  index (id,name)
 ) default charset utf8;
 
 create table if not exists pets
