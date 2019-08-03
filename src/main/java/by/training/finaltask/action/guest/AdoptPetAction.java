@@ -58,7 +58,7 @@ public class AdoptPetAction extends AuthorizedUserAction {
                     Adoption adoption = formParser.parse(this,adoptionParameters);
                     AdoptionService adoptionService = (AdoptionService)
                             new ServiceFactoryImpl().createService(DAOEnum.ADOPTION);
-                    adoptionService.add(adoption);
+                    adoptionService.adopt(adoption);
                     Forward forward = new Forward("/adoptions/guest/myadoptions.html",true);
                     forward.getAttributes().put("successMessage","petAdoptedSuccessfully");
                     return forward;

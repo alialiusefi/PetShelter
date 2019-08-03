@@ -20,7 +20,6 @@ public class ShelterDAOImplementation extends BaseDAO implements ShelterDAO {
 
     public ShelterDAOImplementation(Connection aliveConnection) {
         super(aliveConnection);
-        this.resourceBundle = ResourceBundle.getBundle(PROPERTY_PATH);
     }
 
     @Override

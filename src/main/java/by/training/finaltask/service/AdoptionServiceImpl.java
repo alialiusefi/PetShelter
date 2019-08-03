@@ -241,7 +241,7 @@ public class AdoptionServiceImpl extends ServiceImpl implements AdoptionService 
     }
 
     @Override
-    public Integer add(Adoption adoption) throws PersistentException, InvalidFormDataException {
+    public Integer adopt(Adoption adoption) throws PersistentException, InvalidFormDataException {
         try {
             connection.setAutoCommit(false);
             AdoptionDAO dao = (AdoptionDAO) createDao(DAOEnum.ADOPTION);
@@ -259,7 +259,7 @@ public class AdoptionServiceImpl extends ServiceImpl implements AdoptionService 
     }
 
     @Override
-    public void update(Adoption adoption) throws PersistentException,InvalidFormDataException {
+    public void updateAdoption(Adoption adoption) throws PersistentException,InvalidFormDataException {
         try {
             connection.setAutoCommit(false);
             AdoptionDAO dao = (AdoptionDAO) createDao(DAOEnum.ADOPTION);
@@ -276,7 +276,7 @@ public class AdoptionServiceImpl extends ServiceImpl implements AdoptionService 
     }
 
     @Override
-    public void delete(int adoptionID) throws InvalidFormDataException, PersistentException {
+    public void deleteAdoption(int adoptionID) throws InvalidFormDataException, PersistentException {
         try {
             AdoptionDAO dao = (AdoptionDAO) createDao(DAOEnum.ADOPTION);
             isExpired(adoptionID);

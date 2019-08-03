@@ -20,7 +20,6 @@ public class BreedDAOImplementation extends BaseDAO implements BreedDAO {
 
     public BreedDAOImplementation(Connection connection) {
         super(connection);
-        this.resourceBundle = ResourceBundle.getBundle(PROPERTY_PATH);
     }
 
     public List<Breed> getAll() throws PersistentException {

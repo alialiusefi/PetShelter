@@ -14,7 +14,6 @@ import java.util.List;
 
 public class PetServiceImpl extends ServiceImpl implements PetService {
 
-
     public PetServiceImpl(Connection connection)
     {
         super(connection);

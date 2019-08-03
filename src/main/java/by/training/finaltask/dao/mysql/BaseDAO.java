@@ -12,6 +12,7 @@ abstract public class BaseDAO {
     protected BaseDAO(Connection connection)
     {
         this.connection = connection;
+        this.resourceBundle = ResourceBundle.getBundle(PROPERTY_PATH);
     }
     protected Connection getConnection() {
         return this.connection;

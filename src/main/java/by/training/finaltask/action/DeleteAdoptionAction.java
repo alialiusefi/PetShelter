@@ -36,7 +36,7 @@ public class DeleteAdoptionAction extends AuthorizedUserAction {
                 AdoptionService adoptionService = (AdoptionService)
                         factory.createService(DAOEnum.ADOPTION);
                 try {
-                    adoptionService.delete(adoptionID);
+                    adoptionService.deleteAdoption(adoptionID);
                     Forward forward = new Forward(request.getHeader("referer"));
                     forward.getAttributes().put("message","adoptionDeleted");
                     LOGGER.info(String.format("%s deleted adoption %d",authuser.getUsername(),adoptionID));

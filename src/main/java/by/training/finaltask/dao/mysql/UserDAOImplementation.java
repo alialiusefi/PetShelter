@@ -21,7 +21,6 @@ public final class UserDAOImplementation extends BaseDAO implements UserDAO {
 
     public UserDAOImplementation(Connection connection) {
         super(connection);
-        this.resourceBundle = ResourceBundle.getBundle(PROPERTY_PATH);
     }
 
     @Override

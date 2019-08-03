@@ -18,7 +18,6 @@ public final class UserInfoDAOImplementation extends BaseDAO implements UserInfo
 
     public UserInfoDAOImplementation(Connection connection) {
         super(connection);
-        this.resourceBundle = ResourceBundle.getBundle(PROPERTY_PATH);
     }
 
     @Override
@@ -52,8 +51,6 @@ public final class UserInfoDAOImplementation extends BaseDAO implements UserInfo
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
             throw new PersistentException(e.getMessage(), e);
-        } finally {
-            LOGGER.debug("getAllUserDAO Query Fulfilled!");
         }
     }
 
@@ -81,7 +78,7 @@ public final class UserInfoDAOImplementation extends BaseDAO implements UserInfo
         List<UserInfo> userInfoList = new LinkedList<>();
         try (PreparedStatement preparedStatement = connection.prepareStatement(
                 resourceBundle.getString("getAllStaffInfoByPhoneDAO"))) {
-            String phoneStr = "%" + phone + "%";
+            String phoneStr = "%" + phone;
             preparedStatement.setNString(1, phoneStr);
             preparedStatement.setInt(2, offset);
             preparedStatement.setInt(3, rowcount);
@@ -97,41 +94,6 @@ public final class UserInfoDAOImplementation extends BaseDAO implements UserInfo
         }
     }
 
-    /*@Override
-    public List<UserInfo> getAllByAdoptionUserID(int userID, int offset, int rowcount) throws PersistentException {
-        List<UserInfo> userInfoList = new LinkedList<>();
-        try (PreparedStatement preparedStatement = connection.prepareStatement(
-                resourceBundle.getString("getAllByAdoptionUserIDDAO"))) {
-            preparedStatement.setInt(1, userID);
-            preparedStatement.setInt(2, offset);
-            preparedStatement.setInt(3, rowcount);
-            try (ResultSet resultSet = preparedStatement.executeQuery()) {
-                while (resultSet.next()) {
-                    userInfoList.add(getUserInfo(resultSet));
-                }
-            }
-            return userInfoList;
-        } catch (SQLException e) {
-            LOGGER.warn(e.getMessage(), e);
-            throw new PersistentException(e.getMessage(), e);
-        }
-    }
-
-    @Override
-    public int getCountByAdoptionUserID(int userID) throws PersistentException {
-        try (PreparedStatement preparedStatement = connection.prepareStatement(
-                resourceBundle.getString("getCountByAdoptionUserIDDAO"))) {
-            preparedStatement.setInt(1, userID);
-            try (ResultSet resultSet = preparedStatement.executeQuery()) {
-                resultSet.next();
-                return resultSet.getInt(1);
-            }
-        } catch (SQLException e) {
-            LOGGER.warn(e.getMessage(), e);
-            throw new PersistentException(e.getMessage(), e);
-        }
-    }
-*/
     @Override
     public List<UserInfo> getAllStaffByFirstName(String firstname, int offset, int rowcount) throws PersistentException {
         List<UserInfo> userInfoList = new LinkedList<>();
@@ -162,8 +124,6 @@ public final class UserInfoDAOImplementation extends BaseDAO implements UserInfo
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
             throw new PersistentException(e.getMessage(), e);
-        } finally {
-            LOGGER.debug("UserInfo Deleted!");
         }
     }
 
@@ -189,7 +149,7 @@ public final class UserInfoDAOImplementation extends BaseDAO implements UserInfo
 
     @Override
     public UserInfo get() throws PersistentException {
-        return null;
+        return get(1);
     }
 
     @Override

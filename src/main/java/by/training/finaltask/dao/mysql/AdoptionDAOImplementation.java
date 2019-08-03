@@ -17,10 +17,8 @@ public final class AdoptionDAOImplementation extends BaseDAO implements Adoption
 
     private Logger LOGGER = LogManager.getLogger(AdoptionDAOImplementation.class);
 
-
     public AdoptionDAOImplementation(Connection connection) {
         super(connection);
-        this.resourceBundle = ResourceBundle.getBundle(PROPERTY_PATH);
     }
 
     @Override

@@ -17,7 +17,6 @@ public final class PetDAOImplementation extends BaseDAO implements PetDAO {
 
     public PetDAOImplementation(Connection connection) {
         super(connection);
-        this.resourceBundle = ResourceBundle.getBundle(PROPERTY_PATH);
     }
 
     @Override

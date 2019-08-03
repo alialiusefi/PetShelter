@@ -124,7 +124,8 @@ public class UserInfoServiceImpl extends ServiceImpl implements UserInfoService 
     }
 
     @Override
-    public List<UserInfo> findAllStaffByPhone(long phone, int offset, int rowcount) throws PersistentException {
+    public List<UserInfo> findAllStaffByPhone(long phone, int offset, int rowcount)
+            throws PersistentException {
         try {
             connection.setAutoCommit(false);
             UserInfoDAO dao = (UserInfoDAO) createDao(DAOEnum.USERINFO);

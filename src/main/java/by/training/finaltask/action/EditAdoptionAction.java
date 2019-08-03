@@ -58,7 +58,7 @@ public class EditAdoptionAction extends AuthorizedUserAction {
                     }
                     Adoption newAdoption = formParser.parse(this, adoptionParam);
                     newAdoption.setId(adoptionID);
-                    service.update(newAdoption);
+                    service.updateAdoption(newAdoption);
                     forward.getAttributes().put(MESSAGE,"recordUpdatedSuccessfully");
                     return forward;
                 } catch (InvalidFormDataException e) {

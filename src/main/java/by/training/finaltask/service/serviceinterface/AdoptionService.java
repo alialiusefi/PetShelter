@@ -43,10 +43,10 @@ public interface AdoptionService extends Service {
 
     int getAllCount() throws PersistentException;
 
-    Integer add(Adoption adoption) throws PersistentException, InvalidFormDataException;
+    Integer adopt(Adoption adoption) throws PersistentException, InvalidFormDataException;
 
-    void update(Adoption adoption) throws PersistentException, InvalidFormDataException;
+    void updateAdoption(Adoption adoption) throws PersistentException, InvalidFormDataException;
 
-    void delete(int adoptionID) throws PersistentException, InvalidFormDataException;
+    void deleteAdoption(int adoptionID) throws PersistentException, InvalidFormDataException;
 
 }

@@ -40,7 +40,7 @@ public class UserInfoFormParser extends FormParser<UserInfo> {
                         try {
                             date = dateFormat.parse(dateofbirth);
                         } catch (ParseException e) {
-                            date = new Date(2000, 1, 1);
+                            throw new InvalidFormDataException("incorrectBirthDateFormat");
                         }
                         GregorianCalendar dateofbirthgreg = new GregorianCalendar();
                         dateofbirthgreg.setTime(date);
