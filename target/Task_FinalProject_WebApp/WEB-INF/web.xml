@@ -19,14 +19,6 @@
         <url-pattern>*.html</url-pattern>
     </servlet-mapping>
 
-    <context-param>
-        <description>Location to store uploaded file</description>
-        <param-name>file-upload</param-name>
-        <param-value>
-            C:\SERVERS\apache-tomcat\bin\petpics
-        </param-value>
-    </context-param>
-
     <error-page>
         <error-code>404</error-code>
         <location>/jsp/error.jsp</location>
@@ -59,6 +51,10 @@
         <filter-name>ActionURLFilter</filter-name>
         <url-pattern>*.html</url-pattern>
     </filter-mapping>
-
-
+    <jsp-config>
+        <taglib>
+            <taglib-uri>/tags/livedate</taglib-uri>
+            <taglib-location>/WEB-INF/livedate.tld</taglib-location>
+        </taglib>
+    </jsp-config>
 </web-app>

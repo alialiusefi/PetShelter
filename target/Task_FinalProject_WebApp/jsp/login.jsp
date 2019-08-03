@@ -2,6 +2,7 @@
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
+
 <html>
 <head>
     <c:url value="/css/bootstrap.min.css" var="cssURL"/>
@@ -14,7 +15,6 @@
 </head>
 <body>
 <jsp:include page="/jsp/tags/menu.jsp" flush="true"/>
-
 <form action="${loginActionURL}" method="post">
     <legend><center><h2><b><fmt:message key="login"/> </b></h2></center></legend><br>
     <div class="form-group" >
