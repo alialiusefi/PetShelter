@@ -1,9 +1,7 @@
 add README in final project
-add index in sql
-add custom tag
 code convention
 service test
-fix logger
+fix logger -- maybe a config file needed?
 ====================
 
 fix updatePet function

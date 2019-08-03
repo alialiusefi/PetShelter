@@ -339,7 +339,6 @@ public class AdoptionServiceImpl extends ServiceImpl implements AdoptionService 
 
     private void updatePetToAdopted(Adoption adoption) throws PersistentException {
         Calendar calendar = Calendar.getInstance();
-        /*TODO; test this*/
         if (calendar.compareTo(adoption.getAdoptionStart()) == 0) {
             PetDAO dao = (PetDAO) createDao(DAOEnum.PET);
             Pet pet = dao.get(adoption.getPetID());

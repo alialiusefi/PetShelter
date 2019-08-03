@@ -29,7 +29,6 @@ public class ActionURIFilter implements Filter {
 
     static {
         actions.put("/", MainAction.class);
-        //actions.put("/index", MainAction.class);
         actions.put("/login", LoginAction.class);
         actions.put("/logout", LogoutAction.class);
         actions.put("/register", RegisterAction.class);

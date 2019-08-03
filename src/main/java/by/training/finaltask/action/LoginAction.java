@@ -29,8 +29,7 @@ public class LoginAction extends Action {
                     session.setAttribute("username", user.getUsername());
                     logger.info(String.format("user \"%s\" is logged in from %s (%s:%s)", login, request.getRemoteAddr(), request.getRemoteHost(), request.getRemotePort()));
                     request.setAttribute("message", "loggedInSuccessfully");
-
-                    return new Forward("/");
+                    return new Forward("/user/profile.html");
                 } else {
                     request.setAttribute("message", "couldntFindPassword");
                     logger.info(String.format("user \"%s\" unsuccessfully tried to log in from %s (%s:%s)",
