@@ -2,15 +2,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 
-
 <html>
-
 <head>
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
 
   <c:url value="/" var="indexActionURL"/>
   <c:url value="/login.html" var="loginActionURL"/>
@@ -20,7 +16,6 @@
   <fmt:setLocale value="${sessionLang}"/>
   <fmt:setBundle basename="by.training.finaltask.resource.localization"/>
   <title><fmt:message key="title"/></title>
-  <!-- Bootstrap core CSS -->
   <link href="/css/bootstrap.min.css" rel="stylesheet">
 </head>
 
@@ -29,13 +24,11 @@
 <!-- MenuItem -->
 <jsp:include page="/jsp/tags/menu.jsp" flush="true"/>
 <br>
-
 <c:if test="${not empty message}">
   <center>
     <label class="text"><fmt:message key="${message}"/></label>
   </center>
 </c:if>
-<!-- Page Content -->
 <center>
   <img src="img/title1.jpg" height="600" width="1000" class="img-fluid" alt="Title Image">
 </center>

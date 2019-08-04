@@ -48,12 +48,10 @@ public class BreedDAOImplementation extends BaseDAO implements BreedDAO {
                 resourceBundle.getString("getBreedByID"))) {
                 preparedStatement.setInt(1,ID);
             try (ResultSet resultset = preparedStatement.executeQuery()) {
-                resultset.next();
-                Integer id = resultset.getInt("id");
-                String breedName = resultset.getNString("name");
-                String description = resultset.getNString("description");
-                String origin = resultset.getNString("origin");
-                return new Breed(id, breedName, description, origin);
+                if(resultset.next()){
+                    return getBreed(resultset);
+                }
+                return null;
             }
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
@@ -79,5 +77,14 @@ public class BreedDAOImplementation extends BaseDAO implements BreedDAO {
     @Override
     public boolean delete(Breed element) throws PersistentException {
         return false;
+    }
+
+    private Breed getBreed(ResultSet resultSet) throws SQLException
+    {
+        Integer id = resultSet.getInt("id");
+        String breedName = resultSet.getNString("name");
+        String description = resultSet.getNString("description");
+        String origin = resultSet.getNString("origin");
+        return new Breed(id, breedName, description, origin);
     }
 }

@@ -408,6 +408,7 @@ public final class AdoptionDAOImplementation extends BaseDAO implements Adoption
         return delete(adoption.getPetID());
     }
 
+    @Override
     public boolean delete(int adoptionID) throws PersistentException {
         try (PreparedStatement preparedStatement = connection.prepareStatement(
                 resourceBundle.getString("deleteAdoptionDAO"))) {

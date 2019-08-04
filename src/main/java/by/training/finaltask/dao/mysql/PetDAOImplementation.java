@@ -424,7 +424,6 @@ public final class PetDAOImplementation extends BaseDAO implements PetDAO {
             }
             buffer.insert(idxOfLimit - 1, " where pets.status = ? ");
         }
-
         return buffer.toString();
     }
 

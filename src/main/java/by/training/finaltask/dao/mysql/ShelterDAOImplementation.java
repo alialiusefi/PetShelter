@@ -29,7 +29,7 @@ public class ShelterDAOImplementation extends BaseDAO implements ShelterDAO {
             List<Shelter> shelters = new LinkedList<>();
             try (ResultSet resultset = preparedStatement.executeQuery()) {
                 while (resultset.next()) {
-                    Integer id = resultset.getInt("id");
+                    int id = resultset.getInt("id");
                     String name = resultset.getNString("name");
                     String location = resultset.getNString("location");
                     shelters.add(new Shelter(id, name, location));
@@ -48,12 +48,11 @@ public class ShelterDAOImplementation extends BaseDAO implements ShelterDAO {
                 resourceBundle.getString("getShelterByID"))) {
             preparedStatement.setInt(1, id);
             try (ResultSet resultset = preparedStatement.executeQuery()) {
-                resultset.next();
-                int shelterID = resultset.getInt("id");
-                String name = resultset.getNString("name");
-                String location = resultset.getNString("location");
-                return new Shelter(shelterID, name, location);
-
+                if(resultset.next())
+                {
+                    return getShelter(resultset);
+                }
+                return null;
             }
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
@@ -79,5 +78,13 @@ public class ShelterDAOImplementation extends BaseDAO implements ShelterDAO {
     @Override
     public boolean delete(Shelter element) throws PersistentException {
         return false;
+    }
+
+    private Shelter getShelter(ResultSet resultSet) throws SQLException
+    {
+        int shelterID = resultSet.getInt("id");
+        String name = resultSet.getNString("name");
+        String location = resultSet.getNString("location");
+        return new Shelter(shelterID, name, location);
     }
 }
