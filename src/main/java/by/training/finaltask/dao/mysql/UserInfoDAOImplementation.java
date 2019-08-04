@@ -10,7 +10,6 @@ import java.sql.*;
 import java.util.GregorianCalendar;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.ResourceBundle;
 
 public final class UserInfoDAOImplementation extends BaseDAO implements UserInfoDAO {
 
@@ -131,14 +130,7 @@ public final class UserInfoDAOImplementation extends BaseDAO implements UserInfo
     public int add(UserInfo element) throws PersistentException {
         try (PreparedStatement preparedStatement = connection.prepareStatement(
                 resourceBundle.getString("addUserInfoDAO"), PreparedStatement.RETURN_GENERATED_KEYS)) {
-            preparedStatement.setInt(1,element.getId());
-            preparedStatement.setNString(2,element.getEmail());
-            preparedStatement.setNString(3,element.getFirstName());
-            preparedStatement.setNString(4,element.getLastName());
-            Date sqlDate = new Date(element.getDateOfBirth().getTimeInMillis());
-            preparedStatement.setDate(5,sqlDate);
-            preparedStatement.setNString(6,element.getAddress());
-            preparedStatement.setLong(7,element.getPhone());
+            setPreparedStatement(element,preparedStatement);
             int rows = preparedStatement.executeUpdate();
             return rows;
         } catch (SQLException e) {
@@ -156,15 +148,8 @@ public final class UserInfoDAOImplementation extends BaseDAO implements UserInfo
     public boolean update(UserInfo element) throws PersistentException {
         try (PreparedStatement preparedStatement = connection.prepareStatement(
                 resourceBundle.getString("updateUserInfoDAO"))) {
-            preparedStatement.setInt(1,element.getId());
-            preparedStatement.setNString(2,element.getEmail());
-            preparedStatement.setNString(3,element.getFirstName());
-            preparedStatement.setNString(4,element.getLastName());
-            Date sqlDate = new Date(element.getDateOfBirth().getTimeInMillis());
-            preparedStatement.setDate(5,sqlDate);
-            preparedStatement.setNString(6,element.getAddress());
-            preparedStatement.setLong(7,element.getPhone());
-            preparedStatement.setInt(8,element.getId());
+
+            preparedStatement.setInt(8, element.getId());
             preparedStatement.executeUpdate();
             return true;
         } catch (SQLException e) {
@@ -177,11 +162,20 @@ public final class UserInfoDAOImplementation extends BaseDAO implements UserInfo
 
     @Override
     public boolean delete(UserInfo element) throws PersistentException {
-        return false;
+        try (PreparedStatement preparedStatement = connection.prepareStatement(
+                resourceBundle.getString("deleteUserInfoDAO")
+        )) {
+            preparedStatement.setInt(1, element.getId());
+            preparedStatement.executeUpdate();
+            return true;
+        } catch (SQLException e) {
+            LOGGER.warn(e.getMessage(), e);
+            throw new PersistentException("Couldn't delete user!\n" +
+                    e.getMessage(), e);
+        }
     }
 
-    private UserInfo getUserInfo(ResultSet resultSet) throws SQLException
-    {
+    private UserInfo getUserInfo(ResultSet resultSet) throws SQLException {
         GregorianCalendar gregCal = new GregorianCalendar();
         gregCal.setTime(resultSet.getDate("dateofbirth"));
         return new UserInfo(
@@ -193,5 +187,17 @@ public final class UserInfoDAOImplementation extends BaseDAO implements UserInfo
                 resultSet.getNString("address"),
                 resultSet.getLong("phone")
         );
+    }
+    private void setPreparedStatement(UserInfo element, PreparedStatement preparedStatement)
+            throws SQLException
+    {
+        preparedStatement.setInt(1, element.getId());
+        preparedStatement.setNString(2, element.getEmail());
+        preparedStatement.setNString(3, element.getFirstName());
+        preparedStatement.setNString(4, element.getLastName());
+        Date sqlDate = new Date(element.getDateOfBirth().getTimeInMillis());
+        preparedStatement.setDate(5, sqlDate);
+        preparedStatement.setNString(6, element.getAddress());
+        preparedStatement.setLong(7, element.getPhone());
     }
 }

@@ -31,9 +31,7 @@ public class UserDeleteAction extends AuthorizedUserAction {
                 Integer userId = Integer.parseInt(
                             request.getParameter("userToDelete"));
                 UserService userService = (UserService) factory.createService(DAOEnum.USER);
-                UserInfoService userInfoService = (UserInfoService) factory.createService(DAOEnum.USERINFO);
                 userService.delete(userId);
-                userInfoService.delete(userId);
                 if (user.getId() == userId) {
                     return new Forward("/logout.html", true);
                 }
