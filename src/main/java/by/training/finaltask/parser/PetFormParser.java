@@ -25,7 +25,7 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
 
-public class PetFormParser extends FormParser<Pet>{
+public final class PetFormParser extends FormParser<Pet> {
 
     private static final int PICTURE_PATH = 0;
     private static final int PET_NAME = 1;

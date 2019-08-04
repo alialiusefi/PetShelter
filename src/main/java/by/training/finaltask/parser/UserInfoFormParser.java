@@ -12,7 +12,7 @@ import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
 
-public class UserInfoFormParser extends FormParser<UserInfo> {
+public final class UserInfoFormParser extends FormParser<UserInfo> {
 
     private static final int EMAIL = 0;
     private static final int FIRSTNAME = 1;

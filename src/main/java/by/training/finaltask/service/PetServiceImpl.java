@@ -12,7 +12,7 @@ import java.sql.SQLException;
 import java.util.GregorianCalendar;
 import java.util.List;
 
-public class PetServiceImpl extends ServiceImpl implements PetService {
+public final class PetServiceImpl extends ServiceImpl implements PetService {
 
     public PetServiceImpl(Connection connection)
     {

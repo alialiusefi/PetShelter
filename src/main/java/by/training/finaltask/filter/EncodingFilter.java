@@ -3,7 +3,8 @@ package by.training.finaltask.filter;
 import javax.servlet.*;
 import java.io.IOException;
 
-public class EncodingFilter implements Filter {
+public final class EncodingFilter implements Filter {
+
 	@Override
 	public void init(FilterConfig filterConfig) throws ServletException {}
 

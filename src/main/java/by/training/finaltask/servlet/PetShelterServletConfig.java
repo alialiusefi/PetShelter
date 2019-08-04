@@ -1,7 +1,6 @@
 package by.training.finaltask.servlet;
 
 import java.util.ResourceBundle;
-import java.util.logging.Level;
 
 public final class PetShelterServletConfig {
 
@@ -12,6 +11,7 @@ public final class PetShelterServletConfig {
     private int dbPoolStartSize;
     private int dbPoolMaxSize;
     private int dbPoolCheckTimeOut;
+
     public PetShelterServletConfig()
     {
         ResourceBundle resourceBundle = ResourceBundle.getBundle(

@@ -1,16 +1,13 @@
 package by.training.finaltask.service;
 
 import by.training.finaltask.dao.pool.PetPooledConnection;
-import by.training.finaltask.entity.Adoption;
 import by.training.finaltask.entity.Role;
 import by.training.finaltask.entity.User;
 import by.training.finaltask.exception.PersistentException;
-import by.training.finaltask.service.serviceinterface.AdoptionService;
 import by.training.finaltask.service.serviceinterface.UserService;
 import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
 import java.sql.DriverManager;
@@ -18,8 +15,6 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.ResourceBundle;
-
-import static org.testng.Assert.*;
 
 public class UserServiceImplTest {
 

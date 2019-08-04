@@ -10,7 +10,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 
-public class UserInfoServiceImpl extends ServiceImpl implements UserInfoService {
+public final class UserInfoServiceImpl extends ServiceImpl implements UserInfoService {
 
     public UserInfoServiceImpl(Connection connection) {
         super(connection);

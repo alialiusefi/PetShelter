@@ -21,7 +21,7 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
-public class ActionURIFilter implements Filter {
+public final class ActionURIFilter implements Filter {
 
     private static final Logger LOGGER = LogManager.getLogger(ActionURIFilter.class);
 

@@ -16,12 +16,13 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
 
-public class AdoptionServiceImpl extends ServiceImpl implements AdoptionService {
+public final class AdoptionServiceImpl extends ServiceImpl implements AdoptionService {
 
     public AdoptionServiceImpl(Connection aliveConnection) {
         super(aliveConnection);
     }
 
+    private final static String REVERSEDATE = "adoptionDatesStartMoreThanEnd";
     @Override
     public Adoption get(int adoptionID) throws PersistentException {
         try {
@@ -56,7 +57,7 @@ public class AdoptionServiceImpl extends ServiceImpl implements AdoptionService 
     public List<Adoption> getAllBetweenDates(GregorianCalendar start, GregorianCalendar end, int offset, int rowcount) throws PersistentException, InvalidFormDataException {
         if(start.compareTo(end) > 0)
         {
-            throw new InvalidFormDataException("adoptionDatesStartMoreThanEnd");
+            throw new InvalidFormDataException();
         }
         try {
             connection.setAutoCommit(false);
@@ -169,7 +170,7 @@ public class AdoptionServiceImpl extends ServiceImpl implements AdoptionService 
     public List<Adoption> getAllBetweenDatesCurrentUser(int userID, GregorianCalendar start, GregorianCalendar end, int offset, int rowcount) throws PersistentException, InvalidFormDataException {
         if(start.compareTo(end) > 0)
         {
-            throw new InvalidFormDataException("adoptionDatesStartMoreThanEnd");
+            throw new InvalidFormDataException(REVERSEDATE);
         }
         try {
             connection.setAutoCommit(false);
@@ -205,7 +206,7 @@ public class AdoptionServiceImpl extends ServiceImpl implements AdoptionService 
             throws PersistentException, InvalidFormDataException {
         if(start.compareTo(end) > 0)
         {
-            throw new InvalidFormDataException("adoptionDatesStartMoreThanEnd");
+            throw new InvalidFormDataException(REVERSEDATE);
         }
         try {
             connection.setAutoCommit(false);
@@ -225,7 +226,7 @@ public class AdoptionServiceImpl extends ServiceImpl implements AdoptionService 
             throws PersistentException, InvalidFormDataException {
         if(start.compareTo(end) > 0)
         {
-            throw new InvalidFormDataException("adoptionDatesStartMoreThanEnd");
+            throw new InvalidFormDataException(REVERSEDATE);
         }
         try {
             connection.setAutoCommit(false);
@@ -303,7 +304,6 @@ public class AdoptionServiceImpl extends ServiceImpl implements AdoptionService 
         }
     }
 
-    /*TODO: Bug: Exclude old adoption from validation*/
     private void isOverlapping(Adoption adoption)
             throws InvalidFormDataException, PersistentException {
         AdoptionDAO dao = (AdoptionDAO) createDao(DAOEnum.ADOPTION);

@@ -7,7 +7,8 @@ import by.training.finaltask.service.UserServiceImpl;
 
 import java.util.List;
 
-public class UserFormParser extends FormParser<User> {
+public final class UserFormParser extends FormParser<User> {
+
     private static final int USERNAME = 0;
     private static final int PASSWORD = 1;
     private static final String USERNAME_REGEX = "^[a-zA-Z0-9]{4,16}$";
@@ -15,34 +16,26 @@ public class UserFormParser extends FormParser<User> {
 
     @Override
     public User parse(Action action, List<String> userParameters) throws InvalidFormDataException {
-            if (!userParameters.isEmpty() && !userParameters.contains(null)
-                    && !userParameters.contains("")) {
-                String username = userParameters.get(USERNAME);
-                String password = userParameters.get(PASSWORD);
-                if (username != null) {
-                    if (password != null) {
-                        if (!username.isEmpty() && username.matches(USERNAME_REGEX)) {
-                            if (!password.isEmpty() && password.matches(PASSWORD_REGEX)) {
-                                return new User(
-                                        null,
-                                        username,
-                                        UserServiceImpl.md5(password),
-                                        null
-                                );
-                            } else {
-                                throw new InvalidFormDataException("incorrectPasswordFormat");
-                            }
-                        } else {
-                            throw new InvalidFormDataException("incorrectUsernameFormat");
-                        }
-                    } else {
-                        throw new InvalidFormDataException("incorrectPasswordFormat");
-                    }
+        if (!userParameters.isEmpty() && !userParameters.contains(null)
+                && !userParameters.contains("")) {
+            String username = userParameters.get(USERNAME);
+            String password = userParameters.get(PASSWORD);
+            if (!username.isEmpty() && username.matches(USERNAME_REGEX)) {
+                if (!password.isEmpty() && password.matches(PASSWORD_REGEX)) {
+                    return new User(
+                            null,
+                            username,
+                            UserServiceImpl.md5(password),
+                            null
+                    );
                 } else {
-                    throw new InvalidFormDataException("incorrectUsernameFormat");
+                    throw new InvalidFormDataException("incorrectPasswordFormat");
                 }
+            } else {
+                throw new InvalidFormDataException("incorrectUsernameFormat");
             }
-            throw new InvalidFormDataException("fillAllFields");
+        }
+        throw new InvalidFormDataException("fillAllFields");
     }
 
 }

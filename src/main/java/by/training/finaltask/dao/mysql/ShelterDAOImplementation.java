@@ -12,9 +12,8 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.List;
-import java.util.ResourceBundle;
 
-public class ShelterDAOImplementation extends BaseDAO implements ShelterDAO {
+public final class ShelterDAOImplementation extends BaseDAO implements ShelterDAO {
 
     private static final Logger LOGGER = LogManager.getLogger(ShelterDAOImplementation.class);
 
@@ -27,7 +26,7 @@ public class ShelterDAOImplementation extends BaseDAO implements ShelterDAO {
         try (PreparedStatement preparedStatement = connection.prepareStatement(
                 resourceBundle.getString("getAllShelters"))) {
             List<Shelter> shelters = new LinkedList<>();
-            try (ResultSet resultset = preparedStatement.executeQuery()) {
+            ResultSet resultset = preparedStatement.executeQuery();
                 while (resultset.next()) {
                     int id = resultset.getInt("id");
                     String name = resultset.getNString("name");
@@ -35,7 +34,6 @@ public class ShelterDAOImplementation extends BaseDAO implements ShelterDAO {
                     shelters.add(new Shelter(id, name, location));
                 }
                 return shelters;
-            }
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
             throw new PersistentException(e.getMessage(), e);
@@ -47,13 +45,13 @@ public class ShelterDAOImplementation extends BaseDAO implements ShelterDAO {
         try (PreparedStatement preparedStatement = connection.prepareStatement(
                 resourceBundle.getString("getShelterByID"))) {
             preparedStatement.setInt(1, id);
-            try (ResultSet resultset = preparedStatement.executeQuery()) {
+            ResultSet resultset = preparedStatement.executeQuery();
                 if(resultset.next())
                 {
                     return getShelter(resultset);
                 }
                 return null;
-            }
+
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
             throw new PersistentException(e.getMessage(), e);

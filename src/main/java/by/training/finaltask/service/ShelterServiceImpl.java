@@ -10,7 +10,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 
-public class ShelterServiceImpl extends ServiceImpl implements ShelterService {
+public final class ShelterServiceImpl extends ServiceImpl implements ShelterService {
 
     public ShelterServiceImpl(Connection aliveConnection)
     {

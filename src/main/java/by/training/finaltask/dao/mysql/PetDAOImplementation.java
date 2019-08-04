@@ -7,9 +7,11 @@ import by.training.finaltask.exception.PersistentException;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
-import java.sql.Date;
 import java.sql.*;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.GregorianCalendar;
+import java.util.LinkedList;
+import java.util.List;
 
 public final class PetDAOImplementation extends BaseDAO implements PetDAO {
 
@@ -24,11 +26,11 @@ public final class PetDAOImplementation extends BaseDAO implements PetDAO {
         try (PreparedStatement preparedStatement = connection.prepareStatement(
                 resourceBundle.getString("getPetDAO"))) {
             preparedStatement.setInt(1, ID);
-            try (ResultSet resultset = preparedStatement.executeQuery()) {
-                if (resultset.next()) {
-                    return getPet(resultset);
-                }
+            ResultSet resultset = preparedStatement.executeQuery();
+            if (resultset.next()) {
+                return getPet(resultset);
             }
+
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
             throw new PersistentException(e.getMessage(), e);
@@ -40,7 +42,7 @@ public final class PetDAOImplementation extends BaseDAO implements PetDAO {
     public List<Pet> getAllByStatus(PetStatus status, int offset, int rowcount) throws PersistentException {
         String query = resourceBundle.getString("getAllPetDAO");
         if (status != null) {
-            query = addPetStatusIntoQuery(query,false);
+            query = addPetStatusIntoQuery(query, false);
         }
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             if (status != null) {
@@ -52,12 +54,12 @@ public final class PetDAOImplementation extends BaseDAO implements PetDAO {
                 preparedStatement.setInt(2, rowcount);
             }
             List<Pet> pets = new ArrayList<>();
-            try (ResultSet resultset = preparedStatement.executeQuery()) {
-                while (resultset.next()) {
-                    pets.add(getPet(resultset));
-                }
-                return pets;
+            ResultSet resultset = preparedStatement.executeQuery();
+            while (resultset.next()) {
+                pets.add(getPet(resultset));
             }
+            return pets;
+
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
             throw new PersistentException(e.getMessage(), e);
@@ -68,7 +70,7 @@ public final class PetDAOImplementation extends BaseDAO implements PetDAO {
     public List<Pet> getAllByPetName(PetStatus status, String petName, int offset, int rowcount) throws PersistentException {
         String query = resourceBundle.getString("getAllPetByPetNameDAO");
         if (status != null) {
-            query = addPetStatusIntoQuery(query,true);
+            query = addPetStatusIntoQuery(query, true);
         }
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setNString(1, petName);
@@ -81,12 +83,12 @@ public final class PetDAOImplementation extends BaseDAO implements PetDAO {
                 preparedStatement.setInt(3, rowcount);
             }
             List<Pet> pets = new LinkedList<>();
-            try (ResultSet resultset = preparedStatement.executeQuery()) {
-                while (resultset.next()) {
-                    pets.add(getPet(resultset));
-                }
-                return pets;
+            ResultSet resultset = preparedStatement.executeQuery();
+            while (resultset.next()) {
+                pets.add(getPet(resultset));
             }
+            return pets;
+
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
             throw new PersistentException(e.getMessage(), e);
@@ -99,7 +101,7 @@ public final class PetDAOImplementation extends BaseDAO implements PetDAO {
             throws PersistentException {
         String query = resourceBundle.getString("getAllPetByShelterDAO");
         if (status != null) {
-            query = addPetStatusIntoQuery(query,true);
+            query = addPetStatusIntoQuery(query, true);
         }
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1, shelterID);
@@ -112,12 +114,12 @@ public final class PetDAOImplementation extends BaseDAO implements PetDAO {
                 preparedStatement.setInt(3, rowcount);
             }
             List<Pet> pets = new LinkedList<>();
-            try (ResultSet resultset = preparedStatement.executeQuery()) {
-                while (resultset.next()) {
-                    pets.add(getPet(resultset));
-                }
-                return pets;
+            ResultSet resultset = preparedStatement.executeQuery();
+            while (resultset.next()) {
+                pets.add(getPet(resultset));
             }
+            return pets;
+
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
             throw new PersistentException(e.getMessage(), e);
@@ -129,7 +131,7 @@ public final class PetDAOImplementation extends BaseDAO implements PetDAO {
             throws PersistentException {
         String query = resourceBundle.getString("getAllPetByBreedDAO");
         if (status != null) {
-            query = addPetStatusIntoQuery(query,true);
+            query = addPetStatusIntoQuery(query, true);
         }
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1, breedID);
@@ -142,12 +144,12 @@ public final class PetDAOImplementation extends BaseDAO implements PetDAO {
                 preparedStatement.setInt(3, rowcount);
             }
             List<Pet> pets = new LinkedList<>();
-            try (ResultSet resultset = preparedStatement.executeQuery()) {
-                while (resultset.next()) {
-                    pets.add(getPet(resultset));
-                }
-                return pets;
+            ResultSet resultset = preparedStatement.executeQuery();
+            while (resultset.next()) {
+                pets.add(getPet(resultset));
             }
+            return pets;
+
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
             throw new PersistentException(e.getMessage(), e);
@@ -160,7 +162,7 @@ public final class PetDAOImplementation extends BaseDAO implements PetDAO {
             throws PersistentException {
         String query = resourceBundle.getString("getAllPetByBirthDateDAO");
         if (status != null) {
-            query = addPetStatusIntoQuery(query,true);
+            query = addPetStatusIntoQuery(query, true);
         }
         query = addRelation(query, relation);
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
@@ -175,12 +177,12 @@ public final class PetDAOImplementation extends BaseDAO implements PetDAO {
                 preparedStatement.setInt(3, rowcount);
             }
             List<Pet> pets = new LinkedList<>();
-            try (ResultSet resultset = preparedStatement.executeQuery()) {
-                while (resultset.next()) {
-                    pets.add(getPet(resultset));
-                }
-                return pets;
+            ResultSet resultset = preparedStatement.executeQuery();
+            while (resultset.next()) {
+                pets.add(getPet(resultset));
             }
+            return pets;
+
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
             throw new PersistentException(e.getMessage(), e);
@@ -206,7 +208,7 @@ public final class PetDAOImplementation extends BaseDAO implements PetDAO {
                                              GregorianCalendar calendar) throws PersistentException {
         String query = resourceBundle.getString("getAmountAllPetByBirthDateDAO");
         if (status != null) {
-            query = addPetStatusIntoQuery(query,true);
+            query = addPetStatusIntoQuery(query, true);
         }
         query = addRelation(query, relation);
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
@@ -215,13 +217,11 @@ public final class PetDAOImplementation extends BaseDAO implements PetDAO {
             if (status != null) {
                 preparedStatement.setNString(2, status.getValue());
             }
-            try (ResultSet res = preparedStatement.executeQuery()) {
-                res.next();
+            ResultSet res = preparedStatement.executeQuery();
+            if (res.next()) {
                 return res.getInt(1);
-            } catch (SQLException e) {
-                LOGGER.warn(e.getMessage(), e);
-                throw new PersistentException(e.getMessage(), e);
             }
+            return 0;
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
             throw new PersistentException(e.getMessage(), e);
@@ -232,19 +232,17 @@ public final class PetDAOImplementation extends BaseDAO implements PetDAO {
     public int getAmountOfAllPetsByStatus(PetStatus status) throws PersistentException {
         String query = resourceBundle.getString("getAllPetCountDAO");
         if (status != null) {
-            query = addPetStatusIntoQuery(query,false);
+            query = addPetStatusIntoQuery(query, false);
         }
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             if (status != null) {
                 preparedStatement.setNString(1, status.getValue());
             }
-            try (ResultSet res = preparedStatement.executeQuery()) {
-                res.next();
+            ResultSet res = preparedStatement.executeQuery();
+            if (res.next()) {
                 return res.getInt(1);
-            } catch (SQLException e) {
-                LOGGER.warn(e.getMessage(), e);
-                throw new PersistentException(e.getMessage(), e);
             }
+            return 0;
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
             throw new PersistentException(e.getMessage(), e);
@@ -255,20 +253,18 @@ public final class PetDAOImplementation extends BaseDAO implements PetDAO {
     public int getAmountOfAllPetsByShelter(PetStatus status, int shelterID) throws PersistentException {
         String query = resourceBundle.getString("getAmountAllPetByShelterDAO");
         if (status != null) {
-            query = addPetStatusIntoQuery(query,true);
+            query = addPetStatusIntoQuery(query, true);
         }
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1, shelterID);
             if (status != null) {
                 preparedStatement.setNString(2, status.getValue());
             }
-            try (ResultSet res = preparedStatement.executeQuery()) {
-                res.next();
+            ResultSet res = preparedStatement.executeQuery();
+            if (res.next()) {
                 return res.getInt(1);
-            } catch (SQLException e) {
-                LOGGER.warn(e.getMessage(), e);
-                throw new PersistentException(e.getMessage(), e);
             }
+            return 0;
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
             throw new PersistentException(e.getMessage(), e);
@@ -280,20 +276,18 @@ public final class PetDAOImplementation extends BaseDAO implements PetDAO {
             throws PersistentException {
         String query = resourceBundle.getString("getAmountAllPetByBreedDAO");
         if (status != null) {
-            query = addPetStatusIntoQuery(query,true);
+            query = addPetStatusIntoQuery(query, true);
         }
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setInt(1, breedID);
             if (status != null) {
                 preparedStatement.setNString(2, status.getValue());
             }
-            try (ResultSet res = preparedStatement.executeQuery()) {
-                res.next();
+            ResultSet res = preparedStatement.executeQuery();
+            if (res.next()) {
                 return res.getInt(1);
-            } catch (SQLException e) {
-                LOGGER.warn(e.getMessage(), e);
-                throw new PersistentException(e.getMessage(), e);
             }
+            return 0;
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
             throw new PersistentException(e.getMessage(), e);
@@ -304,20 +298,18 @@ public final class PetDAOImplementation extends BaseDAO implements PetDAO {
     public int getAmountOfAllPetsByPetName(PetStatus status, String petName) throws PersistentException {
         String query = resourceBundle.getString("getAmountAllPetByPetNameDAO");
         if (status != null) {
-            query = addPetStatusIntoQuery(query,true);
+            query = addPetStatusIntoQuery(query, true);
         }
         try (PreparedStatement preparedStatement = connection.prepareStatement(query)) {
             preparedStatement.setNString(1, petName);
             if (status != null) {
                 preparedStatement.setNString(2, status.getValue());
             }
-            try (ResultSet res = preparedStatement.executeQuery()) {
-                res.next();
+            ResultSet res = preparedStatement.executeQuery();
+            if (res.next()) {
                 return res.getInt(1);
-            } catch (SQLException e) {
-                LOGGER.warn(e.getMessage(), e);
-                throw new PersistentException(e.getMessage(), e);
             }
+            return 0;
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
             throw new PersistentException(e.getMessage(), e);
@@ -330,13 +322,11 @@ public final class PetDAOImplementation extends BaseDAO implements PetDAO {
                 resourceBundle.getString("addPetDAO"), PreparedStatement.RETURN_GENERATED_KEYS)) {
             setPreparedStatement(preparedStatement, element);
             preparedStatement.executeUpdate();
-            try (ResultSet set = preparedStatement.getGeneratedKeys()) {
-                set.next();
+            ResultSet set = preparedStatement.getGeneratedKeys();
+            if (set.next()) {
                 return set.getInt(1);
-            } catch (SQLException e) {
-                LOGGER.warn(e.getMessage(), e);
-                throw new PersistentException(e.getMessage(), e);
             }
+            return 0;
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
             throw new PersistentException("Couldn't add row!\n"
@@ -410,8 +400,7 @@ public final class PetDAOImplementation extends BaseDAO implements PetDAO {
     private String addPetStatusIntoQuery(String query, boolean hasWhere) {
         StringBuffer buffer = new StringBuffer(query);
         int idxOfLimit = buffer.indexOf("limit");
-        if(hasWhere)
-        {
+        if (hasWhere) {
             if (idxOfLimit == -1) {
                 buffer.insert(query.length() - 1, " and pets.status = ?");
                 return buffer.toString();

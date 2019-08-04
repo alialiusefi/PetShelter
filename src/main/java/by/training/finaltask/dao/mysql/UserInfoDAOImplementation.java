@@ -24,10 +24,9 @@ public final class UserInfoDAOImplementation extends BaseDAO implements UserInfo
         try (PreparedStatement preparedStatement = connection.prepareStatement(
                 resourceBundle.getString("getUserInfoDAO"))) {
             preparedStatement.setInt(1, userID);
-            try (ResultSet resultset = preparedStatement.executeQuery()) {
-                if (resultset.next()) {
-                    return getUserInfo(resultset);
-                }
+            ResultSet resultset = preparedStatement.executeQuery();
+            if (resultset.next()) {
+                return getUserInfo(resultset);
             }
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
@@ -41,10 +40,9 @@ public final class UserInfoDAOImplementation extends BaseDAO implements UserInfo
         List<UserInfo> userInfoList = new LinkedList<>();
         try (PreparedStatement preparedStatement = connection.prepareStatement(
                 resourceBundle.getString("getAllUserInfoDAO"))) {
-            try (ResultSet resultSet = preparedStatement.executeQuery()) {
-                while (resultSet.next()) {
-                    userInfoList.add(getUserInfo(resultSet));
-                }
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                userInfoList.add(getUserInfo(resultSet));
             }
             return userInfoList;
         } catch (SQLException e) {
@@ -60,11 +58,11 @@ public final class UserInfoDAOImplementation extends BaseDAO implements UserInfo
                 resourceBundle.getString("getAllStaffInfoDAO"))) {
             preparedStatement.setInt(1, offset);
             preparedStatement.setInt(2, rowcount);
-            try (ResultSet resultSet = preparedStatement.executeQuery()) {
-                while (resultSet.next()) {
-                    userInfoList.add(getUserInfo(resultSet));
-                }
+            ResultSet resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                userInfoList.add(getUserInfo(resultSet));
             }
+
             return userInfoList;
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
@@ -81,11 +79,10 @@ public final class UserInfoDAOImplementation extends BaseDAO implements UserInfo
             preparedStatement.setNString(1, phoneStr);
             preparedStatement.setInt(2, offset);
             preparedStatement.setInt(3, rowcount);
-            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+            ResultSet resultSet = preparedStatement.executeQuery();
                 while (resultSet.next()) {
                     userInfoList.add(getUserInfo(resultSet));
                 }
-            }
             return userInfoList;
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
@@ -101,11 +98,10 @@ public final class UserInfoDAOImplementation extends BaseDAO implements UserInfo
             preparedStatement.setNString(1, firstname);
             preparedStatement.setInt(2, offset);
             preparedStatement.setInt(3, rowcount);
-            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+            ResultSet resultSet = preparedStatement.executeQuery();
                 while (resultSet.next()) {
                     userInfoList.add(getUserInfo(resultSet));
                 }
-            }
             return userInfoList;
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
@@ -130,7 +126,7 @@ public final class UserInfoDAOImplementation extends BaseDAO implements UserInfo
     public int add(UserInfo element) throws PersistentException {
         try (PreparedStatement preparedStatement = connection.prepareStatement(
                 resourceBundle.getString("addUserInfoDAO"), PreparedStatement.RETURN_GENERATED_KEYS)) {
-            setPreparedStatement(element,preparedStatement);
+            setPreparedStatement(element, preparedStatement);
             int rows = preparedStatement.executeUpdate();
             return rows;
         } catch (SQLException e) {
@@ -188,9 +184,9 @@ public final class UserInfoDAOImplementation extends BaseDAO implements UserInfo
                 resultSet.getLong("phone")
         );
     }
+
     private void setPreparedStatement(UserInfo element, PreparedStatement preparedStatement)
-            throws SQLException
-    {
+            throws SQLException {
         preparedStatement.setInt(1, element.getId());
         preparedStatement.setNString(2, element.getEmail());
         preparedStatement.setNString(3, element.getFirstName());

@@ -14,7 +14,7 @@ import java.util.Formatter;
 import java.util.List;
 
 
-public class UserServiceImpl extends ServiceImpl implements UserService {
+public final class UserServiceImpl extends ServiceImpl implements UserService {
 
     UserServiceImpl(Connection aliveConnection) {
         super(aliveConnection);

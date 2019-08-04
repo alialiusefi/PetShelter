@@ -1,21 +1,16 @@
 package by.training.finaltask.service;
 
-import by.training.finaltask.dao.pool.ConnectionPool;
 import by.training.finaltask.dao.pool.PetPooledConnection;
 import by.training.finaltask.entity.Adoption;
 import by.training.finaltask.exception.PersistentException;
 import by.training.finaltask.service.serviceinterface.AdoptionService;
-import org.testng.Assert;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
-
-import static org.testng.Assert.*;
 
 public class AdoptionServiceImplTest {
 

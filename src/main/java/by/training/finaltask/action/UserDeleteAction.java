@@ -4,7 +4,6 @@ import by.training.finaltask.dao.mysql.DAOEnum;
 import by.training.finaltask.entity.Role;
 import by.training.finaltask.entity.User;
 import by.training.finaltask.exception.PersistentException;
-import by.training.finaltask.service.serviceinterface.UserInfoService;
 import by.training.finaltask.service.serviceinterface.UserService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -28,7 +27,7 @@ public class UserDeleteAction extends AuthorizedUserAction {
         if (session != null) {
             User user = (User) session.getAttribute("authorizedUser");
             if (user != null && allowedRoles.contains(user.getUserRole())) {
-                Integer userId = Integer.parseInt(
+                int userId = Integer.parseInt(
                             request.getParameter("userToDelete"));
                 UserService userService = (UserService) factory.createService(DAOEnum.USER);
                 userService.delete(userId);

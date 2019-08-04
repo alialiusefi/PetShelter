@@ -7,7 +7,7 @@ import by.training.finaltask.exception.InvalidFormDataException;
 import java.util.GregorianCalendar;
 import java.util.List;
 
-public class AdoptionFormParser extends FormParser<Adoption> {
+public final class AdoptionFormParser extends FormParser<Adoption> {
 
     private static final int ADOPTIONID = 0;
     private static final int PETID = 1;

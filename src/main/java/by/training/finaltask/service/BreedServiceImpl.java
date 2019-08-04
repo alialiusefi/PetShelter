@@ -10,7 +10,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.util.List;
 
-public class BreedServiceImpl extends ServiceImpl implements BreedService {
+public final class BreedServiceImpl extends ServiceImpl implements BreedService {
 
     public BreedServiceImpl(Connection aliveConnection)
     {
