@@ -7,45 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="aaaf2f76-4e53-48ef-addd-78db3cc4e10b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/artifacts/Task_FinalProject_WebApp_war_exploded/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/DeleteAdoptionAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/DeleteAdoptionAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/EditAdoptionAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/EditAdoptionAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/guest/AdoptPetAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/guest/AdoptPetAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/staff/FindAdoptionAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/staff/FindAdoptionAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/AdoptionDAOImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/AdoptionDAOImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/BaseDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/BaseDAO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/BreedDAOImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/BreedDAOImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/PetDAOImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/PetDAOImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/ShelterDAOImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/ShelterDAOImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/UserDAOImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/UserDAOImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/UserInfoDAOImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/UserInfoDAOImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/parser/UserInfoFormParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/parser/UserInfoFormParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/service/AdoptionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/service/AdoptionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/service/PetServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/service/PetServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/service/ServiceFactoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/service/ServiceFactoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/service/UserInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/service/UserInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/service/serviceinterface/AdoptionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/service/serviceinterface/AdoptionService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/servlet/PetShelterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/servlet/PetShelterServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/DeleteAdoptionAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/DeleteAdoptionAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/EditAdoptionAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/EditAdoptionAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/guest/AdoptPetAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/guest/AdoptPetAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/staff/FindAdoptionAction.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/staff/FindAdoptionAction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/dao/mysql/AdoptionDAOImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/dao/mysql/AdoptionDAOImplementation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/dao/mysql/BaseDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/dao/mysql/BaseDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/dao/mysql/BreedDAOImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/dao/mysql/BreedDAOImplementation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/dao/mysql/PetDAOImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/dao/mysql/PetDAOImplementation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/dao/mysql/ShelterDAOImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/dao/mysql/ShelterDAOImplementation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/dao/mysql/UserDAOImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/dao/mysql/UserDAOImplementation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/Action.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/Action.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/dao/mysql/UserInfoDAOImplementation.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/dao/mysql/UserInfoDAOImplementation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/parser/UserInfoFormParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/parser/UserInfoFormParser.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/service/AdoptionServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/service/AdoptionServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/service/PetServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/service/PetServiceImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/service/ServiceFactoryImpl$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/service/ServiceFactoryImpl$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/service/ServiceFactoryImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/service/ServiceFactoryImpl.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/service/serviceinterface/AdoptionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/service/serviceinterface/AdoptionService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/servlet/PetShelterServlet.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/servlet/PetShelterServlet.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/service/UserInfoServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/by/training/finaltask/service/UserInfoServiceImpl.class" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -163,7 +128,25 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.UserServiceImplTest.testFindByUserNameAndPassword">
+  <component name="RunManager" selected="TestNG.UserServiceImplTest.testAdd">
+    <configuration name="UserServiceImplTest.testAdd" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Task_FinalProject_WebApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.training.finaltask.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="by.training.finaltask.service" />
+      <option name="MAIN_CLASS_NAME" value="by.training.finaltask.service.UserServiceImplTest" />
+      <option name="METHOD_NAME" value="testAdd" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserServiceImplTest.testFindByUserNameAndPassword" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Task_FinalProject_WebApp" />
       <extension name="coverage">
@@ -290,13 +273,15 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Tomcat Server.Tomcat 8.5.43" />
       <item itemvalue="TestNG.UserServiceImplTest.testGetAll" />
       <item itemvalue="TestNG.UserServiceImplTest.testGet" />
       <item itemvalue="TestNG.UserServiceImplTest.testFindByUserNameAndPassword" />
+      <item itemvalue="TestNG.UserServiceImplTest.testAdd" />
+      <item itemvalue="Tomcat Server.Tomcat 8.5.43" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.UserServiceImplTest.testAdd" />
         <item itemvalue="TestNG.UserServiceImplTest.testFindByUserNameAndPassword" />
         <item itemvalue="TestNG.UserServiceImplTest.testGet" />
         <item itemvalue="TestNG.UserServiceImplTest.testGetAll" />
@@ -316,11 +301,6 @@
               <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@277e6ef9" type="7427dc5b:ServiceModel$ServiceGroupNode" />
               <item name="com.intellij.execution.services.ServiceModel$ServiceNode@4c2e6fdc" type="9fbbdea:ServiceModel$ServiceNode" />
-            </path>
-            <path>
-              <item name="services root" type="e789fda9:ObjectUtils$Sentinel" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceGroupNode@277e6ef9" type="7427dc5b:ServiceModel$ServiceGroupNode" />
-              <item name="com.intellij.execution.services.ServiceModel$ServiceNode@4b3a7187" type="9fbbdea:ServiceModel$ServiceNode" />
             </path>
           </expand>
           <select />
@@ -342,7 +322,9 @@
       <workItem from="1564656824113" duration="5227000" />
       <workItem from="1564664874618" duration="14783000" />
       <workItem from="1564744255548" duration="1954000" />
-      <workItem from="1564749722296" duration="16933000" />
+      <workItem from="1564749722296" duration="18190000" />
+      <workItem from="1564847603577" duration="75000" />
+      <workItem from="1564904178836" duration="94000" />
     </task>
     <task id="LOCAL-00001" summary="Optimized Imports">
       <created>1564665014093</created>
@@ -519,7 +501,14 @@
       <option name="project" value="LOCAL" />
       <updated>1564821604373</updated>
     </task>
-    <option name="localTasksCounter" value="26" />
+    <task id="LOCAL-00026" summary="Updated finding staff by phone">
+      <created>1564845281902</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1564845281902</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -556,7 +545,8 @@
     <MESSAGE value="Removed index.html url mapping&#10;Replaced all System.out.println with Logger.info&#10;Removed Unused log4j2 config file&#10;Remove unused resource bundle fields" />
     <MESSAGE value="Added Custom Taglib livedate.tld" />
     <MESSAGE value="Fixed Redirection" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed Redirection" />
+    <MESSAGE value="Updated finding staff by phone" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated finding staff by phone" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
