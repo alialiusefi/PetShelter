@@ -1,4 +1,15 @@
 use petshelter;
+
+select adoptions_made.id,adoptions_made.pet_id,
+       adoptions_made.adoption_start, adoptions_made.adoption_end,
+       adoptions_made.user_id
+from adoptions_made
+where (adoption_start between ? and ?) or
+      (adoption_end between ? and ?) or 
+      (adoption_start and adoption_end between ? and ?)
+limit ?,?;
+
+
 select count(pets.id) from pets where pets.status = ?;
 
 

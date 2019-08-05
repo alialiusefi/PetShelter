@@ -6,33 +6,249 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aaaf2f76-4e53-48ef-addd-78db3cc4e10b" name="Default Changelist" comment="Code Convention">
+    <list default="true" id="aaaf2f76-4e53-48ef-addd-78db3cc4e10b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/eclipseCodeFormatter.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Task_FinalProject_WebApp.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/UserDeleteAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/UserDeleteAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/staff/FindAdoptionAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/staff/FindAdoptionAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindAdoptionBetweenDatesAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindAdoptionBetweenDatesAction.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/AdoptionDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/AdoptionDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/AdoptionDAOImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/AdoptionDAOImplementation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/BreedDAOImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/BreedDAOImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/PetDAOImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/PetDAOImplementation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/ShelterDAOImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/ShelterDAOImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/UserDAOImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/UserDAOImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/UserInfoDAOImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/UserInfoDAOImplementation.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/filter/ActionURIFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/filter/ActionURIFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/filter/EncodingFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/filter/EncodingFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/filter/SessionLocaleFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/filter/SessionLocaleFilter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/parser/AdoptionFormParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/parser/AdoptionFormParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/parser/PetFormParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/parser/PetFormParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/parser/UserFormParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/parser/UserFormParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/parser/UserInfoFormParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/parser/UserInfoFormParser.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/service/AdoptionServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/service/AdoptionServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/service/BreedServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/service/BreedServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/service/PetServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/service/PetServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/service/ShelterServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/service/ShelterServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/service/UserInfoServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/service/UserInfoServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/service/UserServiceImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/servlet/PetShelterServletConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/servlet/PetShelterServletConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/tag/DateTag.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/tag/DateTag.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/daomysqlqueries.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/daomysqlqueries.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/sql/#_test.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/sql/#_test.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/daomysqlqueries.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/daomysqlqueries.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/adoptions/staff/findadoption.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/adoptions/staff/findadoption.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/by/training/finaltask/service/AdoptionServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/training/finaltask/service/AdoptionServiceImplTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/by/training/finaltask/service/UserServiceImplTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/by/training/finaltask/service/UserServiceImplTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp.war" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/META-INF/Task_FinalProject_WebApp.kotlin_module" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/Action$Forward.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/Action.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/ActionManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/ActionManagerFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/ActionManagerImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/AuthorizedUserAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/DeleteAdoptionAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/EditAdoptionAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/FindAdoptionBetweenDatesAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/FindAdoptionByPetName.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/FindPetAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/FindPetByBirthDateAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/FindPetByBreedAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/FindPetByPetNameAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/FindPetByShelterAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/LoginAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/LogoutAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/MainAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/MoreInfoPetAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/ProfileAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/RegisterAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/UserDeleteAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/UserEditAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/admin/AddStaffAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/admin/FindStaffAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/admin/FindStaffByFirstNameAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/admin/FindStaffByPhoneAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/guest/AdoptPetAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/guest/MyAdoptionsAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/staff/AddPetAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/staff/DeletePetAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/staff/EditPetAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/action/staff/FindAdoptionAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/dao/daointerface/AdoptionDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/dao/daointerface/BreedDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/dao/daointerface/DAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/dao/daointerface/PetDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/dao/daointerface/ShelterDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/dao/daointerface/UserDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/dao/daointerface/UserInfoDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/dao/mysql/AdoptionDAOImplementation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/dao/mysql/BaseDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/dao/mysql/BreedDAOImplementation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/dao/mysql/DAOEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/dao/mysql/PetDAOImplementation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/dao/mysql/ShelterDAOImplementation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/dao/mysql/UserDAOImplementation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/dao/mysql/UserInfoDAOImplementation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/dao/pool/ConnectionPool.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/dao/pool/PetPooledConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/entity/Adoption.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/entity/Breed.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/entity/Entity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/entity/Pet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/entity/PetStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/entity/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/entity/Shelter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/entity/UserInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/exception/InvalidFormDataException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/exception/PersistentException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/filter/ActionURIFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/filter/EncodingFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/filter/SessionLocaleFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/parser/AdoptionFormParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/parser/FormParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/parser/PetFormParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/parser/UserFormParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/parser/UserInfoFormParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/resource/localization.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/resource/localization_de_DE.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/resource/localization_en_US.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/resource/localization_ru_RU.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/service/AdoptionServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/service/BreedServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/service/PetServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/service/ServiceFactoryImpl$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/service/ServiceFactoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/service/ServiceImpl$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/service/ServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/service/ShelterServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/service/UserInfoServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/service/UserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/service/serviceinterface/AdoptionService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/service/serviceinterface/BreedService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/service/serviceinterface/PetService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/service/serviceinterface/Service.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/service/serviceinterface/ServiceFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/service/serviceinterface/ShelterService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/service/serviceinterface/UserInfoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/service/serviceinterface/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/servlet/PetShelterServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/servlet/PetShelterServletConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/by/training/finaltask/tag/DateTag.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/daomysqlqueries.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/log4j2.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/classes/servletconfig.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/lib/commons-fileupload-1.4.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/lib/commons-io-2.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/lib/jsp-api-2.1.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/lib/jstl-1.2.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/lib/log4j-api-2.12.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/lib/log4j-core-2.12.0.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/lib/mysql-connector-java-5.1.47.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/WEB-INF/web.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/css/bootstrap.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/css/bootstrap.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/css/bootstrap.min.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/css/bootstrap.min.css.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/img/title1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/index.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/js/bootstrap.bundle.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/js/bootstrap.bundle.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/js/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/js/bootstrap.bundle.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/js/bootstrap.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/js/bootstrap.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/js/bootstrap.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/js/bootstrap.min.js.map" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/js/formscript.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/jsp/adoptions/adoptpet.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/jsp/adoptions/editadoption.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/jsp/adoptions/guest/myadoptions.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/jsp/adoptions/staff/findadoption.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/jsp/error.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/jsp/login.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/jsp/pets/findpet.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/jsp/pets/moreinfopet.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/jsp/pets/staff/addpet.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/jsp/pets/staff/editpet.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/jsp/register.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/jsp/tags/footer.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/jsp/tags/menu.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/jsp/user/admin/addstaff.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/jsp/user/admin/findstaff.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/jsp/user/profile.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/Task_FinalProject_WebApp/jsp/user/useredit.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/Action$Forward.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/Action.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/ActionManager.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/ActionManagerFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/ActionManagerImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/AuthorizedUserAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/DeleteAdoptionAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/EditAdoptionAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/FindAdoptionBetweenDatesAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/FindAdoptionByPetName.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/FindPetAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/FindPetByBirthDateAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/FindPetByBreedAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/FindPetByPetNameAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/FindPetByShelterAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/LoginAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/LogoutAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/MainAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/MoreInfoPetAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/ProfileAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/RegisterAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/UserDeleteAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/UserEditAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/admin/AddStaffAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/admin/FindStaffAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/admin/FindStaffByFirstNameAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/admin/FindStaffByPhoneAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/guest/AdoptPetAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/guest/MyAdoptionsAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/staff/AddPetAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/staff/DeletePetAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/staff/EditPetAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/action/staff/FindAdoptionAction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/dao/mysql/AdoptionDAOImplementation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/dao/mysql/BaseDAO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/dao/mysql/BreedDAOImplementation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/dao/mysql/DAOEnum.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/dao/mysql/PetDAOImplementation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/dao/mysql/ShelterDAOImplementation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/dao/mysql/UserDAOImplementation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/dao/mysql/UserInfoDAOImplementation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/dao/pool/ConnectionPool.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/dao/pool/PetPooledConnection.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/entity/Adoption.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/entity/Breed.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/entity/Entity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/entity/Pet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/entity/PetStatus.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/entity/Role.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/entity/Shelter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/entity/User.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/entity/UserInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/exception/InvalidFormDataException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/exception/PersistentException.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/filter/ActionURIFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/filter/EncodingFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/filter/SessionLocaleFilter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/parser/AdoptionFormParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/parser/FormParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/parser/PetFormParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/parser/UserFormParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/parser/UserInfoFormParser.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/service/AdoptionServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/service/BreedServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/service/PetServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/service/ServiceFactoryImpl$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/service/ServiceFactoryImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/service/ServiceImpl$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/service/ServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/service/ShelterServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/service/UserInfoServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/service/UserServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/service/serviceinterface/AdoptionService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/service/serviceinterface/BreedService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/service/serviceinterface/PetService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/service/serviceinterface/Service.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/service/serviceinterface/ServiceFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/service/serviceinterface/ShelterService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/service/serviceinterface/UserInfoService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/service/serviceinterface/UserService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/servlet/PetShelterServlet.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/servlet/PetShelterServletConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/by/training/finaltask/tag/DateTag.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/daomysqlqueries.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/servletconfig.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,12 +287,97 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/UserInfoDAOImplementation.java">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/AdoptionDAO.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1287">
-              <caret line="103" column="17" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
+            <state relative-caret-position="234">
+              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/AdoptionDAOImplementation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-6459">
+              <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#660#661#0" expanded="true" />
+                <element signature="e#684#685#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/BaseDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/DAOEnum.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="36">
+              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/BreedDAO.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="72">
+              <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/BreedDAOImplementation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="180">
+              <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+              <folding>
+                <element signature="e#728#729#0" expanded="true" />
+                <element signature="e#752#753#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/UserDAOImplementation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="176">
+              <caret line="256" column="13" selection-start-line="256" selection-start-column="13" selection-end-line="256" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/PetDAOImplementation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="18">
+              <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/ShelterDAOImplementation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1386">
+              <caret line="89" selection-start-line="89" selection-end-line="89" />
+              <folding>
+                <element signature="e#760#761#0" expanded="true" />
+                <element signature="e#789#790#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -87,8 +388,28 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="TestNG Test Class" />
+        <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="FindBugs-IDEA-Workspace">
+    <analyzeBeforeCheckIn>true</analyzeBeforeCheckIn>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>compareTo</find>
+      <find>firstname</find>
+      <find>adoption</find>
+      <find>alask</find>
+      <find>tad</find>
+      <find>update</find>
+      <find>tades</find>
+      <find>mau</find>
+      <find>curren</find>
+      <find>curre</find>
+      <find>current</find>
+      <find>betwe</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -97,7 +418,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/AdoptionDAOImplementationTest.java" />
-        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/daomysqlqueries.properties" />
         <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/UserDeleteAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/filter/ActionURIFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/filter/SessionLocaleFilter.java" />
@@ -108,17 +428,25 @@
         <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/service/PetServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/service/ShelterServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/service/UserInfoServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/service/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/servlet/PetShelterServletConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/filter/EncodingFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/parser/UserFormParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/service/AdoptionServiceImpl.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/AdoptionDAOImplementation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/BreedDAOImplementation.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/PetDAOImplementation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/ShelterDAOImplementation.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/UserDAOImplementation.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/UserInfoDAOImplementation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/service/UserServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindAdoptionBetweenDatesAction.java" />
+        <option value="$PROJECT_DIR$/src/main/webapp/jsp/adoptions/staff/findadoption.jsp" />
+        <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/comparator/GregorianCalendarComparator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/service/AdoptionServiceImpl.java" />
+        <option value="$PROJECT_DIR$/src/test/java/by/training/finaltask/service/AdoptionServiceImplTest.java" />
+        <option value="$PROJECT_DIR$/src/main/sql/#_test.sql" />
+        <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/daomysqlqueries.properties" />
+        <option value="$PROJECT_DIR$/src/main/resources/daomysqlqueries.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/AdoptionDAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/AdoptionDAOImplementation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/BreedDAOImplementation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/ShelterDAOImplementation.java" />
       </list>
     </option>
   </component>
@@ -149,6 +477,12 @@
       <select />
     </treeState>
   </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="298" />
+    <option name="y" value="-8" />
+    <option name="width" value="816" />
+    <option name="height" value="576" />
+  </component>
   <component name="ProjectId" id="1Oot9P58gnBvj0mHuMGkZhEVKqo" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -156,6 +490,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
@@ -197,15 +532,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="finaltask" type="462c0819:PsiDirectoryNode" />
-              <item name="action" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PetShelter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PetShelter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="finaltask" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -217,51 +543,6 @@
               <item name="finaltask" type="462c0819:PsiDirectoryNode" />
               <item name="dao" type="462c0819:PsiDirectoryNode" />
               <item name="mysql" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PetShelter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PetShelter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="finaltask" type="462c0819:PsiDirectoryNode" />
-              <item name="parser" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PetShelter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PetShelter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="finaltask" type="462c0819:PsiDirectoryNode" />
-              <item name="resource" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PetShelter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PetShelter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="finaltask" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PetShelter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PetShelter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="finaltask" type="462c0819:PsiDirectoryNode" />
-              <item name="servlet" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="PetShelter" type="b2602c69:ProjectViewProjectNode" />
-              <item name="PetShelter" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="finaltask" type="462c0819:PsiDirectoryNode" />
-              <item name="tag" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="PetShelter" type="b2602c69:ProjectViewProjectNode" />
@@ -283,11 +564,25 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="PetShelter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PetShelter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PetShelter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PetShelter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -300,16 +595,17 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1564910202385" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565033706811" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="TestNG" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG" value="" />
     <property name="create.test.in.the.same.root" value="true" />
-    <property name="database.console.LAST_STATE" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/test/resources" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="database.console.LAST_STATE" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/.idea/profile.xml" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15722656" />
     <property name="project.structure.side.proportion" value="0.30475086" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.project.statistic.project.settings" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.build" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
@@ -347,6 +643,42 @@
     </option>
   </component>
   <component name="RunManager" selected="Tomcat Server.Tomcat 8.5.43">
+    <configuration name="AdoptionServiceImplTest.testGet" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Task_FinalProject_WebApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.training.finaltask.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="by.training.finaltask.service" />
+      <option name="MAIN_CLASS_NAME" value="by.training.finaltask.service.AdoptionServiceImplTest" />
+      <option name="METHOD_NAME" value="testGet" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="AdoptionServiceImplTest.testGetAllBetweenDates" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="Task_FinalProject_WebApp" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="by.training.finaltask.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="by.training.finaltask.service" />
+      <option name="MAIN_CLASS_NAME" value="by.training.finaltask.service.AdoptionServiceImplTest" />
+      <option name="METHOD_NAME" value="testGetAllBetweenDates" />
+      <option name="TEST_OBJECT" value="METHOD" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="UserServiceImplTest.testAdd" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="Task_FinalProject_WebApp" />
       <extension name="coverage">
@@ -376,24 +708,6 @@
       <option name="PACKAGE_NAME" value="by.training.finaltask.service" />
       <option name="MAIN_CLASS_NAME" value="by.training.finaltask.service.UserServiceImplTest" />
       <option name="METHOD_NAME" value="testFindByUserNameAndPassword" />
-      <option name="TEST_OBJECT" value="METHOD" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="UserServiceImplTest.testGet" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="Task_FinalProject_WebApp" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="by.training.finaltask.service.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="by.training.finaltask.service" />
-      <option name="MAIN_CLASS_NAME" value="by.training.finaltask.service.UserServiceImplTest" />
-      <option name="METHOD_NAME" value="testGet" />
       <option name="TEST_OBJECT" value="METHOD" />
       <properties />
       <listeners />
@@ -492,17 +806,19 @@
     </configuration>
     <list>
       <item itemvalue="TestNG.UserServiceImplTest.testGetAll" />
-      <item itemvalue="TestNG.UserServiceImplTest.testGet" />
       <item itemvalue="TestNG.UserServiceImplTest.testFindByUserNameAndPassword" />
       <item itemvalue="TestNG.UserServiceImplTest.testAdd" />
+      <item itemvalue="TestNG.AdoptionServiceImplTest.testGet" />
+      <item itemvalue="TestNG.AdoptionServiceImplTest.testGetAllBetweenDates" />
       <item itemvalue="Tomcat Server.Tomcat 8.5.43" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.AdoptionServiceImplTest.testGetAllBetweenDates" />
+        <item itemvalue="TestNG.AdoptionServiceImplTest.testGet" />
         <item itemvalue="TestNG.UserServiceImplTest.testGetAll" />
         <item itemvalue="TestNG.UserServiceImplTest.testAdd" />
         <item itemvalue="TestNG.UserServiceImplTest.testFindByUserNameAndPassword" />
-        <item itemvalue="TestNG.UserServiceImplTest.testGet" />
       </list>
     </recent_temporary>
   </component>
@@ -543,6 +859,10 @@
       <workItem from="1564749722296" duration="18190000" />
       <workItem from="1564847603577" duration="75000" />
       <workItem from="1564904178836" duration="94000" />
+      <workItem from="1565000026139" duration="10386000" />
+      <workItem from="1565033750381" duration="1531000" />
+      <workItem from="1565035492669" duration="657000" />
+      <workItem from="1565036173255" duration="922000" />
     </task>
     <task id="LOCAL-00001" summary="Optimized Imports">
       <created>1564665014093</created>
@@ -740,28 +1060,56 @@
       <option name="project" value="LOCAL" />
       <updated>1564906935743</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Code Convention">
+      <created>1564910344461</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1564910344461</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="UserServiceImplTest_testAdd - 2019.08.04 at 10h 43m 25s.xml">
-      <configuration name="UserServiceImplTest.testAdd" configurationId="TestNG" />
+    <history-entry file="AdoptionServiceImplTest_testGet - 2019.08.05 at 19h 30m 57s.xml">
+      <configuration name="AdoptionServiceImplTest.testGet" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="UserServiceImplTest_testGetAll - 2019.08.04 at 10h 48m 08s.xml">
-      <configuration name="UserServiceImplTest.testGetAll" configurationId="TestNG" />
+    <history-entry file="AdoptionServiceImplTest_testGet - 2019.08.05 at 19h 31m 17s.xml">
+      <configuration name="AdoptionServiceImplTest.testGet" configurationId="TestNG" />
     </history-entry>
-    <history-entry file="UserServiceImplTest_testGetAll - 2019.08.04 at 10h 48m 53s.xml">
-      <configuration name="UserServiceImplTest.testGetAll" configurationId="TestNG" />
+    <history-entry file="AdoptionServiceImplTest_testGet - 2019.08.05 at 19h 33m 20s.xml">
+      <configuration name="AdoptionServiceImplTest.testGet" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="AdoptionServiceImplTest_testGetAllBetweenDates - 2019.08.05 at 19h 59m 02s.xml">
+      <configuration name="AdoptionServiceImplTest.testGetAllBetweenDates" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="AdoptionServiceImplTest_testGetAllBetweenDates - 2019.08.05 at 19h 59m 41s.xml">
+      <configuration name="AdoptionServiceImplTest.testGetAllBetweenDates" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="AdoptionServiceImplTest_testGetAllBetweenDates - 2019.08.05 at 20h 00m 59s.xml">
+      <configuration name="AdoptionServiceImplTest.testGetAllBetweenDates" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="AdoptionServiceImplTest_testGetAllBetweenDates - 2019.08.05 at 20h 03m 47s.xml">
+      <configuration name="AdoptionServiceImplTest.testGetAllBetweenDates" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="AdoptionServiceImplTest_testGetAllBetweenDates - 2019.08.05 at 20h 04m 13s.xml">
+      <configuration name="AdoptionServiceImplTest.testGetAllBetweenDates" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="AdoptionServiceImplTest_testGetAllBetweenDates - 2019.08.05 at 20h 06m 04s.xml">
+      <configuration name="AdoptionServiceImplTest.testGetAllBetweenDates" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="AdoptionServiceImplTest_testGetAllBetweenDates - 2019.08.05 at 21h 38m 28s.xml">
+      <configuration name="AdoptionServiceImplTest.testGetAllBetweenDates" configurationId="TestNG" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5129000" />
+    <option name="totallyTimeSpent" value="20653000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19364598" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20574887" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -769,27 +1117,27 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Database Console" weight="0.3289689" />
-      <window_info anchor="bottom" id="Messages" weight="0.3289689" />
       <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3289689" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3289689" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32569557" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39934534" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="FindBugs-IDEA" order="7" />
+      <window_info anchor="bottom" id="FindBugs-IDEA" order="7" weight="0.3289689" />
       <window_info anchor="bottom" id="Application Servers" order="8" />
       <window_info anchor="bottom" id="Analysis" order="9" />
       <window_info anchor="bottom" id="Terminal" order="10" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="CheckStyle" order="12" />
+      <window_info anchor="bottom" id="CheckStyle" order="12" weight="0.3289689" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
       <window_info anchor="bottom" id="Statistic" order="14" weight="0.3289689" />
       <window_info anchor="bottom" id="SonarLint" order="15" weight="0.3289689" />
       <window_info anchor="bottom" id="Java Enterprise" order="16" />
-      <window_info anchor="bottom" id="Database Changes" order="17" />
+      <window_info anchor="bottom" id="Database Changes" order="17" weight="0.3289689" />
       <window_info anchor="bottom" id="Version Control" order="18" />
+      <window_info anchor="bottom" id="Database Console" order="19" weight="0.3289689" />
+      <window_info anchor="bottom" id="Messages" order="20" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -801,6 +1149,47 @@
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="PlantUML" order="9" />
     </layout>
+    <layout-to-restore>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19667171" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Designer" order="2" />
+      <window_info id="Image Layers" order="3" />
+      <window_info id="Capture Tool" order="4" />
+      <window_info id="UI Designer" order="5" />
+      <window_info id="Favorites" order="6" side_tool="true" />
+      <window_info id="Web" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32569557" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39934534" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="FindBugs-IDEA" order="7" weight="0.3289689" />
+      <window_info anchor="bottom" id="Application Servers" order="8" />
+      <window_info anchor="bottom" id="Analysis" order="9" />
+      <window_info anchor="bottom" id="Terminal" order="10" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="CheckStyle" order="12" />
+      <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
+      <window_info anchor="bottom" id="Statistic" order="14" weight="0.3289689" />
+      <window_info anchor="bottom" id="SonarLint" order="15" weight="0.3289689" />
+      <window_info anchor="bottom" id="Java Enterprise" order="16" />
+      <window_info anchor="bottom" id="Database Changes" order="17" />
+      <window_info anchor="bottom" id="Version Control" order="18" />
+      <window_info anchor="bottom" id="Database Console" order="19" weight="0.3289689" />
+      <window_info anchor="bottom" id="Messages" order="20" weight="0.3289689" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Maven" order="3" weight="0.2526475" />
+      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Capture Analysis" order="5" />
+      <window_info anchor="right" id="Database" order="6" weight="0.18986385" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
+      <window_info anchor="right" id="Theme Preview" order="8" />
+      <window_info anchor="right" id="PlantUML" order="9" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -859,16 +1248,12 @@
     <MESSAGE value="Updated finding staff by phone" />
     <MESSAGE value="Code Convention" />
     <option name="LAST_COMMIT_MESSAGE" value="Code Convention" />
+    <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/by/training/finaltask/service/AdoptionServiceImpl.java</url>
-          <line>339</line>
-          <properties />
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/by/training/finaltask/filter/ActionURIFilter.java</url>
           <line>69</line>
@@ -881,66 +1266,31 @@
           <properties />
           <option name="timeStamp" value="9" />
         </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/training/finaltask/service/AdoptionServiceImpl.java</url>
+          <line>295</line>
+          <properties />
+          <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/AdoptionDAOImplementation.java</url>
+          <line>271</line>
+          <properties />
+          <option name="timeStamp" value="16" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory">
+        <watch expression="calendar" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/test/java/by/training/finaltask/service/AdoptionServiceImplTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="19" column="15" selection-start-line="19" selection-start-column="15" selection-end-line="19" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/AdoptionDAOImplementationTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="88" column="5" selection-start-line="88" selection-start-column="5" selection-end-line="88" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/BaseDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/index.jsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-7">
-          <caret line="55" selection-start-line="55" selection-end-line="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/daomysqlqueries.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="19" column="59" selection-start-line="19" selection-start-column="59" selection-end-line="19" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/service/serviceinterface/UserInfoService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="252">
           <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/sql/2_create_tables.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="68" column="34" lean-forward="true" selection-start-line="68" selection-start-column="34" selection-end-line="68" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://f4117627-5f40-4b2f-8d35-71142a57bc9c/schema/petshelter/table/users">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
         </state>
       </provider>
     </entry>
@@ -958,20 +1308,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/DAOEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/AdoptionDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="8" column="17" selection-start-line="8" selection-start-column="17" selection-end-line="8" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/pool/ConnectionPool.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -983,13 +1319,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="7" column="19" selection-start-line="7" selection-start-column="19" selection-end-line="7" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/entity/Adoption.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="5" column="19" selection-start-line="5" selection-start-column="19" selection-end-line="5" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -1111,17 +1440,106 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/service/AdoptionServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/filter/ActionURIFilter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2367">
-          <caret line="305" selection-start-line="305" selection-end-line="305" />
+        <state relative-caret-position="401">
+          <caret line="105" column="16" selection-start-line="105" selection-start-column="16" selection-end-line="105" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/testng/testng/7.0.0-beta7/testng-7.0.0-beta7-sources.jar!/org/testng/internal/TestInvoker.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="594" selection-start-line="594" selection-end-line="594" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.8.0_191/src.zip!/java/util/Calendar.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="2659" lean-forward="true" selection-start-line="2659" selection-end-line="2659" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/action/staff/FindAdoptionAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="21" column="13" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/jsp/adoptions/staff/findadoption.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="40" column="108" selection-start-line="40" selection-start-column="108" selection-end-line="40" selection-end-column="108" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/sql/2_create_tables.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="45" selection-start-line="45" selection-end-line="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://f4117627-5f40-4b2f-8d35-71142a57bc9c/schema/petshelter/table/breeds">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/sql/4_fill_db.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="5" column="45" lean-forward="true" selection-start-line="5" selection-start-column="45" selection-end-line="5" selection-end-column="45" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/comparable.java" />
+    <entry file="das://f4117627-5f40-4b2f-8d35-71142a57bc9c/schema/petshelter/table/users">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://f4117627-5f40-4b2f-8d35-71142a57bc9c/schema/petshelter/table/adoptions_made">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/UserInfoDAOImplementation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1056">
+          <caret line="130" column="24" selection-start-line="130" selection-start-column="24" selection-end-line="130" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/service/UserServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="108" column="17" selection-start-line="108" selection-start-column="17" selection-end-line="108" selection-end-column="17" />
+        <state relative-caret-position="18">
+          <caret line="75" column="22" lean-forward="true" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/comparator/GregorianCalendarComparator.java" />
+    <entry file="das://f4117627-5f40-4b2f-8d35-71142a57bc9c/schema/petshelter/table/pets">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/entity/Adoption.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="41" selection-start-line="41" selection-end-line="41" />
+          <folding>
+            <element signature="e#930#931#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1132,58 +1550,214 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/filter/ActionURIFilter.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/by/training/finaltask/service/AdoptionServiceImplTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="401">
-          <caret line="105" column="16" selection-start-line="105" selection-start-column="16" selection-end-line="105" selection-end-column="16" />
+        <state relative-caret-position="86">
+          <caret line="70" selection-start-line="70" selection-end-line="70" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/daomysqlqueries.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/daomysqlqueries.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="35" selection-start-line="35" selection-end-line="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindAdoptionBetweenDatesAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="48" column="52" selection-start-line="48" selection-start-column="52" selection-end-line="48" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/service/AdoptionServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="297" column="81" selection-start-line="297" selection-start-column="81" selection-end-line="297" selection-end-column="81" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/sql/#_test.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/BreedDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/AdoptionDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/AdoptionDAOImplementation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1558">
-          <caret line="262" column="12" selection-start-line="262" selection-start-column="12" selection-end-line="262" selection-end-column="12" />
+        <state relative-caret-position="-6459">
+          <caret line="21" column="5" lean-forward="true" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
           <folding>
-            <element signature="e#619#620#0" expanded="true" />
-            <element signature="e#652#653#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#660#661#0" expanded="true" />
+            <element signature="e#684#685#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/BaseDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/DAOEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/PetDAOImplementation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/UserDAOImplementation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="176">
+          <caret line="256" column="13" selection-start-line="256" selection-start-column="13" selection-end-line="256" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/ShelterDAOImplementation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1386">
+          <caret line="89" selection-start-line="89" selection-end-line="89" />
+          <folding>
+            <element signature="e#760#761#0" expanded="true" />
+            <element signature="e#789#790#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/BreedDAOImplementation.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="53" column="43" lean-forward="true" selection-start-line="53" selection-start-column="43" selection-end-line="53" selection-end-column="43" />
+        <state relative-caret-position="180">
+          <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
+          <folding>
+            <element signature="e#728#729#0" expanded="true" />
+            <element signature="e#752#753#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/PetDAOImplementation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-6975">
-          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/ShelterDAOImplementation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-175">
-          <caret line="53" lean-forward="true" selection-start-line="53" selection-end-line="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/UserDAOImplementation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="256" column="13" selection-start-line="256" selection-start-column="13" selection-end-line="256" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/UserInfoDAOImplementation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1287">
-          <caret line="103" column="17" selection-start-line="103" selection-start-column="17" selection-end-line="103" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <last-edited>Task_FinalProject_WebApp:war</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+                <option value="0.5" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <last-edited>Web</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.30475086" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="JdkListConfigurable.UI">
+        <settings>
+          <last-edited>1.8.0_191</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.30475086" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <last-edited>Task_FinalProject_WebApp</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.30475086" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <last-edited>Maven: com.beust:jcommander:1.72</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.30475086" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.30475086" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

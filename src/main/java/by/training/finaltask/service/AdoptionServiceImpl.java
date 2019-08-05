@@ -12,6 +12,7 @@ import by.training.finaltask.service.serviceinterface.AdoptionService;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 import java.util.List;
@@ -299,9 +300,6 @@ public final class AdoptionServiceImpl extends ServiceImpl implements AdoptionSe
                 throw new InvalidFormDataException("incorrectDateFormat");
             }
         }
-        if (adoption.getAdoptionStart().compareTo(calendar) < 0) {
-            throw new InvalidFormDataException("adoptionsRequiresADay");
-        }
     }
 
     private void isOverlapping(Adoption adoption)
@@ -338,7 +336,11 @@ public final class AdoptionServiceImpl extends ServiceImpl implements AdoptionSe
     }
 
     private void updatePetToAdopted(Adoption adoption) throws PersistentException {
-        Calendar calendar = Calendar.getInstance();
+        LocalDate date = LocalDate.now();
+        GregorianCalendar calendar = new GregorianCalendar(
+                date.getYear(),
+                date.getMonthValue() - 1,
+                date.getDayOfMonth());
         if (calendar.compareTo(adoption.getAdoptionStart()) == 0) {
             PetDAO dao = (PetDAO) createDao(DAOEnum.PET);
             Pet pet = dao.get(adoption.getPetID());

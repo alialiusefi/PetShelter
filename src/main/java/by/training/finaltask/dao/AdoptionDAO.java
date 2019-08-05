@@ -8,6 +8,12 @@ import java.util.List;
 
 public interface AdoptionDAO extends DAO<Adoption> {
 
+    /**
+     * Gets adoption from DB using petID column.
+     * @param petID
+     * @return returns Adoption.
+     * @throws PersistentException
+     */
     Adoption get(Integer petID) throws PersistentException;
 
     List<Adoption> getAll(int offset, int rowcount) throws PersistentException;

@@ -32,6 +32,8 @@ public class FindAdoptionBetweenDatesAction extends AuthorizedUserAction {
         this.allowedRoles.add(Role.STAFF);
     }
 
+    //todo: fix bug with search
+
     @Override
     public Forward exec(HttpServletRequest request, HttpServletResponse response) throws PersistentException {
         HttpSession session = request.getSession(false);

@@ -38,7 +38,7 @@
             <th><fmt:message key="petName"/></th>
             <th><fmt:message key="adoptedFrom"/></th>
             <th><fmt:message key="adoptedTo"/></th>
-            <th><fmt:message key="firstName"/></th>
+            <th><fmt:message key="firstName"/></th> <%--todo: disambiguation of firstName to User First Name--%>
             <th><fmt:message key="email"/></th>
             <th><fmt:message key="address"/></th>
             <th><fmt:message key="contactNumber"/></th>
