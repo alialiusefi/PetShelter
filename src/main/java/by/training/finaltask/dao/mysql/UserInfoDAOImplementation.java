@@ -135,10 +135,6 @@ public final class UserInfoDAOImplementation extends BaseDAO implements UserInfo
         }
     }
 
-    @Override
-    public UserInfo get() throws PersistentException {
-        return get(1);
-    }
 
     @Override
     public boolean update(UserInfo element) throws PersistentException {

@@ -24,10 +24,6 @@ public final class UserDAOImplementation extends BaseDAO implements UserDAO {
         super(connection);
     }
 
-    @Override
-    public User get() throws PersistentException {
-        return get(1);
-    }
 
     @Override
     public User get(Integer userID) throws PersistentException {

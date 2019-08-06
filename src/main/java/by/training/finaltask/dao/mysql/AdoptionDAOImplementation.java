@@ -1,16 +1,15 @@
 package by.training.finaltask.dao.mysql;
 
+import by.training.finaltask.dao.AdoptionDAO;
+import by.training.finaltask.entity.Adoption;
+import by.training.finaltask.exception.PersistentException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.sql.*;
 import java.util.GregorianCalendar;
 import java.util.LinkedList;
 import java.util.List;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import by.training.finaltask.dao.AdoptionDAO;
-import by.training.finaltask.entity.Adoption;
-import by.training.finaltask.exception.PersistentException;
 
 public final class AdoptionDAOImplementation extends BaseDAO implements AdoptionDAO {
 
@@ -417,11 +416,6 @@ public final class AdoptionDAOImplementation extends BaseDAO implements Adoption
 			LOGGER.warn(e.getMessage(), e);
 			throw new PersistentException(e.getMessage(), e);
 		}
-	}
-
-	@Override
-	public Adoption get() throws PersistentException {
-		return get(1);
 	}
 
 	private Adoption getAdoption(ResultSet resultSet) throws SQLException {

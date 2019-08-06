@@ -1,5 +1,11 @@
 package by.training.finaltask.dao.mysql;
 
+import by.training.finaltask.dao.BreedDAO;
+import by.training.finaltask.entity.Breed;
+import by.training.finaltask.exception.PersistentException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -7,17 +13,9 @@ import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import by.training.finaltask.dao.BreedDAO;
-import by.training.finaltask.entity.Breed;
-import by.training.finaltask.exception.PersistentException;
-
 public final class BreedDAOImplementation extends BaseDAO implements BreedDAO {
 
 	private Logger LOGGER = LogManager.getLogger(PetDAOImplementation.class);
-    private static String UNSUPPORTEDOPERATION = "unsupportedOperation";
 
 	public BreedDAOImplementation(Connection connection) {
 		super(connection);
@@ -56,28 +54,6 @@ public final class BreedDAOImplementation extends BaseDAO implements BreedDAO {
 			LOGGER.warn(e.getMessage(), e);
 			throw new PersistentException(e.getMessage(), e);
 		}
-	}
-
-	@Override
-	public Breed get() throws PersistentException {
-		throw new PersistentException(UNSUPPORTEDOPERATION);
-	}
-
-	@Override
-	public int add(Breed element) throws PersistentException {
-		throw new PersistentException(UNSUPPORTEDOPERATION);
-	}
-
-	@Override
-	public boolean update(Breed element) throws PersistentException {
-		throw new PersistentException(UNSUPPORTEDOPERATION);
-
-	}
-
-	@Override
-	public boolean delete(Breed element) throws PersistentException {
-		throw new PersistentException(UNSUPPORTEDOPERATION);
-
 	}
 
 	private Breed getBreed(ResultSet resultSet) throws SQLException {

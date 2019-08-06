@@ -5,9 +5,22 @@ import by.training.finaltask.exception.PersistentException;
 
 public interface DAO<T> {
 
-    int add(T element) throws PersistentException;
-    T get() throws PersistentException;
-    boolean update(T element) throws PersistentException;
-    boolean delete(T element) throws PersistentException;
+    String UNSUPPORTEDOPERATION = "unsupportedOperation";
+
+    default int add(T element) throws PersistentException {
+        throw new PersistentException(UNSUPPORTEDOPERATION);
+    }
+
+    default T get() throws PersistentException {
+        throw new PersistentException(UNSUPPORTEDOPERATION);
+    }
+
+    default boolean update(T element) throws PersistentException {
+        throw new PersistentException(UNSUPPORTEDOPERATION);
+    }
+
+    default boolean delete(T element) throws PersistentException {
+        throw new PersistentException(UNSUPPORTEDOPERATION);
+    }
 
 }

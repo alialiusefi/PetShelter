@@ -1,18 +1,17 @@
 package by.training.finaltask.dao.mysql;
 
+import by.training.finaltask.dao.ShelterDAO;
+import by.training.finaltask.entity.Shelter;
+import by.training.finaltask.exception.PersistentException;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.LinkedList;
 import java.util.List;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import by.training.finaltask.dao.ShelterDAO;
-import by.training.finaltask.entity.Shelter;
-import by.training.finaltask.exception.PersistentException;
 
 public final class ShelterDAOImplementation extends BaseDAO implements ShelterDAO {
 
@@ -59,28 +58,6 @@ public final class ShelterDAOImplementation extends BaseDAO implements ShelterDA
 		}
 	}
 
-	@Override
-	public int add(Shelter element) throws PersistentException {
-		throw new PersistentException(UNSUPPORTEDOPERATION);
-	}
-
-	@Override
-	public Shelter get() throws PersistentException {
-		throw new PersistentException(UNSUPPORTEDOPERATION);
-
-	}
-
-	@Override
-	public boolean update(Shelter element) throws PersistentException {
-		throw new PersistentException(UNSUPPORTEDOPERATION);
-
-	}
-
-	@Override
-	public boolean delete(Shelter element) throws PersistentException {
-		throw new PersistentException(UNSUPPORTEDOPERATION);
-
-	}
 
 	private Shelter getShelter(ResultSet resultSet) throws SQLException {
 		int shelterID = resultSet.getInt("id");
