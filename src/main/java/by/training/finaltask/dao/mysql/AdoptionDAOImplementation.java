@@ -14,7 +14,7 @@ import java.util.List;
 public final class AdoptionDAOImplementation extends BaseDAO implements AdoptionDAO {
 
 	private static final int COUNTARGUMENTS = 10;
-	private Logger LOGGER = LogManager.getLogger(AdoptionDAOImplementation.class);
+	private Logger logger = LogManager.getLogger(AdoptionDAOImplementation.class);
 
 	public AdoptionDAOImplementation(Connection connection) {
 		super(connection);
@@ -25,13 +25,15 @@ public final class AdoptionDAOImplementation extends BaseDAO implements Adoption
 		try (PreparedStatement preparedStatement = connection.prepareStatement(
 				resourceBundle.getString("getAdoptionDAO"))) {
 			preparedStatement.setInt(1, adoptionID);
-			ResultSet resultset = preparedStatement.executeQuery();
-			if (resultset.next()) {
-				return getAdoption(resultset);
+			try (ResultSet resultset = preparedStatement.executeQuery()) {
+				if (resultset.next()) {
+					return getAdoption(resultset);
+				}
+
 			}
 
 		} catch (SQLException e) {
-			LOGGER.warn(e.getMessage(), e);
+			logger.warn(e.getMessage(), e);
 			throw new PersistentException(e.getMessage(), e);
 		}
 		return null;
@@ -44,14 +46,16 @@ public final class AdoptionDAOImplementation extends BaseDAO implements Adoption
 			preparedStatement.setInt(1, offset);
 			preparedStatement.setInt(2, rowcount);
 			List<Adoption> adoptions = new LinkedList<>();
-			ResultSet resultset = preparedStatement.executeQuery();
-			while (resultset.next()) {
-				adoptions.add(getAdoption(resultset));
+			try (ResultSet resultset = preparedStatement.executeQuery()) {
+				while (resultset.next()) {
+					adoptions.add(getAdoption(resultset));
+				}
+
 			}
 			return adoptions;
 
 		} catch (SQLException e) {
-			LOGGER.warn(e.getMessage(), e);
+			logger.warn(e.getMessage(), e);
 			throw new PersistentException(e.getMessage(), e);
 		}
 	}
@@ -62,15 +66,17 @@ public final class AdoptionDAOImplementation extends BaseDAO implements Adoption
 				resourceBundle.getString("getAllAdoptionDAO"))) {
 			List<Adoption> adoptions = new LinkedList<>();
 			preparedStatement.setInt(1, petID);
-			ResultSet resultset = preparedStatement.executeQuery();
-			while (resultset.next()) {
-				adoptions.add(getAdoption(resultset));
+			try (ResultSet resultset = preparedStatement.executeQuery()) {
+				while (resultset.next()) {
+					adoptions.add(getAdoption(resultset));
+				}
+
 			}
 
 			return adoptions;
 
 		} catch (SQLException e) {
-			LOGGER.warn(e.getMessage(), e);
+			logger.warn(e.getMessage(), e);
 			throw new PersistentException(e.getMessage(), e);
 		}
 	}
@@ -91,14 +97,16 @@ public final class AdoptionDAOImplementation extends BaseDAO implements Adoption
 			preparedStatement.setDate(6, endDate);
 			preparedStatement.setInt(7, offset);
 			preparedStatement.setInt(8, rowcount);
-			ResultSet resultset = preparedStatement.executeQuery();
-			while (resultset.next()) {
-				adoptions.add(getAdoption(resultset));
+			try (ResultSet resultset = preparedStatement.executeQuery()) {
+				while (resultset.next()) {
+					adoptions.add(getAdoption(resultset));
+				}
+
 			}
 			return adoptions;
 
 		} catch (SQLException e) {
-			LOGGER.warn(e.getMessage(), e);
+			logger.warn(e.getMessage(), e);
 			throw new PersistentException(e.getMessage(), e);
 		}
 	}
@@ -115,12 +123,13 @@ public final class AdoptionDAOImplementation extends BaseDAO implements Adoption
 			statement.setDate(4, endDate);
 			statement.setDate(5, startDate);
 			statement.setDate(6, endDate);
-			ResultSet set = statement.executeQuery();
-			set.next();
-			return set.getInt(1);
+			try (ResultSet set = statement.executeQuery()) {
+				set.next();
+				return set.getInt(1);
+			}
 
 		} catch (SQLException e) {
-			LOGGER.warn(e.getMessage(), e);
+			logger.warn(e.getMessage(), e);
 			throw new PersistentException(e.getMessage(), e);
 		}
 	}
@@ -142,14 +151,15 @@ public final class AdoptionDAOImplementation extends BaseDAO implements Adoption
 			preparedStatement.setInt(7, userID);
 			preparedStatement.setInt(8, offset);
 			preparedStatement.setInt(9, rowcount);
-			ResultSet resultset = preparedStatement.executeQuery();
-			while (resultset.next()) {
-				adoptions.add(getAdoption(resultset));
+			try (ResultSet resultset = preparedStatement.executeQuery()) {
+				while (resultset.next()) {
+					adoptions.add(getAdoption(resultset));
+				}
 			}
 			return adoptions;
 
 		} catch (SQLException e) {
-			LOGGER.warn(e.getMessage(), e);
+			logger.warn(e.getMessage(), e);
 			throw new PersistentException(e.getMessage(), e);
 		}
 	}
@@ -162,14 +172,16 @@ public final class AdoptionDAOImplementation extends BaseDAO implements Adoption
 			preparedStatement.setNString(1, petName);
 			preparedStatement.setInt(2, offset);
 			preparedStatement.setInt(3, rowcount);
-			ResultSet resultset = preparedStatement.executeQuery();
-			while (resultset.next()) {
-				adoptions.add(getAdoption(resultset));
+			try (ResultSet resultset = preparedStatement.executeQuery()) {
+				while (resultset.next()) {
+					adoptions.add(getAdoption(resultset));
+				}
+
 			}
 			return adoptions;
 
 		} catch (SQLException e) {
-			LOGGER.warn(e.getMessage(), e);
+			logger.warn(e.getMessage(), e);
 			throw new PersistentException(e.getMessage(), e);
 		}
 	}
@@ -191,7 +203,7 @@ public final class AdoptionDAOImplementation extends BaseDAO implements Adoption
 				return adoptions;
 			}
 		} catch (SQLException e) {
-			LOGGER.warn(e.getMessage(), e);
+			logger.warn(e.getMessage(), e);
 			throw new PersistentException(e.getMessage(), e);
 		}
 	}
@@ -211,7 +223,7 @@ public final class AdoptionDAOImplementation extends BaseDAO implements Adoption
 				return adoptions;
 			}
 		} catch (SQLException e) {
-			LOGGER.warn(e.getMessage(), e);
+			logger.warn(e.getMessage(), e);
 			throw new PersistentException(e.getMessage(), e);
 		}
 	}
@@ -226,7 +238,7 @@ public final class AdoptionDAOImplementation extends BaseDAO implements Adoption
 				return set.getInt(1);
 			}
 		} catch (SQLException e) {
-			LOGGER.warn(e.getMessage(), e);
+			logger.warn(e.getMessage(), e);
 			throw new PersistentException(e.getMessage(), e);
 		}
 	}
@@ -241,7 +253,7 @@ public final class AdoptionDAOImplementation extends BaseDAO implements Adoption
 				return set.getInt(1);
 			}
 		} catch (SQLException e) {
-			LOGGER.warn(e.getMessage(), e);
+			logger.warn(e.getMessage(), e);
 			throw new PersistentException(e.getMessage(), e);
 		}
 	}
@@ -257,7 +269,7 @@ public final class AdoptionDAOImplementation extends BaseDAO implements Adoption
 				return set.getInt(1);
 			}
 		} catch (SQLException e) {
-			LOGGER.warn(e.getMessage(), e);
+			logger.warn(e.getMessage(), e);
 			throw new PersistentException(e.getMessage(), e);
 		}
 	}
@@ -284,7 +296,7 @@ public final class AdoptionDAOImplementation extends BaseDAO implements Adoption
 			}
 			return 0;
 		} catch (SQLException e) {
-			LOGGER.warn(e.getMessage(), e);
+			logger.warn(e.getMessage(), e);
 			throw new PersistentException(e.getMessage(), e);
 		}
 	}
@@ -314,7 +326,7 @@ public final class AdoptionDAOImplementation extends BaseDAO implements Adoption
 			}
 			return res;
 		} catch (SQLException e) {
-			LOGGER.warn(e.getMessage(), e);
+			logger.warn(e.getMessage(), e);
 			throw new PersistentException(e.getMessage(), e);
 		}
 	}
@@ -335,7 +347,7 @@ public final class AdoptionDAOImplementation extends BaseDAO implements Adoption
 			}
 			return res;
 		} catch (SQLException e) {
-			LOGGER.warn(e.getMessage(), e);
+			logger.warn(e.getMessage(), e);
 			throw new PersistentException(e.getMessage(), e);
 		}
 	}
@@ -352,7 +364,7 @@ public final class AdoptionDAOImplementation extends BaseDAO implements Adoption
 			return 0;
 
 		} catch (SQLException e) {
-			LOGGER.warn(e.getMessage(), e);
+			logger.warn(e.getMessage(), e);
 			throw new PersistentException(e.getMessage(), e);
 		}
 	}
@@ -378,7 +390,7 @@ public final class AdoptionDAOImplementation extends BaseDAO implements Adoption
 			}
 
 		} catch (SQLException e) {
-			LOGGER.warn(e.getMessage(), e);
+			logger.warn(e.getMessage(), e);
 			throw new PersistentException("Couldn't add row!\n" + e.getMessage(), e);
 		}
 	}
@@ -400,7 +412,7 @@ public final class AdoptionDAOImplementation extends BaseDAO implements Adoption
 			preparedStatement.executeUpdate();
 			return true;
 		} catch (SQLException e) {
-			LOGGER.warn(e.getMessage(), e);
+			logger.warn(e.getMessage(), e);
 			throw new PersistentException("Couldn't update user!\n" + e.getMessage(), e);
 		}
 	}
@@ -418,7 +430,7 @@ public final class AdoptionDAOImplementation extends BaseDAO implements Adoption
 			preparedStatement.executeUpdate();
 			return true;
 		} catch (SQLException e) {
-			LOGGER.warn(e.getMessage(), e);
+			logger.warn(e.getMessage(), e);
 			throw new PersistentException(e.getMessage(), e);
 		}
 	}
