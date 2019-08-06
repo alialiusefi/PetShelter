@@ -4,7 +4,10 @@ import java.sql.Blob;
 import java.util.GregorianCalendar;
 import java.util.Objects;
 
-public final class Pet extends Entity{
+/**
+ * Pet entity class that represents pets table.
+ */
+public final class Pet {
 
     private int id;
     private String name;

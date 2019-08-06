@@ -4,14 +4,13 @@ import by.training.finaltask.action.Action;
 import by.training.finaltask.entity.UserInfo;
 import by.training.finaltask.exception.InvalidFormDataException;
 
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
 
+/**
+ * Parses Parameters from form to create UserInfo.
+ */
 public final class UserInfoFormParser extends FormParser<UserInfo> {
 
     private static final int EMAIL = 0;
@@ -20,14 +19,18 @@ public final class UserInfoFormParser extends FormParser<UserInfo> {
     private static final int DATEOFBIRTH = 3;
     private static final int ADDRESS = 4;
     private static final int CONTACTNUMBER = 5;
-    private static final String EMAIL_REGEX = "^((?!\\.)[\\w-_.]*[^.])(@\\w+)(\\.\\w+(\\.\\w+)?[^.\\W])$";
+    private static final String EMAIL_REGEX = "^((?!\\.)[\\w-_.]*[^.])(@\\w+)" +
+            "(\\.\\w+(\\.\\w+)?[^.\\W])$";
     private static final String NAME_REGEX = "^[a-zA-Z]+$";
     private static final String CONTACT_REGEX = "^\\+[0-9]{1,15}$";
+    private static final String DATE_FORMAT = "yyyy-MM-dd";
 
     @Override
-    public UserInfo parse(Action action, List<String> userInfoParameters) throws InvalidFormDataException {
-        if(!userInfoParameters.isEmpty() && !userInfoParameters.contains(null)
-                && !userInfoParameters.contains("")) {
+    public UserInfo parse(Action action, List<String> userInfoParameters)
+            throws InvalidFormDataException {
+        if (!userInfoParameters.isEmpty() &&
+                !userInfoParameters.contains(null) &&
+                !userInfoParameters.contains("")) {
             String email = userInfoParameters.get(EMAIL);
             if (email != null && email.matches(EMAIL_REGEX)) {
                 String firstname = userInfoParameters.get(FIRSTNAME);
@@ -35,15 +38,9 @@ public final class UserInfoFormParser extends FormParser<UserInfo> {
                     String lastname = userInfoParameters.get(LASTNAME);
                     if (lastname != null && lastname.matches(NAME_REGEX)) {
                         String dateofbirth = userInfoParameters.get(DATEOFBIRTH);
-                        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
-                        Date date;
-                        try {
-                            date = dateFormat.parse(dateofbirth);
-                        } catch (ParseException e) {
-                            throw new InvalidFormDataException("incorrectBirthDateFormat");
-                        }
-                        GregorianCalendar dateofbirthgreg = new GregorianCalendar();
-                        dateofbirthgreg.setTime(date);
+                        GregorianCalendar dateofbirthgreg =
+                                FormParser.parseDate(DATE_FORMAT, dateofbirth);
+
                         Calendar current = GregorianCalendar.getInstance();
                         if (dateofbirthgreg.compareTo(current) > 0) {
                             throw new InvalidFormDataException("incorrectBirthDateFormat");
@@ -53,7 +50,7 @@ public final class UserInfoFormParser extends FormParser<UserInfo> {
                             String contactnumber = userInfoParameters.get(CONTACTNUMBER);
                             if (contactnumber != null && contactnumber.matches(CONTACT_REGEX)) {
                                 String contactNumberNoSymbols = removePhoneFormatSymbols(contactnumber);
-                                Long number = Long.parseLong(contactNumberNoSymbols);
+                                long number = Long.parseLong(contactNumberNoSymbols);
                                 return new UserInfo(
                                         null,
                                         email,

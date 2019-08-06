@@ -1,5 +1,8 @@
 package by.training.finaltask.entity;
 
+/**
+ * Enum entity class that is a column of pets table.
+ */
 public enum PetStatus {
     ADOPTED("Adopted"),
     SHELTERED("Sheltered"),
@@ -7,8 +10,7 @@ public enum PetStatus {
 
     private String value;
 
-    PetStatus(String value)
-    {
+    PetStatus(String value) {
         this.value = value;
     }
 

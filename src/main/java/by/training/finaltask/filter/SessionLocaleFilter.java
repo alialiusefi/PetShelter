@@ -4,6 +4,9 @@ import javax.servlet.*;
 import javax.servlet.http.HttpServletRequest;
 import java.io.IOException;
 
+/**
+ * Filter that detects and sets language/locale of the web page content.
+ */
 public final class SessionLocaleFilter implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {

@@ -2,6 +2,9 @@ package by.training.finaltask.entity;
 
 import java.util.Objects;
 
+/**
+ * User entity class that represents users table.
+ */
 public final class User {
 
     private Integer id;

@@ -15,6 +15,11 @@ public abstract class FormParser<T> {
 
     private static final String NUMBER_REGEX = "[1-9]+";
 
+    /**
+     * @param pageParameter Page Number parameter in pagination.
+     * @param amountOfPages Total Count of rows.
+     * @return parsed page number.
+     */
     public static int parsePageNumber(String pageParameter, int amountOfPages) {
         if (pageParameter != null) {
             if (pageParameter.matches(NUMBER_REGEX)) {
@@ -30,8 +35,15 @@ public abstract class FormParser<T> {
         return 1;
     }
 
+    /**
+     * @param format  Date format to parse into.
+     * @param dateStr Date in YYYY-MM-dd format.
+     * @return return gregorian calendar.
+     * @throws InvalidFormDataException if dateStr is not valid.
+     */
     public static GregorianCalendar parseDate(String format,
-                                              String dateStr) throws InvalidFormDataException {
+                                              String dateStr)
+            throws InvalidFormDataException {
         DateFormat dateFormat = new SimpleDateFormat(format);
         Date date;
         try {
@@ -44,7 +56,13 @@ public abstract class FormParser<T> {
         return dategreg;
     }
 
-
+    /**
+     * @param action     Action required to get service
+     * @param parameters form parameters.
+     * @return matching generic object
+     * @throws InvalidFormDataException if data inputed is invalid.
+     * @throws PersistentException      if connection to database is interrupted.
+     */
     public abstract T parse(Action action, List<String> parameters)
             throws InvalidFormDataException, PersistentException;
 

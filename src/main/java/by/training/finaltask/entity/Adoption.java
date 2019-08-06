@@ -3,6 +3,9 @@ package by.training.finaltask.entity;
 import java.util.GregorianCalendar;
 import java.util.Objects;
 
+/**
+ * Adoption Entity Class that represents adoptions_made table
+ */
 public final class Adoption {
 
     private int id;
@@ -11,7 +14,7 @@ public final class Adoption {
     private GregorianCalendar adoptionEnd;
     private int userID;
 
-    public Adoption(int id,int petID, GregorianCalendar adoptionStart,
+    public Adoption(int id, int petID, GregorianCalendar adoptionStart,
                     GregorianCalendar adoptionEnd, int userID) {
         this.id = id;
         this.petID = petID;
@@ -20,13 +23,11 @@ public final class Adoption {
         this.userID = userID;
     }
 
-    public int getId()
-    {
+    public int getId() {
         return id;
     }
 
-    public void setId(int id)
-    {
+    public void setId(int id) {
         this.id = id;
     }
 
@@ -70,8 +71,10 @@ public final class Adoption {
         return getId() == adoption.getId() &&
                 getPetID() == adoption.getPetID() &&
                 getUserID() == adoption.getUserID() &&
-                Objects.equals(getAdoptionStart(), adoption.getAdoptionStart()) &&
-                Objects.equals(getAdoptionEnd(), adoption.getAdoptionEnd());
+                Objects.equals(getAdoptionStart(),
+                        adoption.getAdoptionStart()) &&
+                Objects.equals(getAdoptionEnd(),
+                        adoption.getAdoptionEnd());
     }
 
     @Override

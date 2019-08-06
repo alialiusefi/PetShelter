@@ -7,6 +7,9 @@ import by.training.finaltask.exception.InvalidFormDataException;
 import java.util.GregorianCalendar;
 import java.util.List;
 
+/**
+ * Parses Parameters from form to create Adoption.
+ */
 public final class AdoptionFormParser extends FormParser<Adoption> {
 
     private static final int ADOPTIONID = 0;
@@ -19,7 +22,8 @@ public final class AdoptionFormParser extends FormParser<Adoption> {
     @Override
     public Adoption parse(Action action, List<String> parameters)
             throws InvalidFormDataException {
-        if (!parameters.isEmpty() && !parameters.contains(null) && !parameters.contains("")) {
+        if (!parameters.isEmpty() && !parameters.contains(null)
+                && !parameters.contains("")) {
             int adoptionID = Integer.parseInt(parameters.get(ADOPTIONID));
             int petID = Integer.parseInt(parameters.get(PETID));
             GregorianCalendar adoptionStartCalendar = parseDate(DATE_FORMAT,
@@ -32,7 +36,9 @@ public final class AdoptionFormParser extends FormParser<Adoption> {
                         parameters.get(ADOPTIONEND));
             }
             int userID = Integer.parseInt(parameters.get(USERID));
-            return new Adoption(adoptionID,petID, adoptionStartCalendar, adoptionEndCalendar, userID);
+            return new Adoption(adoptionID, petID,
+                    adoptionStartCalendar, adoptionEndCalendar,
+                    userID);
         }
         throw new InvalidFormDataException("fillAllFields");
     }

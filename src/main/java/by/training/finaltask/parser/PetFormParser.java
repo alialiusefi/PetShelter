@@ -17,14 +17,12 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.sql.Blob;
 import java.sql.SQLException;
-import java.text.DateFormat;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.GregorianCalendar;
 import java.util.List;
 
+/**
+ * Parses Parameters from form to create Pet.
+ */
 public final class PetFormParser extends FormParser<Pet> {
 
     private static final int PICTURE_PATH = 0;
@@ -42,19 +40,21 @@ public final class PetFormParser extends FormParser<Pet> {
     @Override
     public Pet parse(Action action, List<String> parameters) throws
             InvalidFormDataException, PersistentException {
-        if (!parameters.isEmpty() && !parameters.contains(null) && !parameters.contains("")) {
-            Blob pictureBlob = validatePicture(parameters.get(PICTURE_PATH));
+        if (!parameters.isEmpty() && !parameters.contains(null)
+                && !parameters.contains("")) {
+            Blob pictureBlob = getPictureBlob(parameters.get(PICTURE_PATH));
             String petName = parameters.get(PET_NAME);
             if (petName.matches(PET_NAME_REGEX)) {
                 String petWeightStr = parameters.get(PET_WEIGHT);
                 if (petWeightStr.matches(WEIGHT_REGEX)) {
                     double petWeight = Double.parseDouble(petWeightStr);
-                    GregorianCalendar dateOfBirthGreg = validateDate(parameters.get(DATE_OF_BIRTH));
-                    GregorianCalendar dateShelteredGreg = validateDate(
-                            parameters.get(DATE_SHELTERED));
+                    GregorianCalendar dateOfBirthGreg = FormParser.parseDate(DATE_FORMAT,
+                            parameters.get(DATE_OF_BIRTH));
+                    GregorianCalendar dateShelteredGreg = FormParser.parseDate(
+                            DATE_FORMAT, parameters.get(DATE_SHELTERED));
                     Shelter shelter = validateShelter(action,
                             parameters.get(SHELTER));
-                    Breed breed = validateBreed(action,parameters.get(BREED));
+                    Breed breed = validateBreed(action, parameters.get(BREED));
                     PetStatus status = PetStatus.valueOf(parameters.get(PET_STATUS));
                     return new Pet(
                             0,
@@ -74,6 +74,13 @@ public final class PetFormParser extends FormParser<Pet> {
         throw new InvalidFormDataException("fillAllFields");
     }
 
+    /**
+     * @param action    action to get service.
+     * @param shelterID shelterID to check if it exists.
+     * @return returns shelter object.
+     * @throws InvalidFormDataException incorrect shelterID.
+     * @throws PersistentException      database error.
+     */
     private Shelter validateShelter(Action action, String shelterID) throws
             InvalidFormDataException, PersistentException {
         ShelterService shelterService = (ShelterService)
@@ -87,7 +94,15 @@ public final class PetFormParser extends FormParser<Pet> {
         }
     }
 
-    private Breed validateBreed(Action action,String breedID) throws InvalidFormDataException, PersistentException {
+    /**
+     * @param action  action to get service.
+     * @param breedID to check if it exists.
+     * @return returns breed object.
+     * @throws InvalidFormDataException incorrect breedID.
+     * @throws PersistentException      database error.
+     */
+    private Breed validateBreed(Action action, String breedID)
+            throws InvalidFormDataException, PersistentException {
         BreedService breedService = (BreedService) action.factory
                 .createService(DAOEnum.BREED);
         int id = Integer.parseInt(breedID);
@@ -99,29 +114,13 @@ public final class PetFormParser extends FormParser<Pet> {
 
     }
 
-    private GregorianCalendar validateDate(String dateStr) throws InvalidFormDataException {
-        DateFormat dateFormat = new SimpleDateFormat(DATE_FORMAT);
-        Date date;
-        try {
-            date = dateFormat.parse(dateStr);
-        } catch (ParseException e) {
-            throw new InvalidFormDataException("incorrectBirthDateFormat");
-        }
-        GregorianCalendar dateofbirthgreg = new GregorianCalendar();
-        dateofbirthgreg.setTime(date);
-        Calendar current = GregorianCalendar.getInstance();
-        if (dateofbirthgreg.compareTo(current) > 0) {
-            throw new InvalidFormDataException("incorrectBirthDateFormat");
-        }
-        return dateofbirthgreg;
-    }
 
-    private Blob validatePicture(String picturePath) throws InvalidFormDataException {
+    private Blob getPictureBlob(String picturePath)
+            throws InvalidFormDataException {
         File pictureFile = new File(picturePath);
         try {
             byte[] pictureBytes = Files.readAllBytes(pictureFile.toPath());
-            if(pictureBytes.length == 0)
-            {
+            if (pictureBytes.length == 0) {
                 return null;
             }
             return new SerialBlob(pictureBytes);

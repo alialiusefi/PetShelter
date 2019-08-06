@@ -1,5 +1,8 @@
 package by.training.finaltask.exception;
 
+/**
+ * Exception is thrown when user input incorrect/invalid data.
+ */
 public class InvalidFormDataException  extends Exception {
 
     public InvalidFormDataException(){}

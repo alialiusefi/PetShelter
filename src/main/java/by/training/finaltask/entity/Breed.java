@@ -2,6 +2,9 @@ package by.training.finaltask.entity;
 
 import java.util.Objects;
 
+/**
+ * Breed entity class that represents breeds table.
+ */
 public final class Breed {
 
     private Integer id;

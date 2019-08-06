@@ -21,11 +21,17 @@ import java.io.IOException;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
+/**
+ * Filter that maps user's address url to the matching
+ * action classes(command pattern).
+ */
 public final class ActionURIFilter implements Filter {
 
-    private static final Logger LOGGER = LogManager.getLogger(ActionURIFilter.class);
+    private static final Logger LOGGER =
+            LogManager.getLogger(ActionURIFilter.class);
 
-    private static Map<String, Class<? extends Action>> actions = new ConcurrentHashMap<>();
+    private static Map<String, Class<? extends Action>> actions =
+            new ConcurrentHashMap<>();
 
     static {
         actions.put("/", MainAction.class);
@@ -34,39 +40,50 @@ public final class ActionURIFilter implements Filter {
         actions.put("/register", RegisterAction.class);
         actions.put("/user/profile", ProfileAction.class);
         actions.put("/user/userdelete", UserDeleteAction.class);
-        actions.put("/user/useredit",UserEditAction.class);
-        actions.put("/user/admin/addstaff", AddStaffAction.class);
-        actions.put("/user/admin/findstaff", FindStaffAction.class);
-        actions.put("/user/admin/findstaffbyfirstname", FindStaffByFirstNameAction.class);
-        actions.put("/user/admin/findstaffbyphone", FindStaffByPhoneAction.class);
-        actions.put("/pets/staff/addpet", AddPetAction.class);
+        actions.put("/user/useredit", UserEditAction.class);
+        actions.put("/user/admin/addstaff",
+                AddStaffAction.class);
+        actions.put("/user/admin/findstaff",
+                FindStaffAction.class);
+        actions.put("/user/admin/findstaffbyfirstname",
+                FindStaffByFirstNameAction.class);
+        actions.put("/user/admin/findstaffbyphone",
+                FindStaffByPhoneAction.class);
+        actions.put("/pets/staff/addpet",
+                AddPetAction.class);
         actions.put("/pets/staff/editpet", EditPetAction.class);
         actions.put("/pets/findpet", FindPetAction.class);
-        actions.put("/pets/moreinfopet",MoreInfoPetAction.class);
+        actions.put("/pets/moreinfopet", MoreInfoPetAction.class);
         actions.put("/pets/staff/deletepet", DeletePetAction.class);
         actions.put("/pets/findpetbybreed", FindPetByBreedAction.class);
         actions.put("/pets/findpetbyshelter", FindPetByShelterAction.class);
         actions.put("/pets/findpetbybirthdate", FindPetByBirthDateAction.class);
         actions.put("/pets/findpetbypetname", FindPetByPetNameAction.class);
         actions.put("/adoptions/staff/findadoption", FindAdoptionAction.class);
-        actions.put("/adoptions/staff/findadoptionbetweendates", FindAdoptionBetweenDatesAction.class);
-        actions.put("/adoptions/staff/findadoptionbypetname", FindAdoptionByPetName.class);
-        actions.put("/adoptions/guest/myadoptions",MyAdoptionsAction.class);
+        actions.put("/adoptions/staff/findadoptionbetweendates",
+                FindAdoptionBetweenDatesAction.class);
+        actions.put("/adoptions/staff/findadoptionbypetname",
+                FindAdoptionByPetName.class);
+        actions.put("/adoptions/guest/myadoptions",
+                MyAdoptionsAction.class);
         actions.put("/adoptions/adoptpet", AdoptPetAction.class);
         actions.put("/adoptions/editadoption", EditAdoptionAction.class);
         actions.put("/adoptions/deleteadoption", DeleteAdoptionAction.class);
     }
 
     @Override
-    public void init(FilterConfig filterConfig) throws ServletException {}
+    public void init(FilterConfig filterConfig) throws ServletException {
+    }
 
-    public void doFilter(ServletRequest request, ServletResponse response,FilterChain chain)
-    throws IOException, ServletException {
+    public void doFilter(ServletRequest request,
+                         ServletResponse response, FilterChain chain)
+            throws IOException, ServletException {
         if (request instanceof HttpServletRequest) {
             HttpServletRequest httpRequest = (HttpServletRequest) request;
             String contextPath = httpRequest.getContextPath();
             String uri = httpRequest.getRequestURI();
-            LOGGER.info(String.format("Starting of processing of request for URI \"%s\"", uri));
+            LOGGER.info(String.format("Starting of processing of" +
+                    " request for URI \"%s\"", uri));
             int beginAction = contextPath.length();
             int endAction = uri.lastIndexOf('.');
             String actionName;
@@ -82,9 +99,12 @@ public final class ActionURIFilter implements Filter {
                 httpRequest.setAttribute("action", action);
                 clearSessionMessage(httpRequest);
                 chain.doFilter(request, response);
-            } catch (InstantiationException | IllegalAccessException | NullPointerException e) {
-                LOGGER.info("It is impossible to create action handler object " + e.getMessage());
-                httpRequest.setAttribute("error", String.format("Запрошенный адрес %s не может быть обработан сервером", uri));
+            } catch (InstantiationException | IllegalAccessException
+                    | NullPointerException e) {
+                LOGGER.info("It is impossible to create action handler " +
+                        "object " + e.getMessage());
+                httpRequest.setAttribute("error",
+                        String.format("Requested Address %s cannot be processed", uri));
                 httpRequest.getServletContext().getRequestDispatcher("/jsp/error.jsp").forward(request, response);
             }
         } else {
@@ -92,17 +112,21 @@ public final class ActionURIFilter implements Filter {
         }
     }
 
-    private void clearSessionMessage(HttpServletRequest request)
-    {
+    /**
+     * Clears all messages when new action is created.
+     *
+     * @param request Servlet Request
+     */
+    private void clearSessionMessage(HttpServletRequest request) {
         HttpSession session = request.getSession(false);
-        if(session != null)
-        {
-            session.setAttribute("message",null);
-            session.setAttribute("successMessage",null);
+        if (session != null) {
+            session.setAttribute("message", null);
+            session.setAttribute("successMessage", null);
         }
     }
 
     @Override
-    public void destroy() {}
+    public void destroy() {
+    }
 
 }

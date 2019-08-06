@@ -2,6 +2,9 @@ package by.training.finaltask.entity;
 
 import java.util.Objects;
 
+/**
+ * Shelter entity class that represents shelters table.
+ */
 public final class Shelter {
 
     private int id;

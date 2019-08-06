@@ -1,5 +1,8 @@
 package by.training.finaltask.entity;
 
+/**
+ * Role Entity class that represents column of user table.
+ */
 public enum Role {
 
     ADMINISTRATOR("Administrator"),
@@ -8,18 +11,17 @@ public enum Role {
 
     private String value;
 
-    private Role(String value)
-    {
+    private Role(String value) {
         this.value = value;
     }
 
     public int getValue() {
         return this.ordinal();
     }
+
     public String getName(){return this.value;}
 
-    public static Role valueOf(int idx)
-    {
+    public static Role valueOf(int idx) {
         return Role.values()[idx];
     }
 }

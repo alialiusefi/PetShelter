@@ -3,6 +3,10 @@ package by.training.finaltask.entity;
 import java.util.GregorianCalendar;
 import java.util.Objects;
 
+
+/**
+ * Userinfo entity class that represents userinfo table.
+ */
 public final class UserInfo {
     private Integer id;
     private String email;

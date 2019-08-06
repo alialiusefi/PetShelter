@@ -7,6 +7,9 @@ import by.training.finaltask.service.UserServiceImpl;
 
 import java.util.List;
 
+/**
+ * Parses Parameters from form to create User.
+ */
 public final class UserFormParser extends FormParser<User> {
 
     private static final int USERNAME = 0;

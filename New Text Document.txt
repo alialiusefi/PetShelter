@@ -7,3 +7,9 @@ fix logger -- maybe a config file needed?
 fix Forwards to new Forward("....?page=" + pageNumber)
 override all unsupported dao implementation in base dao and certain dao interfaces 
 ====================
+
+
+CheckStyle:
+Entity Package DONE
+Exception DONE
+Filter DONE
