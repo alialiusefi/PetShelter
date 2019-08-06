@@ -26,9 +26,10 @@ public final class PetDAOImplementation extends BaseDAO implements PetDAO {
         try (PreparedStatement preparedStatement = connection.prepareStatement(
                 resourceBundle.getString("getPetDAO"))) {
             preparedStatement.setInt(1, ID);
-            ResultSet resultset = preparedStatement.executeQuery();
-            if (resultset.next()) {
-                return getPet(resultset);
+            try (ResultSet resultset = preparedStatement.executeQuery()) {
+                if (resultset.next()) {
+                    return getPet(resultset);
+                }
             }
 
         } catch (SQLException e) {
@@ -54,9 +55,10 @@ public final class PetDAOImplementation extends BaseDAO implements PetDAO {
                 preparedStatement.setInt(2, rowcount);
             }
             List<Pet> pets = new ArrayList<>();
-            ResultSet resultset = preparedStatement.executeQuery();
-            while (resultset.next()) {
-                pets.add(getPet(resultset));
+            try (ResultSet resultset = preparedStatement.executeQuery()) {
+                while (resultset.next()) {
+                    pets.add(getPet(resultset));
+                }
             }
             return pets;
 
@@ -83,9 +85,10 @@ public final class PetDAOImplementation extends BaseDAO implements PetDAO {
                 preparedStatement.setInt(3, rowcount);
             }
             List<Pet> pets = new LinkedList<>();
-            ResultSet resultset = preparedStatement.executeQuery();
-            while (resultset.next()) {
-                pets.add(getPet(resultset));
+            try (ResultSet resultset = preparedStatement.executeQuery()) {
+                while (resultset.next()) {
+                    pets.add(getPet(resultset));
+                }
             }
             return pets;
 
@@ -114,12 +117,12 @@ public final class PetDAOImplementation extends BaseDAO implements PetDAO {
                 preparedStatement.setInt(3, rowcount);
             }
             List<Pet> pets = new LinkedList<>();
-            ResultSet resultset = preparedStatement.executeQuery();
-            while (resultset.next()) {
-                pets.add(getPet(resultset));
+            try (ResultSet resultset = preparedStatement.executeQuery()) {
+                while (resultset.next()) {
+                    pets.add(getPet(resultset));
+                }
             }
             return pets;
-
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
             throw new PersistentException(e.getMessage(), e);
@@ -144,9 +147,10 @@ public final class PetDAOImplementation extends BaseDAO implements PetDAO {
                 preparedStatement.setInt(3, rowcount);
             }
             List<Pet> pets = new LinkedList<>();
-            ResultSet resultset = preparedStatement.executeQuery();
-            while (resultset.next()) {
-                pets.add(getPet(resultset));
+            try (ResultSet resultset = preparedStatement.executeQuery()) {
+                while (resultset.next()) {
+                    pets.add(getPet(resultset));
+                }
             }
             return pets;
 
@@ -177,9 +181,10 @@ public final class PetDAOImplementation extends BaseDAO implements PetDAO {
                 preparedStatement.setInt(3, rowcount);
             }
             List<Pet> pets = new LinkedList<>();
-            ResultSet resultset = preparedStatement.executeQuery();
-            while (resultset.next()) {
-                pets.add(getPet(resultset));
+            try (ResultSet resultset = preparedStatement.executeQuery()) {
+                while (resultset.next()) {
+                    pets.add(getPet(resultset));
+                }
             }
             return pets;
 
@@ -217,9 +222,10 @@ public final class PetDAOImplementation extends BaseDAO implements PetDAO {
             if (status != null) {
                 preparedStatement.setNString(2, status.getValue());
             }
-            ResultSet res = preparedStatement.executeQuery();
-            if (res.next()) {
-                return res.getInt(1);
+            try (ResultSet res = preparedStatement.executeQuery()) {
+                if (res.next()) {
+                    return res.getInt(1);
+                }
             }
             return 0;
         } catch (SQLException e) {
@@ -238,9 +244,10 @@ public final class PetDAOImplementation extends BaseDAO implements PetDAO {
             if (status != null) {
                 preparedStatement.setNString(1, status.getValue());
             }
-            ResultSet res = preparedStatement.executeQuery();
-            if (res.next()) {
-                return res.getInt(1);
+            try (ResultSet res = preparedStatement.executeQuery()) {
+                if (res.next()) {
+                    return res.getInt(1);
+                }
             }
             return 0;
         } catch (SQLException e) {
@@ -260,9 +267,10 @@ public final class PetDAOImplementation extends BaseDAO implements PetDAO {
             if (status != null) {
                 preparedStatement.setNString(2, status.getValue());
             }
-            ResultSet res = preparedStatement.executeQuery();
-            if (res.next()) {
-                return res.getInt(1);
+            try (ResultSet res = preparedStatement.executeQuery()) {
+                if (res.next()) {
+                    return res.getInt(1);
+                }
             }
             return 0;
         } catch (SQLException e) {
@@ -283,9 +291,10 @@ public final class PetDAOImplementation extends BaseDAO implements PetDAO {
             if (status != null) {
                 preparedStatement.setNString(2, status.getValue());
             }
-            ResultSet res = preparedStatement.executeQuery();
-            if (res.next()) {
-                return res.getInt(1);
+            try (ResultSet res = preparedStatement.executeQuery()) {
+                if (res.next()) {
+                    return res.getInt(1);
+                }
             }
             return 0;
         } catch (SQLException e) {
@@ -305,9 +314,10 @@ public final class PetDAOImplementation extends BaseDAO implements PetDAO {
             if (status != null) {
                 preparedStatement.setNString(2, status.getValue());
             }
-            ResultSet res = preparedStatement.executeQuery();
-            if (res.next()) {
-                return res.getInt(1);
+            try (ResultSet res = preparedStatement.executeQuery()) {
+                if (res.next()) {
+                    return res.getInt(1);
+                }
             }
             return 0;
         } catch (SQLException e) {
@@ -322,9 +332,10 @@ public final class PetDAOImplementation extends BaseDAO implements PetDAO {
                 resourceBundle.getString("addPetDAO"), PreparedStatement.RETURN_GENERATED_KEYS)) {
             setPreparedStatement(preparedStatement, element);
             preparedStatement.executeUpdate();
-            ResultSet set = preparedStatement.getGeneratedKeys();
-            if (set.next()) {
-                return set.getInt(1);
+            try (ResultSet set = preparedStatement.getGeneratedKeys()) {
+                if (set.next()) {
+                    return set.getInt(1);
+                }
             }
             return 0;
         } catch (SQLException e) {
@@ -352,11 +363,6 @@ public final class PetDAOImplementation extends BaseDAO implements PetDAO {
     @Override
     public boolean delete(Pet element) throws PersistentException {
         return delete(element.getId());
-    }
-
-    @Override
-    public Pet get() throws PersistentException {
-        return get(1);
     }
 
     private Pet getPet(ResultSet resultSet) throws SQLException {

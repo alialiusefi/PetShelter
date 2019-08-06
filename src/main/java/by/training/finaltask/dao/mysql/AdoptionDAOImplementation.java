@@ -276,9 +276,11 @@ public final class AdoptionDAOImplementation extends BaseDAO implements Adoption
 			statement.setDate(5, startDate);
 			statement.setDate(6, endDate);
 			statement.setInt(7, userID);
-			ResultSet set = statement.executeQuery();
-			if (set.next()) {
-				return set.getInt(1);
+			try (ResultSet set = statement.executeQuery()) {
+				if (set.next()) {
+					return set.getInt(1);
+				}
+
 			}
 			return 0;
 		} catch (SQLException e) {
@@ -326,9 +328,10 @@ public final class AdoptionDAOImplementation extends BaseDAO implements Adoption
 			preparedStatement.setDate(3, new Date(start.getTimeInMillis()));
 			preparedStatement.setDate(4, new Date(start.getTimeInMillis()));
 			int res = 0;
-			ResultSet set = preparedStatement.executeQuery();
-			if (set.next()) {
-				res = set.getInt(1);
+			try (ResultSet set = preparedStatement.executeQuery()) {
+				if (set.next()) {
+					res = set.getInt(1);
+				}
 			}
 			return res;
 		} catch (SQLException e) {
@@ -341,9 +344,10 @@ public final class AdoptionDAOImplementation extends BaseDAO implements Adoption
 	public int getAllCount() throws PersistentException {
 		try (PreparedStatement statement = connection.prepareStatement(
 				resourceBundle.getString("getAllAmountAdoptionDAO"))) {
-			ResultSet set = statement.executeQuery();
-			if (set.next()) {
-				return set.getInt(1);
+			try (ResultSet set = statement.executeQuery()) {
+				if (set.next()) {
+					return set.getInt(1);
+				}
 			}
 			return 0;
 
@@ -368,9 +372,10 @@ public final class AdoptionDAOImplementation extends BaseDAO implements Adoption
 			}
 			preparedStatement.setInt(4, element.getUserID());
 			preparedStatement.executeUpdate();
-			ResultSet set = preparedStatement.getGeneratedKeys();
-			set.next();
-			return set.getInt(1);
+			try (ResultSet set = preparedStatement.getGeneratedKeys()) {
+				set.next();
+				return set.getInt(1);
+			}
 
 		} catch (SQLException e) {
 			LOGGER.warn(e.getMessage(), e);

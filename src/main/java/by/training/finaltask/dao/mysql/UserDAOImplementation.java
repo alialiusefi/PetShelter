@@ -30,9 +30,10 @@ public final class UserDAOImplementation extends BaseDAO implements UserDAO {
         try (PreparedStatement preparedStatement = connection.prepareStatement(
                 resourceBundle.getString("getUserDAO"))) {
             preparedStatement.setInt(1, userID);
-            ResultSet resultSet = preparedStatement.executeQuery();
-            if (resultSet.next()) {
-                return getUser(resultSet);
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                if (resultSet.next()) {
+                    return getUser(resultSet);
+                }
             }
 
         } catch (SQLException e) {
@@ -47,11 +48,11 @@ public final class UserDAOImplementation extends BaseDAO implements UserDAO {
         try (PreparedStatement preparedStatement = connection.prepareStatement(
                 resourceBundle.getString("getUserByUserNameDAO"))) {
             preparedStatement.setNString(1, username);
-            ResultSet resultSet = preparedStatement.executeQuery();
-            if (resultSet.next()) {
-                return getUser(resultSet);
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                if (resultSet.next()) {
+                    return getUser(resultSet);
+                }
             }
-
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
             throw new PersistentException(e.getMessage(), e);
@@ -65,9 +66,10 @@ public final class UserDAOImplementation extends BaseDAO implements UserDAO {
                 resourceBundle.getString("getUserByUserNamePassWordDAO"))) {
             preparedStatement.setNString(1, user);
             preparedStatement.setNString(2, pass);
-            ResultSet resultSet = preparedStatement.executeQuery();
-            if (resultSet.next()) {
-                return getUser(resultSet);
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                if (resultSet.next()) {
+                    return getUser(resultSet);
+                }
             }
 
         } catch (SQLException e) {
@@ -84,9 +86,10 @@ public final class UserDAOImplementation extends BaseDAO implements UserDAO {
                 resourceBundle.getString("getAllUserDAO"))) {
             preparedStatement.setInt(1, offset);
             preparedStatement.setInt(2, rowcount);
-            ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                userList.add(getUser(resultSet));
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
+                    userList.add(getUser(resultSet));
+                }
             }
             return userList;
         } catch (SQLException e) {
@@ -117,9 +120,10 @@ public final class UserDAOImplementation extends BaseDAO implements UserDAO {
             preparedStatement.setNString(2, element.getPassword());
             preparedStatement.setInt(3, element.getUserRole().getValue());
             preparedStatement.executeUpdate();
-            ResultSet set = preparedStatement.getGeneratedKeys();
-            if (set.next()) {
-                return set.getInt(1);
+            try (ResultSet set = preparedStatement.getGeneratedKeys()) {
+                if (set.next()) {
+                    return set.getInt(1);
+                }
             }
             return 0;
         } catch (SQLException e) {
@@ -162,9 +166,12 @@ public final class UserDAOImplementation extends BaseDAO implements UserDAO {
     public int getAmountOfAllStaff() throws PersistentException {
         try (PreparedStatement preparedStatement = connection.prepareStatement(
                 resourceBundle.getString("getAmountAllStaffDAO"))) {
-            ResultSet res = preparedStatement.executeQuery();
-            res.next();
-            return res.getInt(1);
+            try (ResultSet res = preparedStatement.executeQuery()) {
+                if (res.next()) {
+                    return res.getInt(1);
+                }
+                return 0;
+            }
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
             throw new PersistentException(e.getMessage(), e);
@@ -178,11 +185,11 @@ public final class UserDAOImplementation extends BaseDAO implements UserDAO {
                 resourceBundle.getString("getAllStaffDAO"))) {
             preparedStatement.setInt(1, offset);
             preparedStatement.setInt(2, rowcount);
-            ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                userList.add(getUser(resultSet));
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
+                    userList.add(getUser(resultSet));
+                }
             }
-
             return userList;
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
@@ -198,9 +205,10 @@ public final class UserDAOImplementation extends BaseDAO implements UserDAO {
             preparedStatement.setNString(1, firstname);
             preparedStatement.setInt(2, offset);
             preparedStatement.setInt(3, rowcount);
-            ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                userList.add(getUser(resultSet));
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
+                    userList.add(getUser(resultSet));
+                }
             }
             return userList;
         } catch (SQLException e) {
@@ -214,9 +222,12 @@ public final class UserDAOImplementation extends BaseDAO implements UserDAO {
         try (PreparedStatement preparedStatement = connection.prepareStatement(
                 resourceBundle.getString("getAmountAllStaffByFirstNameDAO"))) {
             preparedStatement.setNString(1, firstname);
-            ResultSet res = preparedStatement.executeQuery();
-            res.next();
-            return res.getInt(1);
+            try (ResultSet res = preparedStatement.executeQuery()) {
+                if (res.next()) {
+                    return res.getInt(1);
+                }
+                return 0;
+            }
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
             throw new PersistentException(e.getMessage(), e);
@@ -229,9 +240,10 @@ public final class UserDAOImplementation extends BaseDAO implements UserDAO {
                 resourceBundle.getString("getAmountAllStaffByPhoneDAO"))) {
             String phoneStr = "%" + phone;
             preparedStatement.setNString(1, phoneStr);
-            ResultSet res = preparedStatement.executeQuery();
-            res.next();
-            return res.getInt(1);
+            try (ResultSet res = preparedStatement.executeQuery()) {
+                res.next();
+                return res.getInt(1);
+            }
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
             throw new PersistentException(e.getMessage(), e);
@@ -247,9 +259,10 @@ public final class UserDAOImplementation extends BaseDAO implements UserDAO {
             preparedStatement.setNString(1, phoneStr);
             preparedStatement.setInt(2, offset);
             preparedStatement.setInt(3, rowcount);
-            ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                userList.add(getUser(resultSet));
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
+                    userList.add(getUser(resultSet));
+                }
             }
             return userList;
         } catch (SQLException e) {

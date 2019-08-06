@@ -6,28 +6,14 @@
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="aaaf2f76-4e53-48ef-addd-78db3cc4e10b" name="Default Changelist" comment="Code Convention">
-      <change afterPath="$PROJECT_DIR$/.idea/eclipseCodeFormatter.xml" afterDir="false" />
+    <list default="true" id="aaaf2f76-4e53-48ef-addd-78db3cc4e10b" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/New Text Document.txt" beforeDir="false" afterPath="$PROJECT_DIR$/New Text Document.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindAdoptionBetweenDatesAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindAdoptionBetweenDatesAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindAdoptionByPetName.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindAdoptionByPetName.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindPetAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindPetAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindPetByBirthDateAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindPetByBirthDateAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindPetByBreedAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindPetByBreedAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindPetByPetNameAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindPetByPetNameAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindPetByShelterAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindPetByShelterAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/admin/FindStaffAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/admin/FindStaffAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/admin/FindStaffByFirstNameAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/admin/FindStaffByFirstNameAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/admin/FindStaffByPhoneAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/admin/FindStaffByPhoneAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/guest/MyAdoptionsAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/guest/MyAdoptionsAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/staff/FindAdoptionAction.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/staff/FindAdoptionAction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/entity/Role.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/entity/Role.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/daomysqlqueries.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/daomysqlqueries.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/adoptions/staff/findadoption.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/adoptions/staff/findadoption.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/pets/findpet.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/pets/findpet.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/jsp/user/admin/findstaff.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/jsp/user/admin/findstaff.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/AdoptionDAOImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/AdoptionDAOImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/BreedDAOImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/BreedDAOImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/PetDAOImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/PetDAOImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/ShelterDAOImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/ShelterDAOImplementation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/UserDAOImplementation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/UserDAOImplementation.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -66,69 +52,60 @@
     <select />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/action/guest/MyAdoptionsAction.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/AdoptionDAOImplementation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+            <state relative-caret-position="527">
+              <caret line="443" lean-forward="true" selection-start-line="443" selection-end-line="443" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/action/staff/FindAdoptionAction.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/BreedDAOImplementation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+            <state relative-caret-position="527">
+              <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindAdoptionBetweenDatesAction.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/DAOEnum.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="24" column="35" selection-start-line="24" selection-start-column="35" selection-end-line="24" selection-end-column="35" />
+            <state relative-caret-position="36">
+              <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindAdoptionByPetName.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/PetDAOImplementation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="21" column="42" lean-forward="true" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+            <state relative-caret-position="527">
+              <caret line="442" lean-forward="true" selection-end-line="442" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/ShelterDAOImplementation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/New Text Document.txt">
+        <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/UserDAOImplementation.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="108">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindPetByBirthDateAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="840">
-              <caret line="73" column="47" selection-start-line="73" selection-start-column="47" selection-end-line="73" selection-end-column="47" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindPetByPetNameAction.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="55" column="58" selection-start-line="55" selection-start-column="58" selection-end-line="55" selection-end-column="58" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="18">
+              <caret line="218" lean-forward="true" selection-start-line="218" selection-end-line="218" />
             </state>
           </provider>
         </entry>
@@ -163,6 +140,7 @@
       <find>&quot;petName&quot;</find>
       <find>petSta</find>
       <find>birthda</find>
+      <find>inner</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -185,19 +163,12 @@
         <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/servlet/PetShelterServletConfig.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/filter/EncodingFilter.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/parser/UserFormParser.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/PetDAOImplementation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/UserDAOImplementation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/UserInfoDAOImplementation.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/service/UserServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/comparator/GregorianCalendarComparator.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/service/AdoptionServiceImpl.java" />
         <option value="$PROJECT_DIR$/src/test/java/by/training/finaltask/service/AdoptionServiceImplTest.java" />
-        <option value="$PROJECT_DIR$/src/main/sql/#_test.sql" />
         <option value="$PROJECT_DIR$/src/main/webapp/WEB-INF/classes/daomysqlqueries.properties" />
         <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/AdoptionDAO.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/AdoptionDAOImplementation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/BreedDAOImplementation.java" />
-        <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/ShelterDAOImplementation.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/entity/Role.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/admin/FindStaffAction.java" />
@@ -217,6 +188,14 @@
         <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindAdoptionBetweenDatesAction.java" />
         <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindAdoptionByPetName.java" />
         <option value="$PROJECT_DIR$/New Text Document.txt" />
+        <option value="$PROJECT_DIR$/src/main/sql/#_test.sql" />
+        <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/DAO.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/UserInfoDAOImplementation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/AdoptionDAOImplementation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/BreedDAOImplementation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/PetDAOImplementation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/ShelterDAOImplementation.java" />
+        <option value="$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/UserDAOImplementation.java" />
       </list>
     </option>
   </component>
@@ -260,6 +239,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -318,6 +298,16 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="finaltask" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="mysql" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="PetShelter" type="b2602c69:ProjectViewProjectNode" />
+              <item name="PetShelter" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="finaltask" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -360,7 +350,6 @@
         </subPane>
       </pane>
       <pane id="Scope" />
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -373,7 +362,7 @@
     <property name="SONARLINT_PRECOMMIT_ANALYSIS" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565084643464" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1565101028182" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="TestNG" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.TestNG" value="" />
     <property name="create.test.in.the.same.root" value="true" />
@@ -642,6 +631,7 @@
       <workItem from="1565035492669" duration="657000" />
       <workItem from="1565036173255" duration="1127000" />
       <workItem from="1565075549792" duration="9157000" />
+      <workItem from="1565099131751" duration="1893000" />
     </task>
     <task id="LOCAL-00001" summary="Optimized Imports">
       <created>1564665014093</created>
@@ -853,7 +843,21 @@
       <option name="project" value="LOCAL" />
       <updated>1565037154286</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Fixed Find Pet Pagination Bug&#10;All Search Parameters are saved in sessions&#10;Code Convention">
+      <created>1565099275129</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1565099275129</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Added Default Methods into DAO">
+      <created>1565100288266</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1565100288266</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -889,7 +893,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="30015000" />
+    <option name="totallyTimeSpent" value="31908000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -904,7 +908,7 @@
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20877458" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2118003" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -931,7 +935,7 @@
       <window_info anchor="bottom" id="Java Enterprise" order="16" />
       <window_info anchor="bottom" id="Database Changes" order="17" weight="0.3289689" />
       <window_info anchor="bottom" id="Version Control" order="18" />
-      <window_info anchor="bottom" id="Database Console" order="19" weight="0.3289689" />
+      <window_info anchor="bottom" id="Database Console" order="19" weight="0.60556465" />
       <window_info anchor="bottom" id="Messages" order="20" weight="0.3289689" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -1001,7 +1005,9 @@
     <MESSAGE value="Fixed Redirection" />
     <MESSAGE value="Updated finding staff by phone" />
     <MESSAGE value="Code Convention" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code Convention" />
+    <MESSAGE value="Fixed Find Pet Pagination Bug&#10;All Search Parameters are saved in sessions&#10;Code Convention" />
+    <MESSAGE value="Added Default Methods into DAO" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added Default Methods into DAO" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
@@ -1028,19 +1034,19 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/AdoptionDAOImplementation.java</url>
-          <line>271</line>
+          <line>270</line>
           <properties />
           <option name="timeStamp" value="16" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindPetByBirthDateAction.java</url>
-          <line>98</line>
+          <line>96</line>
           <properties />
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindPetByBirthDateAction.java</url>
-          <line>41</line>
+          <line>39</line>
           <properties />
           <option name="timeStamp" value="20" />
         </line-breakpoint>
@@ -1065,20 +1071,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/UserInfoDAOImplementation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
-          <caret line="130" column="24" selection-start-line="130" selection-start-column="24" selection-end-line="130" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/service/UserServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="75" column="22" lean-forward="true" selection-start-line="75" selection-start-column="22" selection-end-line="75" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/comparator/GregorianCalendarComparator.java" />
     <entry file="das://f4117627-5f40-4b2f-8d35-71142a57bc9c/schema/petshelter/table/pets">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
@@ -1111,59 +1103,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/sql/#_test.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="8" column="6" selection-start-line="8" selection-start-column="6" selection-end-line="8" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/BreedDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/AdoptionDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/BaseDAO.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/DAOEnum.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/PetDAOImplementation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/ShelterDAOImplementation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1386">
-          <caret line="89" selection-start-line="89" selection-end-line="89" />
-          <folding>
-            <element signature="e#760#761#0" expanded="true" />
-            <element signature="e#789#790#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -1191,13 +1130,6 @@
     <entry file="file://$PROJECT_DIR$/desktop.ini">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/BreedDAOImplementation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="900">
-          <caret line="64" lean-forward="true" selection-start-line="64" selection-end-line="64" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/service/BreedServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -1216,18 +1148,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
           <caret line="14" column="7" selection-start-line="14" selection-start-column="7" selection-end-line="14" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/AdoptionDAOImplementation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="18">
-          <caret line="21" column="5" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#660#661#0" expanded="true" />
-            <element signature="e#684#685#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1270,13 +1190,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
           <caret line="12" column="71" selection-start-line="12" selection-start-column="71" selection-end-line="12" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/UserDAOImplementation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4">
-          <caret line="222" column="29" lean-forward="true" selection-start-line="222" selection-start-column="29" selection-end-line="222" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -1381,34 +1294,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindPetByPetNameAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="702">
-          <caret line="55" column="58" selection-start-line="55" selection-start-column="58" selection-end-line="55" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindPetByBirthDateAction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="840">
-          <caret line="73" column="47" selection-start-line="73" selection-start-column="47" selection-end-line="73" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/action/guest/MyAdoptionsAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="32" column="13" lean-forward="true" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
+        <state>
+          <caret line="32" column="13" selection-start-line="32" selection-start-column="13" selection-end-line="32" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/action/staff/FindAdoptionAction.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="26" lean-forward="true" selection-start-line="26" selection-end-line="26" />
+        <state relative-caret-position="162">
+          <caret line="26" selection-start-line="26" selection-end-line="26" />
         </state>
       </provider>
     </entry>
@@ -1422,14 +1318,118 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindAdoptionByPetName.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
-          <caret line="21" column="42" lean-forward="true" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+          <caret line="21" column="42" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindPetByBirthDateAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="990">
+          <caret line="71" column="47" selection-start-line="71" selection-start-column="47" selection-end-line="71" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/action/FindPetByPetNameAction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="55" column="58" selection-start-line="55" selection-start-column="58" selection-end-line="55" selection-end-column="58" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/sql/#_test.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="15" lean-forward="true" selection-start-column="15" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/New Text Document.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="108">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        <state relative-caret-position="144">
+          <caret line="8" column="20" lean-forward="true" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/BaseDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="5" column="22" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/DAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/BreedDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/AdoptionDAO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/UserInfoDAOImplementation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2250">
+          <caret line="136" selection-start-line="136" selection-end-line="136" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/AdoptionDAOImplementation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="443" lean-forward="true" selection-start-line="443" selection-end-line="443" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/BreedDAOImplementation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="69" lean-forward="true" selection-start-line="69" selection-end-line="69" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/DAOEnum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="36">
+          <caret line="2" column="12" selection-start-line="2" selection-start-column="12" selection-end-line="2" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/PetDAOImplementation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="527">
+          <caret line="442" lean-forward="true" selection-end-line="442" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/ShelterDAOImplementation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/by/training/finaltask/dao/mysql/UserDAOImplementation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="18">
+          <caret line="218" lean-forward="true" selection-start-line="218" selection-end-line="218" />
         </state>
       </provider>
     </entry>

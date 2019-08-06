@@ -27,12 +27,13 @@ public final class ShelterDAOImplementation extends BaseDAO implements ShelterDA
 		try (PreparedStatement preparedStatement = connection.prepareStatement(
 				resourceBundle.getString("getAllShelters"))) {
 			List<Shelter> shelters = new LinkedList<>();
-			ResultSet resultset = preparedStatement.executeQuery();
-			while (resultset.next()) {
-				int id = resultset.getInt("id");
-				String name = resultset.getNString("name");
-				String location = resultset.getNString("location");
-				shelters.add(new Shelter(id, name, location));
+			try (ResultSet resultset = preparedStatement.executeQuery()) {
+				while (resultset.next()) {
+					int id = resultset.getInt("id");
+					String name = resultset.getNString("name");
+					String location = resultset.getNString("location");
+					shelters.add(new Shelter(id, name, location));
+				}
 			}
 			return shelters;
 		} catch (SQLException e) {
@@ -46,9 +47,10 @@ public final class ShelterDAOImplementation extends BaseDAO implements ShelterDA
 		try (PreparedStatement preparedStatement = connection.prepareStatement(
 				resourceBundle.getString("getShelterByID"))) {
 			preparedStatement.setInt(1, id);
-			ResultSet resultset = preparedStatement.executeQuery();
-			if (resultset.next()) {
-				return getShelter(resultset);
+			try (ResultSet resultset = preparedStatement.executeQuery()) {
+				if (resultset.next()) {
+					return getShelter(resultset);
+				}
 			}
 			return null;
 
