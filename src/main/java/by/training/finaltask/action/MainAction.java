@@ -9,7 +9,6 @@ public class MainAction extends Action {
 
 	@Override
 	public Forward exec(HttpServletRequest request, HttpServletResponse response) throws PersistentException {
-
 		return null;
 	}
 }

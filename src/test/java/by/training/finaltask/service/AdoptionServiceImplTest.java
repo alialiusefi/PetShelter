@@ -18,7 +18,7 @@ import java.util.*;
 
 public class AdoptionServiceImplTest {
 
-    private  PetPooledConnection connection;
+    private PetPooledConnection connection;
     private AdoptionService service;
 
     @BeforeMethod

@@ -48,7 +48,7 @@ public class EditAdoptionAction extends AuthorizedUserAction {
                 List<String> adoptionParam = new ArrayList<>();
                 addAdoptionParametersToList(request, adoption, adoptionParam);
                 try {
-                    Forward forward = new Forward("/index.jsp");
+                    Forward forward = new Forward("/home.jsp");
                     if(authUser.getUserRole() == Role.STAFF) {
                         forward.setForward("/adoptions/staff/findadoption.html");
                     }

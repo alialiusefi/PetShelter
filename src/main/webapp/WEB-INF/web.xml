@@ -23,7 +23,9 @@
         <error-code>404</error-code>
         <location>/jsp/error.jsp</location>
     </error-page>
-
+    <welcome-file-list>
+        <welcome-file>index.jsp</welcome-file>
+    </welcome-file-list>
     <filter>
         <filter-name>EncodingFilter</filter-name>
         <filter-class>by.training.finaltask.filter.EncodingFilter</filter-class>

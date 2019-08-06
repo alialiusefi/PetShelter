@@ -8,6 +8,7 @@
 <c:url value="/" var="titleActionURL"/>
 <c:url value="/register.html" var="registerActionURL"/>
 <c:url value="/user/profile.html" var="profileActionURL"/>
+
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
     <div class="container">
         <a class="navbar-brand" href="${titleActionURL}">
@@ -78,29 +79,15 @@
     </div>
 </nav>
 ${exception}
-<c:choose>
-    <c:when test="${pageContext.request.requestURI eq '/'}">
-        <form action="<c:url value="/"/>" method="post">
-            <select name="lang" class="custom-select-sm float-right" >
-                <option value ="${sessionLang}" ><fmt:message key="pickLanguage"/></option>
-                <option value="en_US"><fmt:message key="english"/></option>
-                <option value="ru_RU"><fmt:message key="russian"/></option>
-                <option value="de_DE"><fmt:message key="german"/></option>
-            </select>
-            <button class="btn float-right" type="submit"><fmt:message key="changeLanguage"/></button>
-        </form>
-    </c:when>
-    <c:otherwise>
-        <form method="post">
-        <select name="lang" class="custom-select-sm float-right" >
-            <option value ="${sessionLang}" ><fmt:message key="pickLanguage"/></option>
-            <option value="en_US"><fmt:message key="english"/></option>
-            <option value="ru_RU"><fmt:message key="russian"/></option>
-            <option value="de_DE"><fmt:message key="german"/></option>
-        </select>
-        <button class="btn float-right" type="submit"><fmt:message key="changeLanguage"/></button>
-        </form>
 
-    </c:otherwise>
-</c:choose>
+<form method="post" action="">
+    <select name="lang" class="custom-select-sm float-right">
+        <option value="${sessionLang}"><fmt:message key="pickLanguage"/></option>
+        <option value="en_US"><fmt:message key="english"/></option>
+        <option value="ru_RU"><fmt:message key="russian"/></option>
+        <option value="de_DE"><fmt:message key="german"/></option>
+    </select>
+    <button class="btn float-right" type="submit"><fmt:message key="changeLanguage"/></button>
+</form>
+
 
