@@ -7,6 +7,7 @@ import by.training.finaltask.entity.User;
 import by.training.finaltask.entity.UserInfo;
 import by.training.finaltask.exception.InvalidFormDataException;
 import by.training.finaltask.exception.PersistentException;
+import by.training.finaltask.parser.FormParser;
 import by.training.finaltask.service.serviceinterface.UserInfoService;
 import by.training.finaltask.service.serviceinterface.UserService;
 import org.apache.logging.log4j.LogManager;
@@ -23,6 +24,7 @@ public class FindStaffByPhoneAction extends AuthorizedUserAction {
     private static String NUMBER_REGEX = "[1-9]+";
     private static final String CONTACT_REGEX = "^\\+[0-9]{1,15}$";
     private static Logger LOGGER = LogManager.getLogger(FindStaffByPhoneAction.class);
+    private static String PHONEATTR = "phoneParameter";
 
     public FindStaffByPhoneAction()
     {
@@ -38,7 +40,8 @@ public class FindStaffByPhoneAction extends AuthorizedUserAction {
             User authUser = (User)session.getAttribute("authorizedUser");
             if(authUser != null && allowedRoles.contains(authUser.getUserRole()))
             {
-                String phoneParameter = request.getParameter("search");
+                String phoneParameter = getSearchParameter(request);
+                session.setAttribute(PHONEATTR, phoneParameter);
                 long phone;
                 try {
                     phone = validatePhone(phoneParameter);
@@ -48,7 +51,6 @@ public class FindStaffByPhoneAction extends AuthorizedUserAction {
                     return forward;
                 }
                 Forward forward = new Forward("/user/admin/findstaff.html?page=1");
-                forward.getAttributes().put("searchParameter",phoneParameter);
                 UserService userService = (UserService) factory.
                         createService(DAOEnum.USER);
                 UserInfoService userInfoService = (UserInfoService)
@@ -61,7 +63,7 @@ public class FindStaffByPhoneAction extends AuthorizedUserAction {
                         / ROWS_PER_PAGE : amountOfAllStaffByPhone / ROWS_PER_PAGE + 1;
                 forward.getAttributes().put("amountOfPages", amountOfPages);
                 int pageNumber;
-                pageNumber = validatePageNumber(
+                pageNumber = FormParser.parsePageNumber(
                         request.getParameter("page"), amountOfPages);
                 int offset = (pageNumber - 1) * ROWS_PER_PAGE;
                 List<UserInfo> userInfoList = userInfoService.findAllStaffByPhone(
@@ -91,17 +93,14 @@ public class FindStaffByPhoneAction extends AuthorizedUserAction {
         throw new InvalidFormDataException("incorrectNumberFormat");
     }
 
-    private int validatePageNumber(String pageParameter, int amountOfPages) {
-        if (pageParameter.matches(NUMBER_REGEX)) {
-            Integer pageNumber = Integer.parseInt(
-                    pageParameter);
-            if (pageNumber <= amountOfPages) {
-                return pageNumber;
-            } else {
-                return 1;
-            }
+    private String getSearchParameter(HttpServletRequest request) {
+        String firstnameParameter = request.getParameter(
+                PHONEATTR);
+        if (firstnameParameter == null) {
+            HttpSession session = request.getSession(false);
+            firstnameParameter = (String) session.getAttribute(PHONEATTR);
         }
-        return 1;
+        return firstnameParameter;
     }
 
 }

@@ -64,7 +64,7 @@ public class FindPetAction extends AuthorizedUserAction {
                     pets = petService.getAllByStatus(PetStatus.SHELTERED,offset, ROWCOUNT);
                 }
                 request.setAttribute("petResults", pets);
-                List<String> images = getImages(request, pets);
+                List<String> images = getImages(pets);
                 request.setAttribute("petPictures", images);
                 request.setAttribute("paginationURL", "/pets/findpet.html");
             }
@@ -76,7 +76,7 @@ public class FindPetAction extends AuthorizedUserAction {
     }
 
 
-    static List<String> getImages(HttpServletRequest request, List<Pet> pets)
+    static List<String> getImages(List<Pet> pets)
             throws PersistentException {
         List<String> images = new ArrayList<>();
         for (Pet pet : pets) {

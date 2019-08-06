@@ -38,7 +38,8 @@
             <th><fmt:message key="petName"/></th>
             <th><fmt:message key="adoptedFrom"/></th>
             <th><fmt:message key="adoptedTo"/></th>
-            <th><fmt:message key="firstName"/></th> <%--todo: disambiguation of firstName to User First Name--%>
+            <th><fmt:message key="firstName"/></th>
+            <%--todo: disambiguation of firstName to User First Name--%>
             <th><fmt:message key="email"/></th>
             <th><fmt:message key="address"/></th>
             <th><fmt:message key="contactNumber"/></th>
@@ -80,45 +81,21 @@
     <ul class="pagination">
         <c:if test="${param.page > 1}">
             <li class="page-item">
-                <c:choose>
-                    <c:when test="${not empty searchParameter}">
-                        <a class="page-link" href="<c:url value="${paginationURL += '?page=' += (param.page - 1)
-                    += '&' += 'search=' += searchParameter}"/>">
-                            Previous</a>
-                    </c:when>
-                    <c:otherwise>
-                        <a class="page-link" href="<c:url value="${paginationURL += '?page=' += (param.page - 1)}"/>">
-                            Previous</a>
-                    </c:otherwise>
-                </c:choose>
+                <a class="page-link" href="<c:url value="${paginationURL += '?page=' += (param.page - 1)}"/>">
+                    Previous</a>
             </li>
         </c:if>
         <c:forEach var="i" begin="1" end="${amountOfPages}">
-            <c:choose>
-                <c:when test="${not empty searchParameter}">
-                    <a class="page-link" href="<c:url value="${paginationURL += '?page=' += i
-                    += '&' += 'search=' += searchParameter}"/>">
-                        <c:out value="${i}"/></a>
-                </c:when>
-                <c:otherwise>
-                    <a class="page-link" href="<c:url value="${paginationURL += '?page=' += i}"/>">
-                        <c:out value="${i}"/></a>
-                </c:otherwise>
-            </c:choose>
+
+            <a class="page-link" href="<c:url value="${paginationURL += '?page=' += i}"/>">
+                <c:out value="${i}"/></a>
+
         </c:forEach>
         <c:if test="${param.page < amountOfPages}">
             <li class="page-item">
-                <c:choose>
-                    <c:when test="${not empty searchParameter}">
-                        <a class="page-link" href="<c:url value="${paginationURL += '?page=' += (param.page + 1)
-                    += '&' += 'search=' += searchParameter}"/>">
-                            Next</a>
-                    </c:when>
-                    <c:otherwise>
-                        <a class="page-link" href="<c:url value="${paginationURL += '?page=' += (param.page + 1)}"/>">
-                            Next</a>
-                    </c:otherwise>
-                </c:choose>
+                <a class="page-link" href="<c:url value="${paginationURL += '?page=' += (param.page + 1)}"/>">
+                    Next</a>
+
             </li>
         </c:if>
     </ul>
@@ -131,10 +108,10 @@
             <div class="col">
                 <button class="btn btn-outline-success mx-sm-3"
                         type="submit"><fmt:message key="searchBetweenTwoDates"/></button>
-                    <input class="form-control" name="dateFrom"
-                           type="date" aria-label="Search"/>
-                    <input class="form-control" name="dateTo"
-                           type="date" aria-label="Search"/>
+                <input class="form-control" name="dateFrom"
+                       type="date" aria-label="Search" value="${sessionScope.dateFrom}"/>
+                <input class="form-control" name="dateTo"
+                       type="date" aria-label="Search" value="${sessionScope.dateTo}"/>
             </div>
         </form>
         <form method="post" class="form-inline"
@@ -142,11 +119,18 @@
             <div class="col">
                 <input class="form-control mx-lg-3"
                        name="petName" type="search"
-                       placeholder="<fmt:message key="petName"/>" aria-label="Search"/>
+                       placeholder="<fmt:message key="petName"/>"
+                       aria-label="Search" value="${sessionScope.petName}"/>
                 <button class="btn btn-outline-success mx-sm-1" type="submit">
                     <fmt:message key="searchByPetName"/></button>
             </div>
         </form>
+        <div class="col">
+            <a class="btn btn-outline-success"
+               href="<c:url value="/adoptions/staff/findadoption.html?page=1"/>">
+                <fmt:message key="reset"/>
+            </a>
+        </div>
     </div>
 </div>
 <%--Search by pet name--%>

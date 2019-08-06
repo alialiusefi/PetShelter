@@ -6,6 +6,7 @@ import by.training.finaltask.entity.Role;
 import by.training.finaltask.entity.User;
 import by.training.finaltask.entity.UserInfo;
 import by.training.finaltask.exception.PersistentException;
+import by.training.finaltask.parser.FormParser;
 import by.training.finaltask.service.serviceinterface.UserInfoService;
 import by.training.finaltask.service.serviceinterface.UserService;
 import org.apache.logging.log4j.LogManager;
@@ -50,7 +51,7 @@ public class FindStaffAction extends AuthorizedUserAction {
                             amountOfAllStaff / ROWCOUNT : amountOfAllStaff / ROWCOUNT + 1;
                     request.setAttribute("amountOfPages", amountOfPages);
                     Integer pagenumber = 1;
-                    pagenumber = validatePageNumber(
+                    pagenumber = FormParser.parsePageNumber(
                             request.getParameter("page"), amountOfPages);
                     int offset = (pagenumber - 1) * ROWCOUNT;
                     userList = userService.getAllStaff(offset, ROWCOUNT);
@@ -65,18 +66,5 @@ public class FindStaffAction extends AuthorizedUserAction {
             }
         }
         throw new PersistentException("forbiddenAccess");
-    }
-
-    private Integer validatePageNumber(String pageParameter, int amountOfPages) {
-        if (pageParameter.matches(NUMBER_REGEX)) {
-            Integer pageNumber = Integer.parseInt(
-                    pageParameter);
-            if (pageNumber <= amountOfPages) {
-                return pageNumber;
-            } else {
-                return 1;
-            }
-        }
-        return 1;
     }
 }

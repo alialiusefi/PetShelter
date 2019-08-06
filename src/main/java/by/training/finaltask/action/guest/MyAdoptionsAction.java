@@ -24,7 +24,7 @@ import java.util.Map;
 public class MyAdoptionsAction extends AuthorizedUserAction {
 
     private static final Logger LOGGER = LogManager.getLogger(MyAdoptionsAction.class);
-    private static final int ROWCOUNT = 10;
+    private static final int ROWCOUNT = 5;
 
     public MyAdoptionsAction() {
         this.allowedRoles.add(Role.GUEST);

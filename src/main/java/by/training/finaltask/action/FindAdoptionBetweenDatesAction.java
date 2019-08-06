@@ -22,7 +22,7 @@ import java.util.List;
 public class FindAdoptionBetweenDatesAction extends AuthorizedUserAction {
 
     private static final Logger LOGGER = LogManager.getLogger(FindAdoptionBetweenDatesAction.class);
-    private static int ROWCOUNT = 10;
+    private static int ROWCOUNT = 5;
     private static final String DATE_FORMAT = "yyyy-MM-dd";
     private static final String DATEFROM = "dateFrom";
     private static final String DATETO = "dateTo";
@@ -32,7 +32,6 @@ public class FindAdoptionBetweenDatesAction extends AuthorizedUserAction {
         this.allowedRoles.add(Role.STAFF);
     }
 
-    //todo: fix bug with search
 
     @Override
     public Forward exec(HttpServletRequest request, HttpServletResponse response) throws PersistentException {

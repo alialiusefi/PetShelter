@@ -22,7 +22,7 @@ import java.util.Map;
 public class FindAdoptionAction extends AuthorizedUserAction {
 
     private static final Logger LOGGER = LogManager.getLogger(FindAdoptionAction.class);
-    private static int ROWCOUNT = 10;
+    private static int ROWCOUNT = 5;
 
 
     public FindAdoptionAction() {

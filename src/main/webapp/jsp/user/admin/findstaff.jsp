@@ -76,87 +76,66 @@
         </tbody>
     </table>
 </div>
-<%--
-<c:out value="${param.page}"/>
---%>
+
 <nav aria-label="Page navigation">
     <ul class="pagination">
         <c:if test="${param.page > 1}">
             <li class="page-item">
-                <c:choose>
-                    <c:when test="${not empty searchParameter}">
-                        <a class="page-link" href="<c:url value="${paginationURL += '?page=' += (param.page - 1)
-                    += '&' += 'search=' += searchParameter}"/>">
-                            Previous</a>
-                    </c:when>
-                    <c:otherwise>
-                    <a class="page-link" href="<c:url value="${paginationURL += '?page=' += (param.page - 1)}"/>">
-                            Previous</a>
-                    </c:otherwise>
-                </c:choose>
+                <a class="page-link" href="<c:url value="${paginationURL += '?page=' += (param.page - 1)}"/>">
+                    Previous</a>
             </li>
         </c:if>
         <c:forEach var="i" begin="1" end="${amountOfPages}">
-            <c:choose>
-                <c:when test="${not empty searchParameter}">
-                    <a class="page-link" href="<c:url value="${paginationURL += '?page=' += i
-                    += '&' += 'search=' += searchParameter}"/>">
-                        <c:out value="${i}"/></a>
-                </c:when>
-                <c:otherwise>
-                    <a class="page-link" href="<c:url value="${paginationURL += '?page=' += i}"/>">
-                        <c:out value="${i}"/></a>
-                </c:otherwise>
-            </c:choose>
+
+            <a class="page-link" href="<c:url value="${paginationURL += '?page=' += i}"/>">
+                <c:out value="${i}"/></a>
         </c:forEach>
         <c:if test="${param.page < amountOfPages}">
             <li class="page-item">
-                <c:choose>
-                    <c:when test="${not empty searchParameter}">
-                        <a class="page-link" href="<c:url value="${paginationURL += '?page=' += (param.page + 1)
-                    += '&' += 'search=' += searchParameter}"/>">
-                            Next</a>
-                    </c:when>
-                    <c:otherwise>
-                        <a class="page-link" href="<c:url value="${paginationURL += '?page=' += (param.page + 1)}"/>">
-                            Next</a>
-                    </c:otherwise>
-                </c:choose>
+                <a class="page-link" href="<c:url value="${paginationURL += '?page=' += (param.page + 1)}"/>">
+                    Next</a>
             </li>
         </c:if>
     </ul>
 </nav>
 
-<%--Search--%>
-
-
-<div class="table-light ">
+<div class="table-light">
     <div class="row">
         <div class="col-md-4">
             <%--Search by first name--%>
-            <form class="form-inline" method="post" action="<c:url value="/user/admin/findstaffbyfirstname.html?page=1"/>">
+            <form class="form-inline" method="post"
+                  action="<c:url value="/user/admin/findstaffbyfirstname.html?page=1"/>">
                 <div class="form-group">
                     <label class="col-form-label"><fmt:message key="searchByFirstName"/></label>
-                    <input class="form-control mr-sm-2" name="search"
-                           type="search" placeholder="Search" aria-label="Search">
-                    <button style="margin-left: 0; z-index: 999;" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    <input class="form-control mr-sm-2" name="firstnameParameter"
+                           type="search" placeholder="Search" aria-label="Search"
+                           value="${sessionScope.firstnameParameter}">
+                    <button style="margin-left: 0; z-index: 999;" class="btn btn-outline-success my-2 my-sm-0"
+                            type="submit">Search
+                    </button>
                 </div>
             </form>
         </div>
         <div class="col-md-4">
             <%--Search by phone--%>
-            <form class="form-inline" method="post" action="<c:url value="/user/admin/findstaffbyphone.html?page=1"/>">
+            <form class="form-inline" method="post"
+                  action="<c:url value="/user/admin/findstaffbyphone.html?page=1"/>">
                 <div class="form-group">
                     <label class="col-form-label"><fmt:message key="searchByPhone"/></label>
-                    <input class="form-control mr-sm-2" name="search" type="search" placeholder="Search" aria-label="Search">
-                    <button style="margin-left: 0; z-index: 999;" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    <input class="form-control mr-sm-2"
+                           name="phoneParameter" type="search" placeholder="Search"
+                           aria-label="Search" value="${sessionScope.phoneParameter}">
+                    <button style="margin-left: 0; z-index: 999;" class="btn btn-outline-success my-2 my-sm-0"
+                            type="submit">Search
+                    </button>
                 </div>
             </form>
         </div>
         <div class="col-md-4">
             <form action="<c:url value="/user/admin/findstaff.html?page=1"/>" method="post" class="form-inline">
                 <div class="form-group">
-                    <button style="margin-left: 0; z-index: 999;" class="btn btn-outline-success my-2 my-sm-0" type="submit">
+                    <button style="margin-left: 0; z-index: 999;" class="btn btn-outline-success my-2 my-sm-0"
+                            type="submit">
                         <fmt:message key="reset"/>
                     </button>
                 </div>

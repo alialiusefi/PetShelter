@@ -18,7 +18,6 @@ public enum Role {
     }
     public String getName(){return this.value;}
 
-    //todo: fix static functions
     public static Role valueOf(int idx)
     {
         return Role.values()[idx];

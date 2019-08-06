@@ -4,9 +4,6 @@ service test
 fix logger -- maybe a config file needed?
 ====================
 
-fix updatePet function
-fix pagination with searchParameters using session
-
-====
-
-
+fix Forwards to new Forward("....?page=" + pageNumber)
+override all unsupported dao implementation in base dao and certain dao interfaces 
+====================

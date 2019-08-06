@@ -101,47 +101,21 @@
     <ul class="pagination">
         <c:if test="${param.page > 1}">
             <li class="page-item">
-                <c:choose>
-                    <c:when test="${not empty searchParameter}">
-                        <a class="page-link"
-                           href="<c:url value="${paginationURL += '?page=' += (param.page - 1)
-                    += '&' += 'search=' += searchParameter}"/>">
-                            Previous</a>
-                    </c:when>
-                    <c:otherwise>
-                        <a class="page-link"
-                           href="<c:url value="${paginationURL += '?page=' += (param.page - 1)}"/>">
-                            Previous</a>
-                    </c:otherwise>
-                </c:choose>
+                <a class="page-link"
+                   href="<c:url value="${paginationURL += '?page=' += (param.page - 1)}"/>">
+                    Previous</a>
             </li>
         </c:if>
         <c:forEach var="i" begin="1" end="${amountOfPages}">
-            <c:choose>
-                <c:when test="${not empty searchParameter}">
-                    <a class="page-link" href="<c:url value="${paginationURL += '?page=' += i
-                    += '&' += 'search=' += searchParameter}"/>">
-                        <c:out value="${i}"/></a>
-                </c:when>
-                <c:otherwise>
-                    <a class="page-link" href="<c:url value="${paginationURL += '?page=' += i}"/>">
-                        <c:out value="${i}"/></a>
-                </c:otherwise>
-            </c:choose>
+
+            <a class="page-link" href="<c:url value="${paginationURL += '?page=' += i}"/>">
+                <c:out value="${i}"/></a>
+
         </c:forEach>
         <c:if test="${param.page < amountOfPages}">
             <li class="page-item">
-                <c:choose>
-                    <c:when test="${not empty searchParameter}">
-                        <a class="page-link" href="<c:url value="${paginationURL += '?page=' += (param.page + 1)
-                    += '&' += 'search=' += searchParameter}"/>">
-                            Next</a>
-                    </c:when>
-                    <c:otherwise>
-                        <a class="page-link" href="<c:url value="${paginationURL += '?page=' += (param.page + 1)}"/>">
-                            Next</a>
-                    </c:otherwise>
-                </c:choose>
+                <a class="page-link" href="<c:url value="${paginationURL += '?page=' += (param.page + 1)}"/>">
+                    Next</a>
             </li>
         </c:if>
     </ul>
@@ -174,10 +148,11 @@
                 </div>
             </c:if>
             <div class="form-inline col-md-12 justify-content-center ">
-                <input name="petName" id="inputpetName" class="form-control" placeholder="<fmt:message key="petName"/>">
+                <input name="petName" id="inputpetName" class="form-control"
+                       placeholder="<fmt:message key="petName"/>" value="${sessionScope.petName}">
                 &emsp;
                 <input type="submit" name="findByPetName" onclick="document.pressed=this.name"
-                    value="<fmt:message key="findByPetName"/>" class="btn-sm btn-primary">
+                       value="<fmt:message key="findByPetName"/>" class="btn-sm btn-primary">
             </div>
             <div class="form-inline p-md-2">
                 <select name="breed" id="inputBreed" class="form-control">
@@ -199,7 +174,7 @@
                        value="<fmt:message key="findByShelter"/>" class="btn-sm btn-primary">
             </div>
             <div class="form-inline" style="padding-left: 15%">
-                <input type="date" name="birthDate">
+                <input type="date" value="${sessionScope.birthDate}" name="birthDate">
                 &emsp;
                 <input type="radio" checked name="birthDateChoice" value="lessthan"><fmt:message
                     key="birthDateBeforeChoice"/>

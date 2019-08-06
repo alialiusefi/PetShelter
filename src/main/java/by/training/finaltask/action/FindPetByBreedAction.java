@@ -19,31 +19,32 @@ import java.util.List;
 public class FindPetByBreedAction extends AuthorizedUserAction {
     private static final Logger LOGGER = LogManager.getLogger(
             FindPetByBreedAction.class);
+    private static int ROWS_PER_PAGE = 6;
+    private static String PETSTATUS_ATTRIBUTE = "petStatus";
+    private static String BREEDATTR = "breed";
 
     public FindPetByBreedAction() {
         this.allowedRoles.add(Role.STAFF);
         this.allowedRoles.add(Role.ADMINISTRATOR);
     }
 
-    private static int ROWS_PER_PAGE = 6;
-    private static String PETSTATUS_ATTRIBUTE = "petStatus";
-
     @Override
     public Forward exec(HttpServletRequest request, HttpServletResponse response) throws PersistentException {
         HttpSession session = request.getSession(false);
         if (session != null) {
             User authUser = (User) session.getAttribute("authorizedUser");
+            String breedIDParam = getBreedID(request);
+            session.setAttribute(BREEDATTR, breedIDParam);
+            int breedID = Integer.parseInt(breedIDParam);
             PetStatus status;
             if (authUser != null && this.allowedRoles.contains(authUser.getUserRole())) {
                 status = FindPetAction.getStatus(request);
             } else {
                 status = PetStatus.SHELTERED;
             }
-            int breedID = getBreedID(request);
-            Forward forward = new Forward("/pets/findpet.html?page=1");
-            forward.getAttributes().put("searchParameter", breedID);
             session.setAttribute(PETSTATUS_ATTRIBUTE, status);
             PetService service = (PetService) factory.createService(DAOEnum.PET);
+            Forward forward = new Forward("/pets/findpet.html?page=");
             int amountOfPetsByBreed = service.getAllCountByBreed(status, breedID);
             int amountOfPages = amountOfPetsByBreed % ROWS_PER_PAGE == 0 ?
                     amountOfPetsByBreed / ROWS_PER_PAGE : amountOfPetsByBreed / ROWS_PER_PAGE + 1;
@@ -53,21 +54,22 @@ public class FindPetByBreedAction extends AuthorizedUserAction {
             int offset = (pagenumber - 1) * ROWS_PER_PAGE;
             List<Pet> pets = service.getAllByBreed(status, breedID, offset, ROWS_PER_PAGE);
             forward.getAttributes().put("petResults", pets);
-            List<String> images = FindPetAction.getImages(request, pets);
+            List<String> images = FindPetAction.getImages(pets);
             forward.getAttributes().put("petPictures", images);
             forward.getAttributes().put("paginationURL", "/pets/findpetbybreed.html");
             return forward;
         }
         LOGGER.info(String.format("%s - attempted to access %s and failed",
-                request.getRemoteAddr(),request.getRequestURI()));
+                request.getRemoteAddr(), request.getRequestURI()));
         throw new PersistentException("forbiddenAccess");
     }
 
-    private int getBreedID(HttpServletRequest request) {
-        if (request.getParameter("breed") == null) {
-            return Integer.parseInt(request.getParameter("search"));
-        } else {
-            return Integer.parseInt(request.getParameter("breed"));
+    private String getBreedID(HttpServletRequest request) {
+        String breedID = request.getParameter(BREEDATTR);
+        if (breedID == null) {
+            breedID = (String) request.getSession(false)
+                    .getAttribute(BREEDATTR);
         }
+        return breedID;
     }
 }

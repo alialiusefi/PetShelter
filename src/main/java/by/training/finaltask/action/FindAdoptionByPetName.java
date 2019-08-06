@@ -19,8 +19,8 @@ import java.util.List;
 public class FindAdoptionByPetName extends AuthorizedUserAction {
 
     private static final Logger LOGGER =  LogManager.getLogger(FindAdoptionByPetName.class);
-    private static final int ROWCOUNT = 10;
-
+    private static final int ROWCOUNT = 5;
+    private static final String PETNAMEATTR = "petName";
     public FindAdoptionByPetName() {
         this.allowedRoles.add(Role.STAFF);
         this.allowedRoles.add(Role.GUEST);
@@ -32,11 +32,11 @@ public class FindAdoptionByPetName extends AuthorizedUserAction {
         if (session != null) {
             User authUser = (User) session.getAttribute("authorizedUser");
             if (authUser != null && allowedRoles.contains(authUser.getUserRole())) {
-                String petName = request.getParameter("petName");
+                String petName = request.getParameter(PETNAMEATTR);
                 if (petName == null) {
-                    petName = (String) session.getAttribute("petName");
+                    petName = (String) session.getAttribute(PETNAMEATTR);
                 } else {
-                    session.setAttribute("petName", petName);
+                    session.setAttribute(PETNAMEATTR, petName);
                 }
                 AdoptionService service = (AdoptionService) factory.createService(
                         DAOEnum.ADOPTION);

@@ -19,6 +19,7 @@ import java.util.ArrayList;
 import java.util.Base64;
 import java.util.List;
 
+
 public class FindPetByShelterAction extends AuthorizedUserAction {
 
     private static final Logger LOGGER = LogManager.getLogger(
@@ -28,17 +29,19 @@ public class FindPetByShelterAction extends AuthorizedUserAction {
         this.allowedRoles.add(Role.STAFF);
         this.allowedRoles.add(Role.ADMINISTRATOR);
     }
-
     private static int ROWS_PER_PAGE = 6;
     private static String NUMBER_REGEX = "[1-9]+";
     private static String PETSTATUS_ATTRIBUTE = "petStatus";
+    private static String SHELTER_ATTRIBUTE = "shelter";
 
     @Override
     public Forward exec(HttpServletRequest request, HttpServletResponse response) throws PersistentException {
         HttpSession session = request.getSession(false);
         if (session != null) {
             User authUser = (User)session.getAttribute("authorizedUser");
-            int shelterID = getShelterID(request);
+            String shelterIDParam = getShelterID(request);
+            session.setAttribute(SHELTER_ATTRIBUTE, shelterIDParam);
+            int shelterID = Integer.parseInt(shelterIDParam);
             PetStatus status;
             if(authUser != null && this.allowedRoles.contains(authUser.getUserRole()))
             {
@@ -47,7 +50,6 @@ public class FindPetByShelterAction extends AuthorizedUserAction {
                 status = PetStatus.SHELTERED;
             }
             Forward forward = new Forward("/pets/findpet.html?page=1");
-            forward.getAttributes().put("searchParameter", shelterID);
             session.setAttribute(PETSTATUS_ATTRIBUTE,status);
             PetService service = (PetService) factory.createService(DAOEnum.PET);
             int amountOfPetsByShelter = service.getAllCountByShelter(status,shelterID);
@@ -88,12 +90,13 @@ public class FindPetByShelterAction extends AuthorizedUserAction {
         return images;
     }
 
-    private int getShelterID(HttpServletRequest request)
+    private String getShelterID(HttpServletRequest request)
     {
-        if (request.getParameter("shelter") == null) {
-            return Integer.parseInt(request.getParameter("search"));
-        } else {
-            return Integer.parseInt(request.getParameter("shelter"));
+        String shelterID = request.getParameter(SHELTER_ATTRIBUTE);
+        if (shelterID == null) {
+            shelterID = (String) request.getSession(false)
+                    .getAttribute(SHELTER_ATTRIBUTE);
         }
+        return shelterID;
     }
 }
