@@ -1,13 +1,13 @@
 package by.training.finaltask.action.guest;
 
 import by.training.finaltask.action.AuthorizedUserAction;
+import by.training.finaltask.action.Pagination;
 import by.training.finaltask.dao.mysql.DAOEnum;
 import by.training.finaltask.entity.Adoption;
 import by.training.finaltask.entity.Pet;
 import by.training.finaltask.entity.Role;
 import by.training.finaltask.entity.User;
 import by.training.finaltask.exception.PersistentException;
-import by.training.finaltask.parser.FormParser;
 import by.training.finaltask.service.serviceinterface.AdoptionService;
 import by.training.finaltask.service.serviceinterface.PetService;
 import org.apache.logging.log4j.LogManager;
@@ -41,14 +41,10 @@ public class MyAdoptionsAction extends AuthorizedUserAction {
                 if (adoptions == null) {
                     AdoptionService service = (AdoptionService) factory
                             .createService(DAOEnum.ADOPTION);
-                    int amountOfAllAdoptions = service.getAllCountCurrentUser(authUser.getId());
-                    int amountOfPages = amountOfAllAdoptions % ROWCOUNT == 0 ?
-                            amountOfAllAdoptions / ROWCOUNT : amountOfAllAdoptions / ROWCOUNT + 1;
-                    request.setAttribute("amountOfPages", amountOfPages);
-                    int pageNumber = FormParser.parsePageNumber(
-                            request.getParameter("page"), amountOfPages);
-                    int offset = (pageNumber - 1) * ROWCOUNT;
-                    adoptions = service.getAllCurrentUser(authUser.getId(), offset, ROWCOUNT);
+                    Pagination pagination = new Pagination(service.getAllCountCurrentUser(
+                            authUser.getId()), ROWCOUNT, request.getParameter("page"));
+                    request.setAttribute("amountOfPages", pagination.getAmountOfPages());
+                    adoptions = service.getAllCurrentUser(authUser.getId(), pagination.getOffset(), ROWCOUNT);
                     request.setAttribute("paginationURL", "/adoptions/guest/myadoptions.html");
                 }
                 List<Pet> pets = getPetForEveryAdoption(adoptions);
@@ -59,7 +55,7 @@ public class MyAdoptionsAction extends AuthorizedUserAction {
 
         }
         LOGGER.info(String.format("%s - attempted to access %s and failed",
-                request.getRemoteAddr(),request.getRequestURI()));
+                request.getRemoteAddr(), request.getRequestURI()));
         throw new PersistentException("forbiddenAccess");
     }
 

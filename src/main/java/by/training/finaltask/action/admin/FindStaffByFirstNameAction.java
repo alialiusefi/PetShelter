@@ -1,12 +1,12 @@
 package by.training.finaltask.action.admin;
 
 import by.training.finaltask.action.AuthorizedUserAction;
+import by.training.finaltask.action.Pagination;
 import by.training.finaltask.dao.mysql.DAOEnum;
 import by.training.finaltask.entity.Role;
 import by.training.finaltask.entity.User;
 import by.training.finaltask.entity.UserInfo;
 import by.training.finaltask.exception.PersistentException;
-import by.training.finaltask.parser.FormParser;
 import by.training.finaltask.service.serviceinterface.UserInfoService;
 import by.training.finaltask.service.serviceinterface.UserService;
 import org.apache.logging.log4j.LogManager;
@@ -39,23 +39,17 @@ public class FindStaffByFirstNameAction extends AuthorizedUserAction {
             if (user != null && allowedRoles.contains(user.getUserRole())) {
                 String firstnameParameter = getSearchParameter(request);
                 session.setAttribute(FIRSTNAMEATTR, firstnameParameter);
-                Forward forward = new Forward("/user/admin/findstaff.html?page=1");
                 UserService userService = (UserService) factory.createService(DAOEnum.USER);
                 UserInfoService userInfoService = (UserInfoService)
                         factory.createService(DAOEnum.USERINFO);
-                firstnameParameter = "%" + firstnameParameter;
-                int amountOfAllStaffByFirstName = userService.getAmountOfAllStaffByFirstName(
-                        firstnameParameter);
-                int amountOfPages = amountOfAllStaffByFirstName % ROWS_PER_PAGE == 0 ?
-                        amountOfAllStaffByFirstName / ROWS_PER_PAGE : amountOfAllStaffByFirstName / ROWS_PER_PAGE + 1;
-                forward.getAttributes().put("amountOfPages", amountOfPages);
-                int pagenumber = FormParser.parsePageNumber(
-                        request.getParameter("page"), amountOfPages);
-                int offset = (pagenumber - 1) * ROWS_PER_PAGE;
+                Pagination pagination = new Pagination(userService.getAmountOfAllStaffByFirstName(
+                        "%" + firstnameParameter), ROWS_PER_PAGE, request.getParameter("page"));
+                Forward forward = new Forward("/user/admin/findstaff.html?page=1");
+                forward.getAttributes().put("amountOfPages", pagination.getAmountOfPages());
                 List<UserInfo> userInfoList = userInfoService.findAllStaffByFirstName(
-                        firstnameParameter, offset, ROWS_PER_PAGE);
+                        firstnameParameter, pagination.getOffset(), ROWS_PER_PAGE);
                 List<User> userList = userService.getAllStaffByFirstName(
-                        firstnameParameter, offset, ROWS_PER_PAGE);
+                        firstnameParameter, pagination.getOffset(), ROWS_PER_PAGE);
                 forward.getAttributes().put("resultUsers", userList);
                 forward.getAttributes().put("resultsUserInfo", userInfoList);
                 forward.getAttributes().put("paginationURL", "/user/admin/findstaffbyfirstname.html");

@@ -16,7 +16,7 @@ public abstract class FormParser<T> {
     private static final String NUMBER_REGEX = "[1-9]+";
 
     /**
-     * @param pageParameter Page Number parameter in pagination.
+     * @param pageParameter Pagination Number parameter in pagination.
      * @param amountOfPages Total Count of rows.
      * @return parsed page number.
      */

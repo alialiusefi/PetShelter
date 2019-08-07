@@ -1,10 +1,10 @@
 package by.training.finaltask.action.staff;
 
 import by.training.finaltask.action.AuthorizedUserAction;
+import by.training.finaltask.action.Pagination;
 import by.training.finaltask.dao.mysql.DAOEnum;
 import by.training.finaltask.entity.*;
 import by.training.finaltask.exception.PersistentException;
-import by.training.finaltask.parser.FormParser;
 import by.training.finaltask.service.serviceinterface.AdoptionService;
 import by.training.finaltask.service.serviceinterface.PetService;
 import by.training.finaltask.service.serviceinterface.UserInfoService;
@@ -42,21 +42,18 @@ public class FindAdoptionAction extends AuthorizedUserAction {
                 if (adoptions == null) {
                     AdoptionService service = (AdoptionService) factory
                             .createService(DAOEnum.ADOPTION);
-                    int amountOfAllAdoptions = service.getAllCount();
-                    int amountOfPages = amountOfAllAdoptions % ROWCOUNT == 0 ?
-                            amountOfAllAdoptions / ROWCOUNT : amountOfAllAdoptions / ROWCOUNT + 1;
-                    request.setAttribute("amountOfPages", amountOfPages);
-                    int pageNumber = FormParser.parsePageNumber(
-                            request.getParameter("page"), amountOfPages);
-                    int offset = (pageNumber - 1) * ROWCOUNT;
-                    adoptions = service.getAll(offset, ROWCOUNT);
+                    Pagination pagination = new Pagination(
+                            service.getAllCount(),
+                            ROWCOUNT, request.getParameter("page"));
+                    request.setAttribute("amountOfPages", pagination.getAmountOfPages());
+                    adoptions = service.getAll(pagination.getOffset(), ROWCOUNT);
                     request.setAttribute("paginationURL", "/adoptions/staff/findadoption.html");
                 }
                 List<Pet> pets = getPetForEveryAdoption(adoptions);
                 List<UserInfo> userInfos = getUserInfoForEveryAdoption(adoptions);
                 request.setAttribute("adoptionResults", adoptions);
-                request.setAttribute("userInfoResults",userInfos);
-                request.setAttribute("petResults",pets);
+                request.setAttribute("userInfoResults", userInfos);
+                request.setAttribute("petResults", pets);
                 return null;
             }
             Forward forward = new Forward("/login.html");
@@ -64,7 +61,7 @@ public class FindAdoptionAction extends AuthorizedUserAction {
             return forward;
         }
         LOGGER.info(String.format("%s - attempted to access %s and failed",
-                request.getRemoteAddr(),request.getRequestURI()));
+                request.getRemoteAddr(), request.getRequestURI()));
         throw new PersistentException("forbiddenAccess");
     }
 
@@ -77,7 +74,7 @@ public class FindAdoptionAction extends AuthorizedUserAction {
                 PetService service = (PetService) factory.createService(DAOEnum.PET);
                 Pet pet = service.get(adoption.getPetID());
                 pets.add(pet);
-                petMap.put(pet.getId(),pet);
+                petMap.put(pet.getId(), pet);
                 continue;
             }
             pets.add(petMap.get(adoption.getPetID()));
@@ -94,7 +91,7 @@ public class FindAdoptionAction extends AuthorizedUserAction {
                 UserInfoService service = (UserInfoService) factory.createService(DAOEnum.USERINFO);
                 UserInfo userInfo = service.get(adoption.getPetID());
                 userInfos.add(userInfo);
-                userInfoMap.put(userInfo.getId(),userInfo);
+                userInfoMap.put(userInfo.getId(), userInfo);
                 continue;
             }
             userInfos.add(userInfoMap.get(adoption.getUserID()));

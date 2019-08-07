@@ -56,18 +56,13 @@ public class FindPetByBirthDateAction extends AuthorizedUserAction {
                 status = PetStatus.SHELTERED;
             }
             session.setAttribute(PETSTATUS_ATTRIBUTE, status);
-            Forward forward = new Forward("/pets/findpet.html?page=1");
             PetService service = (PetService) factory.createService(DAOEnum.PET);
-            int amountOfPetsByBirthDate = service.getAllCountByBirthDate(relation,
-                    status, gregorianCalendar);
-            int amountOfPages = amountOfPetsByBirthDate % ROWSPERPAGE == 0 ?
-                    amountOfPetsByBirthDate / ROWSPERPAGE : amountOfPetsByBirthDate / ROWSPERPAGE + 1;
-            forward.getAttributes().put("amountOfPages", amountOfPages);
-            int pageNumber = FormParser.parsePageNumber(
-                    request.getParameter("page"), amountOfPages);
-            int offset = (pageNumber - 1) * ROWSPERPAGE;
+            Pagination pagination = new Pagination(service.getAllCountByBirthDate(relation,
+                    status, gregorianCalendar), ROWSPERPAGE, request.getParameter("page"));
+            Forward forward = new Forward("/pets/findpet.html?page=" + pagination.getPageNumber());
+            forward.getAttributes().put("amountOfPages", pagination.getAmountOfPages());
             List<Pet> pets = service.getAllByBirthDate(relation, status,
-                    gregorianCalendar, offset, ROWSPERPAGE);
+                    gregorianCalendar, pagination.getOffset(), ROWSPERPAGE);
             forward.getAttributes().put("petResults", pets);
             List<String> images = FindPetAction.getImages(pets);
             forward.getAttributes().put("petPictures", images);

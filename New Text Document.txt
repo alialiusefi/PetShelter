@@ -1,11 +1,9 @@
 add README in final project
 code convention
 service test
-fix logger -- maybe a config file needed?
 ====================
 
 fix Forwards to new Forward("....?page=" + pageNumber)
-override all unsupported dao implementation in base dao and certain dao interfaces 
 ====================
 
 

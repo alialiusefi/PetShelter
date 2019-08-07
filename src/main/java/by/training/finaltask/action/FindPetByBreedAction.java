@@ -44,14 +44,14 @@ public class FindPetByBreedAction extends AuthorizedUserAction {
             }
             session.setAttribute(PETSTATUS_ATTRIBUTE, status);
             PetService service = (PetService) factory.createService(DAOEnum.PET);
-            Forward forward = new Forward("/pets/findpet.html?page=");
             int amountOfPetsByBreed = service.getAllCountByBreed(status, breedID);
             int amountOfPages = amountOfPetsByBreed % ROWS_PER_PAGE == 0 ?
                     amountOfPetsByBreed / ROWS_PER_PAGE : amountOfPetsByBreed / ROWS_PER_PAGE + 1;
-            forward.getAttributes().put("amountOfPages", amountOfPages);
             int pagenumber = FormParser.parsePageNumber(
                     request.getParameter("page"), amountOfPages);
             int offset = (pagenumber - 1) * ROWS_PER_PAGE;
+            Forward forward = new Forward("/pets/findpet.html?page=" + pagenumber);
+            forward.getAttributes().put("amountOfPages", amountOfPages);
             List<Pet> pets = service.getAllByBreed(status, breedID, offset, ROWS_PER_PAGE);
             forward.getAttributes().put("petResults", pets);
             List<String> images = FindPetAction.getImages(pets);

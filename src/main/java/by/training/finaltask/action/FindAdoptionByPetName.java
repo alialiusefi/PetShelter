@@ -5,7 +5,6 @@ import by.training.finaltask.entity.Adoption;
 import by.training.finaltask.entity.Role;
 import by.training.finaltask.entity.User;
 import by.training.finaltask.exception.PersistentException;
-import by.training.finaltask.parser.FormParser;
 import by.training.finaltask.service.serviceinterface.AdoptionService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -18,9 +17,10 @@ import java.util.List;
 
 public class FindAdoptionByPetName extends AuthorizedUserAction {
 
-    private static final Logger LOGGER =  LogManager.getLogger(FindAdoptionByPetName.class);
+    private static final Logger LOGGER = LogManager.getLogger(FindAdoptionByPetName.class);
     private static final int ROWCOUNT = 5;
     private static final String PETNAMEATTR = "petName";
+
     public FindAdoptionByPetName() {
         this.allowedRoles.add(Role.STAFF);
         this.allowedRoles.add(Role.GUEST);
@@ -43,40 +43,29 @@ public class FindAdoptionByPetName extends AuthorizedUserAction {
                 Forward forward = new Forward(request.getHeader("referer"));
                 List<Adoption> adoptions = new ArrayList<>();
                 if (authUser.getUserRole() == Role.GUEST) {
-                    int amountOfAllAdoptions = service.getCountPetNameCurrentUser(
-                            authUser.getId(), "%" + petName + "%");
-                    int amountOfPages = amountOfAllAdoptions % ROWCOUNT == 0 ?
-                            amountOfAllAdoptions / ROWCOUNT :
-                            amountOfAllAdoptions / ROWCOUNT + 1;
-                    forward.getAttributes().put("amountOfPages", amountOfPages);
-                    int pageNumber = FormParser.parsePageNumber(
-                            request.getParameter("page"), amountOfPages);
-                    int offset = (pageNumber - 1) * ROWCOUNT;
+                    Pagination pagination = new Pagination(service.getCountPetNameCurrentUser(
+                            authUser.getId(), "%" + petName + "%"),
+                            ROWCOUNT, request.getParameter("page"));
+                    forward.getAttributes().put("amountOfPages", pagination.getAmountOfPages());
                     adoptions = service.getAllPetNameCurrentUser(authUser.getId(), petName,
-                            offset, ROWCOUNT);
+                            pagination.getOffset(), ROWCOUNT);
                 }
                 if (authUser.getUserRole() == Role.STAFF) {
-                    int amountOfAllAdoptions = service.getCountPetName(
-                            "%" + petName + "%");
-                    int amountOfPages = amountOfAllAdoptions % ROWCOUNT == 0 ?
-                            amountOfAllAdoptions / ROWCOUNT :
-                            amountOfAllAdoptions / ROWCOUNT + 1;
-                    forward.getAttributes().put("amountOfPages", amountOfPages);
-                    int pageNumber = FormParser.parsePageNumber(
-                            request.getParameter("page"), amountOfPages);
-                    int offset = (pageNumber - 1) * ROWCOUNT;
+                    Pagination pagination = new Pagination(service.getCountPetName(
+                            "%" + petName + "%"), ROWCOUNT, request.getParameter("page"));
+                    forward.getAttributes().put("amountOfPages", pagination.getAmountOfPages());
                     adoptions = service.getAllPetName("%" + petName + "%",
-                            offset, ROWCOUNT);
+                            pagination.getOffset(), ROWCOUNT);
                 }
                 forward.getAttributes().put("paginationURL", "/adoptions/staff/findadoptionbypetname.html");
                 forward.getAttributes().put("adoptionResults", adoptions);
                 return forward;
             }
             LOGGER.info(String.format("%s - attempted to access %s and stopped due to not enough" +
-                    "privileges", request.getRemoteAddr(),request.getRequestURI()));
+                    "privileges", request.getRemoteAddr(), request.getRequestURI()));
         }
         LOGGER.info(String.format("%s - attempted to access %s and failed",
-                request.getRemoteAddr(),request.getRequestURI()));
+                request.getRemoteAddr(), request.getRequestURI()));
         throw new PersistentException("forbiddenAccess");
     }
 

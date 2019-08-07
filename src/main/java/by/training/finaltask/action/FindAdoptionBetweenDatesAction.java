@@ -7,7 +7,6 @@ import by.training.finaltask.entity.User;
 import by.training.finaltask.exception.InvalidFormDataException;
 import by.training.finaltask.exception.PersistentException;
 import by.training.finaltask.parser.AdoptionFormParser;
-import by.training.finaltask.parser.FormParser;
 import by.training.finaltask.service.serviceinterface.AdoptionService;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -53,32 +52,24 @@ public class FindAdoptionBetweenDatesAction extends AuthorizedUserAction {
                             AdoptionFormParser.parseDate(DATE_FORMAT, adoptionStartParam);
                     GregorianCalendar end =
                             AdoptionFormParser.parseDate(DATE_FORMAT, adoptionEndParam);
-
                     AdoptionService service = (AdoptionService)
                             factory.createService(DAOEnum.ADOPTION);
                     Forward forward = new Forward(request.getHeader("referer"));
                     List<Adoption> adoptions = new ArrayList<>();
                     if (authUser.getUserRole() == Role.GUEST) {
-                        int amountOfAllAdoptions = service.getCountBetweenDatesCurrentUser(
-                                authUser.getId(), start, end);
-                        int amountOfPages = amountOfAllAdoptions % ROWCOUNT == 0 ?
-                                amountOfAllAdoptions / ROWCOUNT : amountOfAllAdoptions / ROWCOUNT + 1;
-                        forward.getAttributes().put("amountOfPages", amountOfPages);
-                        int pageNumber = FormParser.parsePageNumber(
-                                request.getParameter("page"), amountOfPages);
-                        int offset = (pageNumber - 1) * ROWCOUNT;
+                        Pagination pagination = new Pagination(
+                                service.getCountBetweenDatesCurrentUser(
+                                        authUser.getId(), start, end), ROWCOUNT,
+                                request.getParameter("page"));
+                        forward.getAttributes().put("amountOfPages", pagination.getAmountOfPages());
                         adoptions = service.getAllBetweenDatesCurrentUser(authUser.getId(),
-                                start, end, offset, ROWCOUNT);
+                                start, end, pagination.getOffset(), ROWCOUNT);
                     }
                     if (authUser.getUserRole() == Role.STAFF) {
-                        int amountOfAllAdoptions = service.getCountBetweenDates(start, end);
-                        int amountOfPages = amountOfAllAdoptions % ROWCOUNT == 0 ?
-                                amountOfAllAdoptions / ROWCOUNT : amountOfAllAdoptions / ROWCOUNT + 1;
-                        forward.getAttributes().put("amountOfPages", amountOfPages);
-                        int pageNumber = FormParser.parsePageNumber(
-                                request.getParameter("page"), amountOfPages);
-                        int offset = (pageNumber - 1) * ROWCOUNT;
-                        adoptions = service.getAllBetweenDates(start, end, offset, ROWCOUNT);
+                        Pagination pagination = new Pagination(service.getCountBetweenDates(start, end),
+                                ROWCOUNT, request.getParameter("page"));
+                        forward.getAttributes().put("amountOfPages", pagination.getAmountOfPages());
+                        adoptions = service.getAllBetweenDates(start, end, pagination.getOffset(), ROWCOUNT);
                     }
                     forward.getAttributes().put("paginationURL", "/adoptions/staff/findadoptionbetweendates.html");
                     forward.getAttributes().put("adoptionResults", adoptions);
@@ -88,7 +79,6 @@ public class FindAdoptionBetweenDatesAction extends AuthorizedUserAction {
                     forward.getAttributes().put("message", e.getMessage());
                     return forward;
                 }
-
             }
             LOGGER.info(String.format("%s - attempted to access %s and stopped due to not enough" +
                     "privileges", request.getRemoteAddr(),request.getRequestURI()));

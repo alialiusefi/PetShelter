@@ -49,16 +49,16 @@ public class FindPetByShelterAction extends AuthorizedUserAction {
             } else {
                 status = PetStatus.SHELTERED;
             }
-            Forward forward = new Forward("/pets/findpet.html?page=1");
             session.setAttribute(PETSTATUS_ATTRIBUTE,status);
             PetService service = (PetService) factory.createService(DAOEnum.PET);
             int amountOfPetsByShelter = service.getAllCountByShelter(status,shelterID);
             int amountOfPages = amountOfPetsByShelter % ROWS_PER_PAGE == 0 ?
                     amountOfPetsByShelter / ROWS_PER_PAGE : amountOfPetsByShelter / ROWS_PER_PAGE + 1;
-            forward.getAttributes().put("amountOfPages", amountOfPages);
             int pageNumber = FormParser.parsePageNumber(
                     request.getParameter("page"), amountOfPages);
             int offset = (pageNumber - 1) * ROWS_PER_PAGE;
+            Forward forward = new Forward("/pets/findpet.html?page=" + pageNumber);
+            forward.getAttributes().put("amountOfPages", amountOfPages);
             List<Pet> pets = service.getAllByShelter(status,shelterID, offset, ROWS_PER_PAGE);
             forward.getAttributes().put("petResults", pets);
             List<String> images = getImages(request, pets);
