@@ -18,14 +18,16 @@ import javax.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.Map;
 
-final public class PetShelterServlet extends HttpServlet {
+/**
+ * Main Servlet that processes requests.
+ */
+public final class PetShelterServlet extends HttpServlet {
 
     private static final Logger LOGGER = LogManager.getLogger(PetShelterServlet.class);
-    private PetShelterServletConfig config;
+    private static final PetShelterServletConfig config = new PetShelterServletConfig();
 
     @Override
-    public void init() throws ServletException {
-        config = new PetShelterServletConfig();
+    public void init() {
         try {
             ConnectionPool.getInstance().initialize(
                     config.getDbDriverClass(),
@@ -54,10 +56,22 @@ final public class PetShelterServlet extends HttpServlet {
         requestHandler(req, resp);
     }
 
+    /**
+     * @return returns service factory.
+     * @throws PersistentException
+     */
     public ServiceFactory getFactory() throws PersistentException {
         return new ServiceFactoryImpl();
     }
 
+    /**
+     * Request Handler that handles all get/post requests.
+     *
+     * @param request  HttpServletRequest object.
+     * @param response HttpServletResponse object.
+     * @throws IOException      if IO abnormality was detected.
+     * @throws ServletException id servlet abnormality was detected.
+     */
     private void requestHandler(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
         Action action = (Action) request.getAttribute("action");
@@ -68,6 +82,7 @@ final public class PetShelterServlet extends HttpServlet {
                 Map<String, Object> attributes = (Map<String, Object>) session.getAttribute(
                         "redirectedData");
                 if (attributes != null) {
+                    //todo: inefficient
                     for (String key : attributes.keySet()) {
                         request.setAttribute(key, attributes.get(key));
                     }

@@ -148,7 +148,7 @@
                 </div>
             </c:if>
             <div class="form-inline col-md-12 justify-content-center ">
-                <input name="petName" id="inputpetName" class="form-control"
+                <input pattern="^[a-zA-Z]{1,10}+$" name="petName" id="inputpetName" class="form-control"
                        placeholder="<fmt:message key="petName"/>" value="${sessionScope.petName}">
                 &emsp;
                 <input type="submit" name="findByPetName" onclick="document.pressed=this.name"
@@ -174,7 +174,7 @@
                        value="<fmt:message key="findByShelter"/>" class="btn-sm btn-primary">
             </div>
             <div class="form-inline" style="padding-left: 15%">
-                <input type="date" value="${sessionScope.birthDate}" name="birthDate">
+                <input type="date" pattern="^\\d{4}-\\d{2}-\\d{2}$" value="${sessionScope.birthDate}" name="birthDate">
                 &emsp;
                 <input type="radio" checked name="birthDateChoice" value="lessthan"><fmt:message
                     key="birthDateBeforeChoice"/>

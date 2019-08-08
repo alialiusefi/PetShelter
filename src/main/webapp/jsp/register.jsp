@@ -22,7 +22,7 @@
 <jsp:include page="/jsp/tags/menu.jsp" flush="true"/>
 <br>
 <div class="container">
-    <form class="form" action=" " method="post" id="contact_form">
+    <form class="form" action="" method="post" id="contact_form">
         <fieldset>
             <!-- Form Name -->
             <legend>
@@ -42,19 +42,23 @@
             <!-- Text input-->
             <div class="form-row">
                 <div class="form-group col-md-3">
-                    <label class="col-md-6 control-label"><fmt:message key="firstName"/></label>
+                    <label for="firstNameValidation" class="col-md-6 control-label"><fmt:message
+                            key="firstName"/></label>
                     <div class="col-md-6 inputGroupContainer">
                         <div class="input-group">
-                            <input name="firstname" placeholder="<fmt:message key="firstName"/>"
+                            <input required id="firstNameValidation" pattern="^[a-zA-Z]+$"
+                                   name="firstname" placeholder="<fmt:message key="firstName"/>"
                                    class="form-control" value="${param.firstname}" type="text">
                         </div>
                     </div>
                 </div>
                 <div class="form-group col-md-3">
-                    <label class="col-md-6 control-label"><fmt:message key="lastName"/> </label>
+                    <label for="lastNameValidation" class="col-md-6 control-label"><fmt:message
+                            key="lastName"/> </label>
                     <div class="col-md-6 inputGroupContainer">
                         <div class="input-group">
-                            <input name="lastname" placeholder="<fmt:message key="lastName"/>"
+                            <input required id="lastNameValidation" pattern="^[a-zA-Z]+$" name="lastname"
+                                   placeholder="<fmt:message key="lastName"/>"
                                    class="form-control" value="${param.lastname}" type="text">
                         </div>
                     </div>
@@ -63,7 +67,7 @@
                     <label class="col-md-6 control-label"><fmt:message key="dateofbirth"/> </label>
                     <div class="col-md-6 inputGroupContainer">
                         <div class="input-group">
-                            <input name="dateofbirth" type="date"
+                            <input required name="dateofbirth" type="date"
                                    class="form-control" value="${param.dateofbirth}">
                         </div>
                     </div>
@@ -71,40 +75,46 @@
             </div>
             <div class="form-row">
                 <div class="form-group col-md-3">
-                    <label class="col-md-6 control-label"><fmt:message key="username"/></label>
+                    <label pattern="^[a-zA-Z0-9]{4,16}$" for="usernameValidation"
+                           class="col-md-6 control-label"><fmt:message key="username"/></label>
                     <div class="col-md-6 inputGroupContainer">
                         <div class="input-group">
-                            <input name="username" placeholder="<fmt:message key="username"/>"
+                            <input name="username" id="usernameValidation"
+                                   required placeholder="<fmt:message key="username"/>"
                                    class="form-control" value="${param.login}" type="text">
                         </div>
                     </div>
                 </div>
                 <div class="form-group col-md-3">
-                    <label class="col-md-6 control-label"><fmt:message key="password"/></label>
+                    <label for="passwordValidation" class="col-md-6 control-label"><fmt:message key="password"/></label>
                     <div class="col-md-6 inputGroupContainer">
                         <div class="input-group">
-                            <input name="password" placeholder="<fmt:message key="password"/>" class="form-control"
-                                   type="password">
+                            <input id="passwordValidation" required name="password"
+                                   placeholder="<fmt:message key="password"/>" class="form-control"
+                                   type="password" pattern=^[a-zA-Z0-9]{6,32}$">
                         </div>
                     </div>
                 </div>
                 <div class="form-group col-md-6">
-                    <label class="col-md-6 control-label"><fmt:message key="email"/></label>
+                    <label for="emailValidation" class="col-md-6 control-label"><fmt:message key="email"/></label>
                     <div class="col-md-6 inputGroupContainer">
                         <div class="input-group">
-                            <input name="email" placeholder="<fmt:message key="email"/>"
-                                   class="form-control" value="${param.email}" type="text">
+                            <input required id="emailValidation" name="email" placeholder="<fmt:message key="email"/>"
+                                   pattern="^((?!\\.)[\\w-_.]*[^.])(@\\w+)
+                            (\\.\\w+(\\.\\w+)?[^.\\W])$" class="form-control" value="${param.email}" type="text">
                         </div>
                     </div>
                 </div>
             </div>
             <div class="form-row">
                 <div class="form-group col-md-6">
-                    <label class="col-md-6 control-label"><fmt:message key="contactNumber"/></label>
+                    <label for="phoneValidation" class="col-md-6 control-label"><fmt:message
+                            key="contactNumber"/></label>
                     <div class="col-md-6 inputGroupContainer">
                         <div class="input-group">
-                            <input name="contactnumber" placeholder="<fmt:message key="contactNumberFormat"/>"
-                                   class="form-control" value="${param.number}" type="text">
+                            <input required id="phoneValidation" name="contactnumber"
+                                   placeholder="<fmt:message key="contactNumberFormat"/>"
+                                   class="form-control" pattern="^\+[0-9]{1,15}$" value="${param.number}" type="text">
                         </div>
                     </div>
                 </div>
@@ -114,7 +124,7 @@
                     <label class="col-md-6 control-label"><fmt:message key="address"/></label>
                     <div class="col-md-6 inputGroupContainer">
                         <div class="input-group">
-                            <input name="address" placeholder="<fmt:message key="address"/>"
+                            <input required name="address" placeholder="<fmt:message key="address"/>"
                                    class="form-control" value="${param.address}" type="text">
                         </div>
                     </div>

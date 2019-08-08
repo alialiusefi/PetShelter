@@ -23,7 +23,7 @@ public final class AdoptionServiceImpl extends ServiceImpl implements AdoptionSe
         super(aliveConnection);
     }
 
-    private final static String REVERSEDATE = "adoptionDatesStartMoreThanEnd";
+    private static final String REVERSEDATE = "adoptionDatesStartMoreThanEnd";
     @Override
     public Adoption get(int adoptionID) throws PersistentException {
         try {
@@ -295,9 +295,11 @@ public final class AdoptionServiceImpl extends ServiceImpl implements AdoptionSe
     private void validateDate(Adoption adoption) throws InvalidFormDataException {
         Calendar calendar = Calendar.getInstance();
         if (adoption.getAdoptionEnd() != null) {
-            if (adoption.getAdoptionStart().compareTo(adoption.getAdoptionEnd()) > 0
-            || adoption.getAdoptionEnd().compareTo(calendar) < 0) {
+            if (adoption.getAdoptionStart().compareTo(adoption.getAdoptionEnd()) > 0) {
                 throw new InvalidFormDataException("incorrectDateFormat");
+            }
+            if (adoption.getAdoptionEnd().compareTo(calendar) < 0) {
+                throw new InvalidFormDataException("endDateIsLessThanToday");
             }
         }
     }
