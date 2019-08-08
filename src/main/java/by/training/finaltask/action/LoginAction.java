@@ -13,7 +13,7 @@ import javax.servlet.http.HttpSession;
 
 public class LoginAction extends Action {
     private static Logger logger = LogManager.getLogger(LoginAction.class);
-
+    private static final String MESSAGEATTR = "message";
     @Override
     public Forward exec(HttpServletRequest request, HttpServletResponse response)
             throws PersistentException {
@@ -28,15 +28,16 @@ public class LoginAction extends Action {
                     session.setAttribute("authorizedUser", user);
                     session.setAttribute("username", user.getUsername());
                     logger.info(String.format("user \"%s\" is logged in from %s (%s:%s)", login, request.getRemoteAddr(), request.getRemoteHost(), request.getRemotePort()));
-                    request.setAttribute("message", "loggedInSuccessfully");
+                    request.setAttribute(MESSAGEATTR, "loggedInSuccessfully");
                     return new Forward("/user/profile.html");
                 } else {
-                    request.setAttribute("message", "couldntFindPassword");
+                    request.setAttribute(MESSAGEATTR, "couldntFindPassword");
                     logger.info(String.format("user \"%s\" unsuccessfully tried to log in from %s (%s:%s)",
                             login, request.getRemoteAddr(), request.getRemoteHost(), request.getRemotePort()));
+                    return null;
                 }
             } else {
-                request.setAttribute("message", "alreadyLoggedIn");
+                request.setAttribute(MESSAGEATTR, "alreadyLoggedIn");
             }
         }
         request.setAttribute("message","fillAllFields");
