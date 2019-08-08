@@ -66,8 +66,8 @@ public class UserServiceImplTest {
 
     @Test
     public void testAdd() throws PersistentException {
-        User expected = new User(null,"alifff",
-                "5f4dcc3b5aa765d61d8327deb882cf99",Role.GUEST);
+        User expected = new User(null, "alifff",
+                "5f4dcc3b5aa765d61d8327deb882cf99", Role.GUEST);
         int idGenerated = service.add(expected);
         expected.setId(idGenerated);
         User actual = service.get(idGenerated);
