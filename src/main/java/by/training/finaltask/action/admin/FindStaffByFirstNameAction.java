@@ -43,13 +43,13 @@ public class FindStaffByFirstNameAction extends AuthorizedUserAction {
                 UserInfoService userInfoService = (UserInfoService)
                         factory.createService(DAOEnum.USERINFO);
                 Pagination pagination = new Pagination(userService.getAmountOfAllStaffByFirstName(
-                        "%" + firstnameParameter), ROWS_PER_PAGE, request.getParameter("page"));
+                        "%" + firstnameParameter + "%"), ROWS_PER_PAGE, request.getParameter("page"));
                 Forward forward = new Forward("/user/admin/findstaff.html?page=1");
                 forward.getAttributes().put("amountOfPages", pagination.getAmountOfPages());
                 List<UserInfo> userInfoList = userInfoService.findAllStaffByFirstName(
-                        firstnameParameter, pagination.getOffset(), ROWS_PER_PAGE);
+                        "%" + firstnameParameter + "%", pagination.getOffset(), ROWS_PER_PAGE);
                 List<User> userList = userService.getAllStaffByFirstName(
-                        firstnameParameter, pagination.getOffset(), ROWS_PER_PAGE);
+                        "%" + firstnameParameter + "%", pagination.getOffset(), ROWS_PER_PAGE);
                 forward.getAttributes().put("resultUsers", userList);
                 forward.getAttributes().put("resultsUserInfo", userInfoList);
                 forward.getAttributes().put("paginationURL", "/user/admin/findstaffbyfirstname.html");
