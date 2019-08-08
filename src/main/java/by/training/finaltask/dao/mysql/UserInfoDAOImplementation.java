@@ -24,9 +24,10 @@ public final class UserInfoDAOImplementation extends BaseDAO implements UserInfo
         try (PreparedStatement preparedStatement = connection.prepareStatement(
                 resourceBundle.getString("getUserInfoDAO"))) {
             preparedStatement.setInt(1, userID);
-            ResultSet resultset = preparedStatement.executeQuery();
-            if (resultset.next()) {
-                return getUserInfo(resultset);
+            try (ResultSet resultset = preparedStatement.executeQuery()) {
+                if (resultset.next()) {
+                    return getUserInfo(resultset);
+                }
             }
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
@@ -40,9 +41,12 @@ public final class UserInfoDAOImplementation extends BaseDAO implements UserInfo
         List<UserInfo> userInfoList = new LinkedList<>();
         try (PreparedStatement preparedStatement = connection.prepareStatement(
                 resourceBundle.getString("getAllUserInfoDAO"))) {
-            ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                userInfoList.add(getUserInfo(resultSet));
+            preparedStatement.setInt(1, offset);
+            preparedStatement.setInt(2, rowcount);
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
+                    userInfoList.add(getUserInfo(resultSet));
+                }
             }
             return userInfoList;
         } catch (SQLException e) {
@@ -58,11 +62,11 @@ public final class UserInfoDAOImplementation extends BaseDAO implements UserInfo
                 resourceBundle.getString("getAllStaffInfoDAO"))) {
             preparedStatement.setInt(1, offset);
             preparedStatement.setInt(2, rowcount);
-            ResultSet resultSet = preparedStatement.executeQuery();
-            while (resultSet.next()) {
-                userInfoList.add(getUserInfo(resultSet));
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                while (resultSet.next()) {
+                    userInfoList.add(getUserInfo(resultSet));
+                }
             }
-
             return userInfoList;
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
@@ -79,10 +83,11 @@ public final class UserInfoDAOImplementation extends BaseDAO implements UserInfo
             preparedStatement.setNString(1, phoneStr);
             preparedStatement.setInt(2, offset);
             preparedStatement.setInt(3, rowcount);
-            ResultSet resultSet = preparedStatement.executeQuery();
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
                 while (resultSet.next()) {
                     userInfoList.add(getUserInfo(resultSet));
                 }
+            }
             return userInfoList;
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
@@ -98,10 +103,11 @@ public final class UserInfoDAOImplementation extends BaseDAO implements UserInfo
             preparedStatement.setNString(1, firstname);
             preparedStatement.setInt(2, offset);
             preparedStatement.setInt(3, rowcount);
-            ResultSet resultSet = preparedStatement.executeQuery();
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
                 while (resultSet.next()) {
                     userInfoList.add(getUserInfo(resultSet));
                 }
+            }
             return userInfoList;
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
@@ -140,7 +146,7 @@ public final class UserInfoDAOImplementation extends BaseDAO implements UserInfo
     public boolean update(UserInfo element) throws PersistentException {
         try (PreparedStatement preparedStatement = connection.prepareStatement(
                 resourceBundle.getString("updateUserInfoDAO"))) {
-
+            setPreparedStatement(element, preparedStatement);
             preparedStatement.setInt(8, element.getId());
             preparedStatement.executeUpdate();
             return true;
