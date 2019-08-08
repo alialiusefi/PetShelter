@@ -34,7 +34,7 @@ public final class ActionURIFilter implements Filter {
             new ConcurrentHashMap<>();
 
     static {
-        actions.put("/", MainAction.class);
+        actions.put("/home", MainAction.class);
         actions.put("/login", LoginAction.class);
         actions.put("/logout", LogoutAction.class);
         actions.put("/register", RegisterAction.class);

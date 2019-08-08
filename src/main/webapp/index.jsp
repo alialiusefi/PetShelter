@@ -5,6 +5,6 @@
     <title>Redirecting</title>
 </head>
 <body>
-<c:redirect url="home.jsp"/>
+<c:redirect url="jsp/home.jsp"/>
 </body>
 </html>

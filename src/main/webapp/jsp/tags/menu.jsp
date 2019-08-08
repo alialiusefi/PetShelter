@@ -5,7 +5,7 @@
 <fmt:setBundle basename="by.training.finaltask.resource.localization"/>
 <c:url value="/login.html" var="loginActionURL"/>
 <c:url value="/logout.html" var="logoutActionURL"/>
-<c:url value="/" var="titleActionURL"/>
+<c:url value="/home.html" var="titleActionURL"/>
 <c:url value="/register.html" var="registerActionURL"/>
 <c:url value="/user/profile.html" var="profileActionURL"/>
 
@@ -19,7 +19,7 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item ${pageContext.request.requestURI eq '/' ? 'active' : ''}">
+                <li class="nav-item ${pageContext.request.requestURI eq '/jsp/home.jsp' ? 'active' : ''}">
                     <a class="nav-link" href="${titleActionURL}">
                         <fmt:message key="home"/></a>
                     <span class="sr-only">(current)</span></a>

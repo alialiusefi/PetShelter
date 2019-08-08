@@ -29,7 +29,7 @@
     </center>
 </c:if>
 <center>
-    <img src="img/title1.jpg" height="600" width="1000" class="img-fluid" alt="Title Image">
+    <img src="../img/title1.jpg" height="600" width="1000" class="img-fluid" alt="Title Image">
 </center>
 
 <div class="container">

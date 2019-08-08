@@ -3,12 +3,14 @@ code convention
 service test
 ====================
 
-fix Forwards to new Forward("....?page=" + pageNumber)
+ask about getHeader("referer"); and fix page=pageNumber
+
 ====================
 
 
-CheckStyle:
+CheckStyle & JavaDocs:
 Entity Package DONE
 Exception DONE
 Filter DONE
 Parser DONE
+DateTag DONE
