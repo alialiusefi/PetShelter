@@ -27,7 +27,8 @@ public class BreedServiceImplTest {
         Class.forName(resourceBundle.getString("dbDriverClass"));
         connection = new PetPooledConnection(DriverManager.
                 getConnection(resourceBundle.getString("dbURL"),
-                        resourceBundle.getString("dbUser"), resourceBundle.getString("dbPassword")));
+                        resourceBundle.getString("dbUser"),
+                        resourceBundle.getString("dbPassword")));
         service = new BreedServiceImpl(connection);
     }
 

@@ -17,7 +17,7 @@ function OnSubmitForm()
     }
     if(document.pressed == 'findByPetName')
     {
-        document.searchForm.action ="/pets/findpetbypetname.html?page=1";
+        document.searchForm.action = "r";
     }
     return true;
 }

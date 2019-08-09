@@ -60,7 +60,7 @@ public final class AdoptionDAOImplementation extends BaseDAO implements Adoption
 	}
 
 	@Override
-	public List<Adoption> getAll(Integer petID, int offset, int rowcount) throws PersistentException {
+	public List<Adoption> getAllByPetID(Integer petID, int offset, int rowcount) throws PersistentException {
 		try (PreparedStatement preparedStatement = connection.prepareStatement(
 				resourceBundle.getString("getAllAdoptionDAO"))) {
 			List<Adoption> adoptions = new LinkedList<>();
@@ -71,7 +71,6 @@ public final class AdoptionDAOImplementation extends BaseDAO implements Adoption
 				}
 
 			}
-
 			return adoptions;
 
 		} catch (SQLException e) {

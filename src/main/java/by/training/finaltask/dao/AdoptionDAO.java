@@ -6,19 +6,28 @@ import by.training.finaltask.exception.PersistentException;
 import java.util.GregorianCalendar;
 import java.util.List;
 
+/**
+ * Data Access Object Interface
+ */
 public interface AdoptionDAO extends DAO<Adoption> {
 
     /**
      * Gets adoption from DB using petID column.
-     * @param petID
+     * @param petID petId to search for.
      * @return returns Adoption.
      * @throws PersistentException
      */
     Adoption get(Integer petID) throws PersistentException;
 
+    /**
+     * @param offset   rows that'll be skipped.
+     * @param rowcount amount of rows.
+     * @return
+     * @throws PersistentException
+     */
     List<Adoption> getAll(int offset, int rowcount) throws PersistentException;
 
-    List<Adoption> getAll(Integer petID, int offset, int rowcount) throws PersistentException;
+    List<Adoption> getAllByPetID(Integer petID, int offset, int rowcount) throws PersistentException;
 
     List<Adoption> getAllBetweenDates(GregorianCalendar start, GregorianCalendar end,
                                       int offset, int rowcount) throws PersistentException;

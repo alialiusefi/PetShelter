@@ -44,8 +44,9 @@ public class FindPetByBirthDateAction extends AuthorizedUserAction {
             try {
                 gregorianCalendar = FormParser.parseDate(DATE_FORMAT, birthDateParam);
             } catch (InvalidFormDataException e) {
-                request.setAttribute("message", e.getMessage());
-                return null;
+                Forward forward = new Forward(request.getHeader("referer"));
+                forward.getAttributes().put("message", e.getMessage());
+                return forward;
             }
             int relation = getRelation(request);
             session.setAttribute(RELATION_ATTRIBUTE, relation);

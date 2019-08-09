@@ -6,7 +6,7 @@ import java.io.IOException;
 import java.time.LocalDate;
 
 /**
- * Tag Class for date located int the footer
+ * Tag Class for the date located in the footer.
  */
 public class DateTag extends SimpleTagSupport {
 
