@@ -34,6 +34,7 @@ public class EditPetAction extends AuthorizedUserAction {
             + "Pet Shelter" + File.separator + "petpics";
     private static final String MESSAGE_ATTRIBUTE = "message";
     private static final String PETID_PARAMETER = "petID";
+
     public EditPetAction() {
         this.allowedRoles.add(Role.STAFF);
     }
@@ -41,26 +42,23 @@ public class EditPetAction extends AuthorizedUserAction {
     @Override
     public Forward exec(HttpServletRequest request, HttpServletResponse response) throws PersistentException {
         HttpSession session = request.getSession(false);
-        if(session != null)
-        {
-            User authUser = (User)session.getAttribute("authorizedUser");
-            if(authUser != null && this.allowedRoles.contains(authUser.getUserRole()))
-            {
+        if (session != null) {
+            User authUser = (User) session.getAttribute("authorizedUser");
+            if (authUser != null && this.allowedRoles.contains(authUser.getUserRole())) {
                 PetService service = (PetService) factory.createService(DAOEnum.PET);
                 String petIDParam = request.getParameter(PETID_PARAMETER);
                 int petID = Integer.parseInt(petIDParam);
                 Pet pet = service.get(petID);
-                request.setAttribute("pet",pet);
+                request.setAttribute("pet", pet);
                 updateSelectionList(request);
                 String petPic = getImage(pet);
-                request.setAttribute("currentPetPicture",petPic);
+                request.setAttribute("currentPetPicture", petPic);
                 List<String> petParameters = new ArrayList<>();
-                addPetParametersToList(request,petParameters);
-                try{
-                    Pet newPet = parser.parse(this,petParameters);
+                addPetParametersToList(request, petParameters);
+                try {
+                    Pet newPet = parser.parse(this, petParameters);
                     newPet.setId(petID);
-                    if(newPet.getPhoto() == null)
-                    {
+                    if (newPet.getPhoto() == null) {
                         newPet.setPhoto(pet.getPhoto());
                     }
                     service.update(newPet);
@@ -80,13 +78,14 @@ public class EditPetAction extends AuthorizedUserAction {
                 }
             }
             LOGGER.info(String.format("%s - attempted to access %s and stopped due to not enough" +
-                    "privileges", request.getRemoteAddr(),request.getRequestURI()));
+                    "privileges", request.getRemoteAddr(), request.getRequestURI()));
             throw new PersistentException("forbiddenAccess");
         }
         LOGGER.info(String.format("%s - attempted to access %s and failed",
-                request.getRemoteAddr(),request.getRequestURI()));
+                request.getRemoteAddr(), request.getRequestURI()));
         throw new PersistentException("forbiddenAccess");
     }
+
     private void updateSelectionList(HttpServletRequest request)
             throws PersistentException {
         BreedService breedService = (BreedService)
@@ -98,6 +97,7 @@ public class EditPetAction extends AuthorizedUserAction {
         request.setAttribute("shelterList", shelters);
         request.setAttribute("breedList", breeds);
     }
+
     private String getImage(Pet pet)
             throws PersistentException {
         String image;

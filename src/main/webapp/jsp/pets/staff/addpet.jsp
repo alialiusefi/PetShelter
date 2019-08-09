@@ -45,7 +45,7 @@
             <label>
                 <fmt:message key="petPicture"/>:
             </label>
-            <input type="file" name="petPicture">
+            <input type="file" required name="petPicture">
         </div>
         <div class="form-row">
             <div class="form-group col-md-6">
@@ -57,12 +57,14 @@
                        class="form-control"
                        placeholder="<fmt:message key="petName"/>"
                        value="${param.petName}"
+                       pattern="^[a-zA-Z]+$"
+                       required
                 >
             </div>
             <div class="form-group col-md-6">
                 <label><fmt:message key="weight"/>:</label>
                 <input name="petWeight" type="text" class="form-control" placeholder="6.9"
-                       value="${param.petWeight}">
+                       value="${param.petWeight}" pattern="^[0-9]+(.[0-9]+)?$" required>
             </div>
         </div>
         <div class="form-row">
@@ -70,11 +72,15 @@
                 <label>
                     <fmt:message key="dateofbirth"/>:
                 </label>
-                <input name="dateOfBirth" type="date" value="${param.dateOfBirth}" class="form-control"/>
+                <input name="dateOfBirth" required
+                       type="date"
+                       value="${param.dateOfBirth}"
+                       class="form-control"/>
             </div>
             <div class="form-group col-md-6">
                 <label><fmt:message key="dateSheltered"/>:</label>
-                <input name="dateSheltered" type="date" value="${param.dateSheltered}" class="form-control">
+                <input required
+                       name="dateSheltered" type="date" value="${param.dateSheltered}" class="form-control">
             </div>
         </div>
         <div class="form-row">
@@ -82,7 +88,7 @@
                 <label for="inputShelter">
                     <fmt:message key="shelter"/>:
                 </label>
-                <select name="shelter" id="inputShelter" class="form-control">
+                <select required name="shelter" id="inputShelter" class="form-control">
                     <c:forEach items="${shelterList}" var="i">
                         <option value="${i.id}">${i.name}</option>
                     </c:forEach>
@@ -92,7 +98,7 @@
                 <label for="inputBreed">
                     <fmt:message key="breed"/>:
                 </label>
-                <select name="breed" id="inputBreed" class="form-control">
+                <select required name="breed" id="inputBreed" class="form-control">
                     <c:forEach items="${breedList}" var="q">
                         <option value="${q.id}">${q.name}</option>
                     </c:forEach>
@@ -102,7 +108,7 @@
                 <label for="inputStatus">
                     <fmt:message key="petStatus"/>:
                 </label>
-                <select name="petStatus" id="inputStatus" class="form-control">
+                <select required name="petStatus" id="inputStatus" class="form-control">
                     <option selected value="SHELTERED">
                         <fmt:message key="sheltered"/>
                     </option>

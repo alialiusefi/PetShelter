@@ -4,6 +4,7 @@ import by.training.finaltask.dao.pool.PetPooledConnection;
 import by.training.finaltask.entity.Role;
 import by.training.finaltask.entity.User;
 import by.training.finaltask.entity.UserInfo;
+import by.training.finaltask.exception.InvalidFormDataException;
 import by.training.finaltask.exception.PersistentException;
 import by.training.finaltask.service.serviceinterface.UserInfoService;
 import org.testng.Assert;
@@ -61,7 +62,7 @@ public class UserInfoServiceImplTest {
     }
 
     @Test
-    public void testAdd() throws PersistentException {
+    public void testAdd() throws PersistentException, InvalidFormDataException {
         User user = new User(null, "ali111",
                 "5f4dcc3b5aa765d61d8327deb882cf99", Role.GUEST);
         UserServiceImpl userService = new UserServiceImpl(connection);
