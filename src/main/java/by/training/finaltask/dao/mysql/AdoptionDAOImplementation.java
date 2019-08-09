@@ -31,7 +31,6 @@ public final class AdoptionDAOImplementation extends BaseDAO implements Adoption
 				}
 
 			}
-
 		} catch (SQLException e) {
 			logger.warn(e.getMessage(), e);
 			throw new PersistentException(e.getMessage(), e);
@@ -391,7 +390,7 @@ public final class AdoptionDAOImplementation extends BaseDAO implements Adoption
 
 		} catch (SQLException e) {
 			logger.warn(e.getMessage(), e);
-			throw new PersistentException("Couldn't add row!\n" + e.getMessage(), e);
+			throw new PersistentException("Couldn't register row!\n" + e.getMessage(), e);
 		}
 	}
 

@@ -91,7 +91,7 @@
                         <div class="input-group">
                             <input id="passwordValidation" required name="password"
                                    placeholder="<fmt:message key="password"/>" class="form-control"
-                                   type="password" pattern=^[a-zA-Z0-9]{6,32}$">
+                                   type="password" pattern=^[a-zA-Z0-9]{6,32}+$">
                         </div>
                     </div>
                 </div>

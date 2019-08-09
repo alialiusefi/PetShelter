@@ -128,7 +128,7 @@ public final class UserDAOImplementation extends BaseDAO implements UserDAO {
             return 0;
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
-            throw new PersistentException("Couldn't add row!\n" + e.getMessage(), e);
+            throw new PersistentException("Couldn't register row!\n" + e.getMessage(), e);
         }
     }
 

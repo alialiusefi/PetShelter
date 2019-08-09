@@ -137,7 +137,7 @@ public final class UserInfoDAOImplementation extends BaseDAO implements UserInfo
             return rows;
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage(), e);
-            throw new PersistentException("Couldn't add row!\n" + e.getMessage(), e);
+            throw new PersistentException("Couldn't register row!\n" + e.getMessage(), e);
         }
     }
 

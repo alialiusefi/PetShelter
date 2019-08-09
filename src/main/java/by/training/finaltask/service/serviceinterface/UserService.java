@@ -1,6 +1,7 @@
 package by.training.finaltask.service.serviceinterface;
 
 import by.training.finaltask.entity.User;
+import by.training.finaltask.exception.InvalidFormDataException;
 import by.training.finaltask.exception.PersistentException;
 
 import java.util.List;
@@ -10,9 +11,11 @@ public interface UserService extends Service {
 
     User get(Integer id) throws PersistentException;
 
+    User get(String username) throws PersistentException;
+
     User findByUserNameAndPassword(String user, String pass) throws PersistentException;
 
-    Integer add(User user) throws PersistentException;
+    int register(User user) throws PersistentException, InvalidFormDataException;
 
     void update(User user) throws PersistentException;
 

@@ -24,7 +24,7 @@
     </div>
     <div class="form-group">
     <label for="exampleInputPassword1"><fmt:message key="password"/></label>
-        <input pattern="^[a-zA-Z0-9]{6,32}$" type="password" name="password" class="form-control"
+        <input pattern="^[a-zA-Z0-9]{6,32}+$" type="password" name="password" class="form-control"
                id="exampleInputPassword1"
                placeholder="Password" aria-describedby="passwordHelp" required>
     </div>

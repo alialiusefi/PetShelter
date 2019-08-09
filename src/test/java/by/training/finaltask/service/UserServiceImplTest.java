@@ -3,6 +3,7 @@ package by.training.finaltask.service;
 import by.training.finaltask.dao.pool.PetPooledConnection;
 import by.training.finaltask.entity.Role;
 import by.training.finaltask.entity.User;
+import by.training.finaltask.exception.InvalidFormDataException;
 import by.training.finaltask.exception.PersistentException;
 import by.training.finaltask.service.serviceinterface.UserService;
 import org.testng.Assert;
@@ -65,10 +66,10 @@ public class UserServiceImplTest {
     }
 
     @Test
-    public void testAdd() throws PersistentException {
+    public void testAdd() throws PersistentException, InvalidFormDataException {
         User expected = new User(null, "alifff",
                 "5f4dcc3b5aa765d61d8327deb882cf99", Role.GUEST);
-        int idGenerated = service.add(expected);
+        int idGenerated = service.register(expected);
         expected.setId(idGenerated);
         User actual = service.get(idGenerated);
         Assert.assertEquals(actual,expected);
@@ -79,7 +80,12 @@ public class UserServiceImplTest {
     }
 
     @Test
-    public void testDelete() {
+    public void testDelete() throws PersistentException, InvalidFormDataException {
+        User expected = new User(null, "alifff",
+                "5f4dcc3b5aa765d61d8327deb882cf99", Role.ADMINISTRATOR);
+        int userId = service.register(expected);
+        service.delete(userId);
+        Assert.assertNull(service.get(userId));
     }
 
     @Test

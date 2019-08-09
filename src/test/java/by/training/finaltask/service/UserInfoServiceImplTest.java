@@ -65,7 +65,7 @@ public class UserInfoServiceImplTest {
         User user = new User(null, "ali111",
                 "5f4dcc3b5aa765d61d8327deb882cf99", Role.GUEST);
         UserServiceImpl userService = new UserServiceImpl(connection);
-        int id = userService.add(user);
+        int id = userService.register(user);
         UserInfo expected = new UserInfo(id, "email@live.com",
                 "Ali", "Ghanem",
                 new GregorianCalendar(1985, Calendar.FEBRUARY, 23)

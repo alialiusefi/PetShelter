@@ -3,6 +3,7 @@ package by.training.finaltask.service;
 import by.training.finaltask.dao.UserDAO;
 import by.training.finaltask.dao.mysql.DAOEnum;
 import by.training.finaltask.entity.User;
+import by.training.finaltask.exception.InvalidFormDataException;
 import by.training.finaltask.exception.PersistentException;
 import by.training.finaltask.service.serviceinterface.UserService;
 
@@ -37,9 +38,34 @@ public final class UserServiceImpl extends ServiceImpl implements UserService {
 
     @Override
     public User get(Integer id) throws PersistentException {
-        UserDAO dao = (UserDAO) createDao(DAOEnum.USER);
-        return dao.get(id);
+        try {
+            connection.setAutoCommit(false);
+            UserDAO dao = (UserDAO) createDao(DAOEnum.USER);
+            User userFound = dao.get(id);
+            commit();
+            connection.setAutoCommit(true);
+            return userFound;
+        } catch (PersistentException | SQLException e) {
+            rollback();
+            throw new PersistentException(e);
+        }
     }
+
+    @Override
+    public User get(String username) throws PersistentException {
+        try {
+            connection.setAutoCommit(false);
+            UserDAO dao = (UserDAO) createDao(DAOEnum.USER);
+            User userFound = dao.get(username);
+            commit();
+            connection.setAutoCommit(true);
+            return userFound;
+        } catch (PersistentException | SQLException e) {
+            rollback();
+            throw new PersistentException(e);
+        }
+    }
+
 
     @Override
     public User findByUserNameAndPassword(String user, String pass) throws PersistentException {
@@ -58,7 +84,11 @@ public final class UserServiceImpl extends ServiceImpl implements UserService {
     }
 
     @Override
-    public Integer add(User user) throws PersistentException {
+    public int register(User user) throws PersistentException, InvalidFormDataException {
+        User userfromDB = get(user.getUsername());
+        if (userfromDB != null) {
+            throw new InvalidFormDataException("userAlreadyExists");
+        }
         try {
             connection.setAutoCommit(false);
             UserDAO dao = (UserDAO) createDao(DAOEnum.USER);
@@ -106,7 +136,7 @@ public final class UserServiceImpl extends ServiceImpl implements UserService {
             digest = MessageDigest.getInstance("md5");
             digest.reset();
             digest.update(string.getBytes());
-            byte hash[] = digest.digest();
+            byte[] hash = digest.digest();
             Formatter formatter = new Formatter();
             for (int i = 0; i < hash.length; i++) {
                 formatter.format("%02X", hash[i]);

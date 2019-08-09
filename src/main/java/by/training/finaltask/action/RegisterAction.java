@@ -22,6 +22,7 @@ public class RegisterAction extends Action {
 
     private static final UserFormParser userParser = new UserFormParser();
     private static final UserInfoFormParser userInfoParser = new UserInfoFormParser();
+    private static final String MESSAGEATTR = "message";
 
     @Override
     public Forward exec(HttpServletRequest request, HttpServletResponse response) throws PersistentException {
@@ -31,30 +32,25 @@ public class RegisterAction extends Action {
             List<String> userInfoParameters = new ArrayList<>();
             addUserParametersToList(request, userParameters);
             addUserInfoParametersToList(request, userInfoParameters);
-            if (userParameters.stream().anyMatch(e -> e != null)
-                    && userInfoParameters.stream().anyMatch(e -> e != null)) {
-                try {
-                    User user = userParser.parse(this,userParameters);
-                    UserService userService = (UserService) factory.createService(
-                            DAOEnum.USER);
-                    UserInfo userInfo = userInfoParser.parse(this,userInfoParameters);
-                    UserInfoService userInfoService = (UserInfoService)
-                            factory.createService(DAOEnum.USERINFO);
-                    user.setUserRole(Role.GUEST);
-                    int userIDGenerated = userService.add(user);
-                    userInfo.setId(userIDGenerated);
-                    userInfoService.add(userInfo);
-                    request.setAttribute("message","registeredSuccessfully");
-                } catch (InvalidFormDataException e) {
-                    request.setAttribute("message", e.getMessage());
-                    return null;
-                }
-                return new Forward("login.html");
-            } else {
+            try {
+                User user = userParser.parse(this, userParameters);
+                user.setUserRole(Role.GUEST);
+                UserService userService = (UserService) factory.createService(
+                        DAOEnum.USER);
+                UserInfo userInfo = userInfoParser.parse(this, userInfoParameters);
+                UserInfoService userInfoService = (UserInfoService)
+                        factory.createService(DAOEnum.USERINFO);
+                int userIDGenerated = userService.register(user);
+                userInfo.setId(userIDGenerated);
+                userInfoService.add(userInfo);
+                request.setAttribute("successMessage", "registeredSuccessfully");
+            } catch (InvalidFormDataException e) {
+                request.setAttribute(MESSAGEATTR, e.getMessage());
                 return null;
             }
+            return new Forward("login.html");
         } else {
-            session.setAttribute("message", "alreadyLoggedIn");
+            session.setAttribute(MESSAGEATTR, "alreadyLoggedIn");
             return null;
         }
     }

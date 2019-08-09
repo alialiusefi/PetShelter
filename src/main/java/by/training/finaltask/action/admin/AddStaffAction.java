@@ -50,7 +50,7 @@ public class AddStaffAction extends AuthorizedUserAction {
                     UserInfo staffuserInfo = userInfoParser.parse(this,userInfoParameters);
                     UserInfoService userInfoService = (UserInfoService)
                             factory.createService(DAOEnum.USERINFO);
-                    int userIDGenerated = userService.add(staff);
+                    int userIDGenerated = userService.register(staff);
                     staffuserInfo.setId(userIDGenerated);
                     userInfoService.add(staffuserInfo);
                     Forward forward = new Forward("/user/admin/addstaff.html", true);
