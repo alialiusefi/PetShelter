@@ -25,6 +25,7 @@ public class EditAdoptionAction extends AuthorizedUserAction {
     private static final AdoptionFormParser formParser = new AdoptionFormParser();
     private static final String MESSAGE = "message";
     private static final String ADOPTIONID = "adoptionID";
+
     public EditAdoptionAction() {
         this.allowedRoles.add(Role.STAFF);
         this.allowedRoles.add(Role.GUEST);
@@ -36,7 +37,13 @@ public class EditAdoptionAction extends AuthorizedUserAction {
         if (session != null) {
             User authUser = (User) session.getAttribute("authorizedUser");
             if (authUser != null && this.allowedRoles.contains(authUser.getUserRole())) {
-                int adoptionID = Integer.parseInt(request.getParameter(ADOPTIONID));
+                String adoptionIDParam = request.getParameter(ADOPTIONID);
+                int adoptionID;
+                if (adoptionIDParam != null) {
+                    adoptionID = Integer.parseInt(adoptionIDParam);
+                } else {
+                    return new Forward(request.getHeader("referer"));
+                }
                 request.setAttribute(ADOPTIONID,adoptionID);
                 AdoptionService service = (AdoptionService)
                         factory.createService(DAOEnum.ADOPTION);
@@ -89,5 +96,6 @@ public class EditAdoptionAction extends AuthorizedUserAction {
         int userID = authUser.getId();
         parameters.add(String.valueOf(userID));
     }
+
 
 }

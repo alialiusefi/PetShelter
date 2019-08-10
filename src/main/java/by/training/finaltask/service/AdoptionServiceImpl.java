@@ -1,5 +1,6 @@
 package by.training.finaltask.service;
 
+import by.training.finaltask.comparator.GregorianCalendarComparator;
 import by.training.finaltask.dao.AdoptionDAO;
 import by.training.finaltask.dao.PetDAO;
 import by.training.finaltask.dao.mysql.DAOEnum;
@@ -14,6 +15,7 @@ import java.sql.Connection;
 import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.Calendar;
+import java.util.Comparator;
 import java.util.GregorianCalendar;
 import java.util.List;
 
@@ -293,7 +295,7 @@ public final class AdoptionServiceImpl extends ServiceImpl implements AdoptionSe
     }
 
     private void validateDate(Adoption adoption) throws InvalidFormDataException {
-        Calendar calendar = Calendar.getInstance();
+        GregorianCalendar calendar = new GregorianCalendar();
         if (adoption.getAdoptionEnd() != null) {
             if (adoption.getAdoptionStart().compareTo(adoption.getAdoptionEnd()) > 0) {
                 throw new InvalidFormDataException("incorrectDateFormat");
@@ -301,6 +303,10 @@ public final class AdoptionServiceImpl extends ServiceImpl implements AdoptionSe
             if (adoption.getAdoptionEnd().compareTo(calendar) < 0) {
                 throw new InvalidFormDataException("endDateIsLessThanToday");
             }
+        }
+        Comparator<GregorianCalendar> comparator = new GregorianCalendarComparator();
+        if (comparator.compare(adoption.getAdoptionStart(), calendar) < 0) {
+            throw new InvalidFormDataException("startDateShouldAtLeastStartToday");
         }
     }
 

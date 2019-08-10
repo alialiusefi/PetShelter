@@ -8,11 +8,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
-
     <fmt:setLocale value="${sessionLang}"/>
     <fmt:setBundle basename="by.training.finaltask.resource.localization"/>
     <title><fmt:message key="findAPet"/></title>
-    <!-- Bootstrap core CSS -->
     <link href="/css/bootstrap.min.css" rel="stylesheet">
     <script src="js/popper.min.js"></script>
 </head>
@@ -33,7 +31,7 @@
 <c:if test="${not empty successMessage}">
     <center>
         <label class="text text-danger">
-            <fmt:message key="${successMessage  }"/>
+            <fmt:message key="${successMessage}"/>
         </label>
     </center>
 </c:if>
