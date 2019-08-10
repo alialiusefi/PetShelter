@@ -65,7 +65,7 @@ public class EditPetAction extends AuthorizedUserAction {
                     File fileToDelete = new File(UPLOAD_PATH +
                             File.separator + request.getSession(false).getId() + ".jpg");
                     if (fileToDelete.delete()) {
-                        Forward forward = new Forward("/pets/staff/editpet.html?petID=" + petID, true);
+                        Forward forward = new Forward("/pets/findpet.html?page=1", true);
                         forward.getAttributes().put("successMessage", "petUpdatedSuccessfully");
                         return forward;
                     } else {

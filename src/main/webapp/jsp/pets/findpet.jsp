@@ -30,7 +30,86 @@
         </label>
     </center>
 </c:if>
+<c:if test="${not empty successMessage}">
+    <center>
+        <label class="text text-danger">
+            <fmt:message key="${successMessage  }"/>
+        </label>
+    </center>
+</c:if>
 <br>
+
+<div class="table table-bordered justify-content-center mx-auto p-3">
+    <div class="form-row justify-content-center">
+        <div class="form-group">
+            <center><h3><fmt:message key="searchForm"/></h3></center>
+        </div>
+        <br>
+        <form name="searchForm" onsubmit="return OnSubmitForm();" method="post">
+            <c:if test="${authorizedUser.userRole == 'STAFF'}">
+                <div class="form-group p-lg-2">
+                    <select name="petStatus" id="inputStatus" class="form-control">
+                        <option value="ALL">
+                            <fmt:message key="allStatus"/>
+                        </option>
+                        <option value="SHELTERED">
+                            <fmt:message key="sheltered"/>
+                        </option>
+                        <option value="ADOPTED">
+                            <fmt:message key="adopted"/>
+                        </option>
+                        <option value="DEAD">
+                            <fmt:message key="dead"/>
+                        </option>
+                    </select>
+                    <i><fmt:message key="appliesToAllSearchTypes"/></i>
+                </div>
+            </c:if>
+            <div class="form-inline col-md-12 justify-content-center ">
+                <input pattern="^[a-zA-Z]{1,10}+$" name="petName" id="inputpetName" class="form-control"
+                       placeholder="<fmt:message key="petName"/>" value="${sessionScope.petName}">
+                &emsp;
+                <input type="submit" name="findByPetName" onclick="document.pressed=this.name"
+                       value="<fmt:message key="findByPetName"/>" class="btn-sm btn-primary">
+            </div>
+            <div class="form-inline p-md-2">
+                <select name="breed" id="inputBreed" class="form-control">
+                    <c:forEach items="${breedList}" var="q">
+                        <option value="${q.id}">${q.name}</option>
+                    </c:forEach>
+                </select>
+                &emsp;
+                <input type="submit" name="findByBreedID" onclick="document.pressed=this.name"
+                       value="<fmt:message key="findByBreed"/>" class="btn-sm btn-primary"/>
+                &emsp;&emsp;&emsp;
+                <select name="shelter" id="inputShelter" class="form-control">
+                    <c:forEach items="${shelterList}" var="i">
+                        <option value="${i.id}">${i.name}</option>
+                    </c:forEach>
+                </select>
+                &emsp;
+                <input type="submit" name="findByShelterID" onclick="document.pressed=this.name"
+                       value="<fmt:message key="findByShelter"/>" class="btn-sm btn-primary">
+            </div>
+            <div class="form-inline" style="padding-left: 15%">
+                <input type="date" pattern="^\\d{4}-\\d{2}-\\d{2}$" value="${sessionScope.birthDate}" name="birthDate">
+                &emsp;
+                <input type="radio" checked name="birthDateChoice" value="lessthan"><fmt:message
+                    key="birthDateBeforeChoice"/>
+                &emsp;
+                <input type="radio" name="birthDateChoice" value="greaterthan"><fmt:message
+                    key="birthDateAfterChoice"/>
+                &emsp;
+                <input type="submit" name="findByBirthDate" onclick="document.pressed=this.name"
+                       value="<fmt:message key="findByBirthDate"/>" class="btn-sm btn-primary">
+            </div>
+        </form>
+        <a class="btn btn-success" style="margin-right: 45%" type="button"
+           href="<c:url value="/pets/findpet.html?page=1"/>">
+            <fmt:message key="reset"/>
+        </a>
+    </div>
+</div>
 <div class="form-row" style="margin-left: 10%">
     <c:forEach items="${petResults}" var="i" varStatus="count">
         <div class="form-group col-md-4">
@@ -120,78 +199,6 @@
         </c:if>
     </ul>
 </nav>
-
-<div class="table table-bordered justify-content-center mx-auto p-3">
-    <div class="form-row justify-content-center">
-        <div class="form-group">
-            <center><h3><fmt:message key="searchForm"/></h3></center>
-        </div>
-        <br>
-        <form name="searchForm" onsubmit="return OnSubmitForm();" method="post">
-            <c:if test="${authorizedUser.userRole == 'STAFF'}">
-                <div class="form-group p-lg-2">
-                    <select name="petStatus" id="inputStatus" class="form-control">
-                        <option value="ALL">
-                            <fmt:message key="allShelters"/>
-                        </option>
-                        <option value="SHELTERED">
-                            <fmt:message key="sheltered"/>
-                        </option>
-                        <option value="ADOPTED">
-                            <fmt:message key="adopted"/>
-                        </option>
-                        <option value="DEAD">
-                            <fmt:message key="dead"/>
-                        </option>
-                    </select>
-                    <i><fmt:message key="appliesToAllSearchTypes"/></i>
-                </div>
-            </c:if>
-            <div class="form-inline col-md-12 justify-content-center ">
-                <input pattern="^[a-zA-Z]{1,10}+$" name="petName" id="inputpetName" class="form-control"
-                       placeholder="<fmt:message key="petName"/>" value="${sessionScope.petName}">
-                &emsp;
-                <input type="submit" name="findByPetName" onclick="document.pressed=this.name"
-                       value="<fmt:message key="findByPetName"/>" class="btn-sm btn-primary">
-            </div>
-            <div class="form-inline p-md-2">
-                <select name="breed" id="inputBreed" class="form-control">
-                    <c:forEach items="${breedList}" var="q">
-                        <option value="${q.id}">${q.name}</option>
-                    </c:forEach>
-                </select>
-                &emsp;
-                <input type="submit" name="findByBreedID" onclick="document.pressed=this.name"
-                       value="<fmt:message key="findByBreed"/>" class="btn-sm btn-primary"/>
-                &emsp;&emsp;&emsp;
-                <select name="shelter" id="inputShelter" class="form-control">
-                    <c:forEach items="${shelterList}" var="i">
-                        <option value="${i.id}">${i.name}</option>
-                    </c:forEach>
-                </select>
-                &emsp;
-                <input type="submit" name="findByShelterID" onclick="document.pressed=this.name"
-                       value="<fmt:message key="findByShelter"/>" class="btn-sm btn-primary">
-            </div>
-            <div class="form-inline" style="padding-left: 15%">
-                <input type="date" pattern="^\\d{4}-\\d{2}-\\d{2}$" value="${sessionScope.birthDate}" name="birthDate">
-                &emsp;
-                <input type="radio" checked name="birthDateChoice" value="lessthan"><fmt:message
-                    key="birthDateBeforeChoice"/>
-                &emsp;
-                <input type="radio" name="birthDateChoice" value="greaterthan"><fmt:message
-                    key="birthDateAfterChoice"/>
-                &emsp;
-                <input type="submit" name="findByBirthDate" onclick="document.pressed=this.name"
-                       value="<fmt:message key="findByBirthDate"/>" class="btn-sm btn-primary">
-            </div>
-        </form>
-        <a class="btn btn-success" style="margin-right: 45%" type="button"
-           href="<c:url value="/pets/findpet.html?page=1"/>">
-            <fmt:message key="reset"/>
-        </a>
-    </div>
-</div>
 <script type="text/javascript" src="/js/formscript.js"></script>
 <jsp:include page="/jsp/tags/footer.jsp" flush="true"/>
 </body>

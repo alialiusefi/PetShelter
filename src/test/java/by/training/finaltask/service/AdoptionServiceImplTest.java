@@ -11,7 +11,6 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
-import java.sql.Date;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.util.*;
@@ -41,17 +40,7 @@ public class AdoptionServiceImplTest {
 
     @Test
     public void testGet() {
-        try {
-            Adoption actual = service.get(4);
-            GregorianCalendar expectedStart = new GregorianCalendar();
-            expectedStart.setTime(new Date(119,6,1));
-            GregorianCalendar expectedEnd = new GregorianCalendar();
-            expectedEnd.setTime(new Date(119,6,22));
-            Adoption expected = new Adoption(4,1,expectedStart,expectedEnd,14);
-            Assert.assertEquals(actual,expected);
-        } catch (PersistentException e) {
-            e.printStackTrace();
-        }
+
     }
 
     @Test
