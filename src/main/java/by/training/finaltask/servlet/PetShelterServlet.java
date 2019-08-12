@@ -70,7 +70,7 @@ public final class PetShelterServlet extends HttpServlet {
      * @param request  HttpServletRequest object.
      * @param response HttpServletResponse object.
      * @throws IOException      if IO abnormality was detected.
-     * @throws ServletException id servlet abnormality was detected.
+     * @throws ServletException if servlet abnormality was detected.
      */
     private void requestHandler(HttpServletRequest request, HttpServletResponse response)
             throws IOException, ServletException {
@@ -82,7 +82,6 @@ public final class PetShelterServlet extends HttpServlet {
                 Map<String, Object> attributes = (Map<String, Object>) session.getAttribute(
                         "redirectedData");
                 if (attributes != null) {
-                    //todo: inefficient
                     for (String key : attributes.keySet()) {
                         request.setAttribute(key, attributes.get(key));
                     }

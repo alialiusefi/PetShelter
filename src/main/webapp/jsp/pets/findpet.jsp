@@ -138,7 +138,8 @@
                         <c:if test="${authorizedUser.userRole != 'ADMINISTRATOR' &&
                         authorizedUser.userRole != 'STAFF'}">
                             <div class="form-inline p-xl-2">
-                                <form action="<c:url value="/adoptions/adoptpet.html"/>" method="post">
+                                <form action="<c:url value="/adoptions/adoptpet.html"/>?petID=${i.id}"
+                                      method="post">
                                     <input type="hidden" name="petID" value="${i.id}">
                                     <input type="submit" value="<fmt:message key="adopt"/>"
                                            class="btn-sm btn-primary">

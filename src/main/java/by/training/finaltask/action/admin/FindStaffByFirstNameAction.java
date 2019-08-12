@@ -21,7 +21,6 @@ public class FindStaffByFirstNameAction extends AuthorizedUserAction {
 
     private static Logger LOGGER = LogManager.getLogger(FindStaffByFirstNameAction.class);
 
-
     private static int ROWS_PER_PAGE = 5;
     private static String NUMBER_REGEX = "[1-9]+";
     private static String FIRSTNAMEATTR = "firstnameParameter";
